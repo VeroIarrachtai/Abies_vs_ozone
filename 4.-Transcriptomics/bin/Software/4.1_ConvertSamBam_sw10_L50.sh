@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#SBATCH -p keri
+#SBATCH -n 5
+#SBATCH --mem=10000
+
+
+cd ../../data/sam
+
+for i in DC01_15_sw10L50_28 DC04_17_sw10L50_28 DS04_15_sw10L50_28 SC03_15_sw10L50_28 SS02_15_sw10L50_28 DC02_15_sw10L50_28 DC05_15_sw10L50_28 SC01_15_sw10L50_28 SC04_15_sw10L50_28 SS05_15_sw10L50_28 DC03_15_sw10L50_28 DS01_15_sw10L50_28 SC01_17_sw10L50_28 SC05_15_sw10L50_28 DC04_15_sw10L50_28 DS02_15_sw10L50_28 SC02_15_sw10L50_28 SS01_15_sw10L50_28; do samtools view -Sb ../../data/SAM/$i.sam > ../../data/BAM/$i.bam; done
+
+cd ../../bin/Software
