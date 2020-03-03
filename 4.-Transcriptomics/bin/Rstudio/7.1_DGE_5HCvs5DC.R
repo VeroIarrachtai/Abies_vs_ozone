@@ -1,7 +1,6 @@
 # Verónica Reyes, febrero 2020
 
 # Load libraries
-library(VennDiagram)
 library(limma)
 library(edgeR)
 library(DESeq2)
@@ -127,7 +126,6 @@ head (topTags(et, n= Inf))
 ########
 res[rownames(topTags(et, n= Inf)),]
 
-
 ################################
 #Plot Log fold change
 ################################
@@ -194,6 +192,7 @@ topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
 write.table(topSig_export, "../../metadata/DGE/EdgeR_HvsD170ppb_FDR_5.txt", sep="\t", row.names=T)
+
 ########
 # DESeq2
 ########
@@ -208,6 +207,7 @@ resSig2_export$ID<-resSig2_export
 head(resSig2_export)
 write.table(resSig2_export, "../../metadata/DGE/DESeq2_HvsD170ppb_FDR_5.txt", sep="\t", row.names=T)
 
+
 ###################################################
 ### How many common DE genes exist edgeR vs DESeq2
 ###################################################
@@ -215,4 +215,5 @@ write.table(resSig2_export, "../../metadata/DGE/DESeq2_HvsD170ppb_FDR_5.txt", se
 genesDEcomunes <- intersect(genesDEedgeR,genesDEDESeq2) 
 head(genesDEcomunes)
 str(genesDEcomunes)
+
 
