@@ -69,7 +69,7 @@ genesDEcomun_over <- intersect(rownames(overxpress_Ds2),rownames(overxpress_Ed))
 genesDEcomun_down <- intersect(rownames(downxpress_Ds2),rownames(downxpress_Ed))
 
 comun_genes_od <- c(genesDEcomun_over,genesDEcomun_down)
-
+comun_genes_od
 # Export data 
 write.table(overxpress_Ds2, "../../metadata/DGE/oxs_DE2_C_TvsD.txt", sep="\t", row.names=T)
 write.table(downxpress_Ds2, "../../metadata/DGE/sxs_DE2_C_TvsD.txt", sep="\t", row.names=T)

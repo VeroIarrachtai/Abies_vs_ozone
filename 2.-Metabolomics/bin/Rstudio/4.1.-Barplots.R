@@ -69,7 +69,7 @@ p + coord_flip() + facet_wrap(~ Factors) +
                                'alfa.Cubenene'= expression(alpha~'-Cubenene'),
                                'delta.Cadinene' = expression(delta~'-Cadinene'),
                                'alfa.Muurolene' = expression(alpha~'-Muurolene')))+
-  labs(x="metabolite",y="g/100g de tejido")
+  labs(x="metabolite",y="g/100g Tissue")
 
 ggsave("../../outputs/4.1_barplot_images_SS.png")
 
@@ -113,7 +113,7 @@ p + coord_flip() + facet_wrap(~ Factors) +
                                'alfa.Cubenene'= expression(alpha~'-Cubenene'),
                                'delta.Cadinene' = expression(delta~'-Cadinene'),
                                'alfa.Muurolene' = expression(alpha~'-Muurolene')))+
-  labs(x="metabolite",y="g/100g de tejido")
+  labs(x="metabolite",y="g/100g Tissue")
 
 ggsave("../../outputs/4.1_barplot_images_conti.png")
 
