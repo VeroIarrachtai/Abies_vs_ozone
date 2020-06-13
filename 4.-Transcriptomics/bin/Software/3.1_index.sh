@@ -1,7 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
-#SBATCH -p keri
-#SBATCH -n 1
-#SBATCH --mem=150000
+#SBATCH -w nodo3
+#SBATCH -n 4
 
-bwa index -p ../../metadata/INDEX/index_Areligiosa -a is ../../metadata/Reference_Transcriptome/GCAT_AB-RNA-1.0.16.fa
+# Veronica Reyes
+# Paper:
+# Make index to alignment
+
+bwa index -p ../../metadata/Index/index_Areligiosa -a is ../../metadata/Reference_Transcriptome/GCAT_AB-RNA-1.0.16.fa

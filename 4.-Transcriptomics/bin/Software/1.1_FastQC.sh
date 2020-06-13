@@ -1,10 +1,15 @@
-#! /bin/bash
-#SBATCH -p keri
-#SBATCH -n 2
-#SBATCH --mem=50000
+#!/bin/sh
 
-#Do Trimmer  with Trimmomatic-0.36
+#SBATCH -w nodo3
+#SBATCH -n 4
 
+# Veronica Reyes 
+# Paper:
+# Make fastQC analyses 
 
 
 # Do fastqc
+for f in ../../data/RAW/*.fastq.gz;
+do fastqc --outdir  ../../metadata/fastqc_after_trimm/ $f
+done
+

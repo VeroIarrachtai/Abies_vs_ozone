@@ -2,7 +2,21 @@
 ## 15 Oct 2018
 ## Veronica Reyes
 
+setwd("../../metadata/genes_order/")
+
+#Load libraries
+
+library(dplyr)
+library(readr)
+
 # Load files
+
+list_file<-list.files(pattern =  "*.txt") %>% #This will read 1 file at a time with * being awilcard
+  lapply(read.table, stringsAsFactor = F) %>%
+  dplyr::bind_rows() 
+list_file
+
+
 DC01_15<-read.delim("../../metadata/genes_order/DC01_15_sw10L50.genesorder.txt", header= FALSE)
 DC02_15<-read.delim("../../metadata/genes_order/DC02_15_sw10L50.genesorder.txt", header= FALSE)
 DC03_15<-read.delim("../../metadata/genes_order/DC03_15_sw10L50.genesorder.txt", header= FALSE)
@@ -66,17 +80,17 @@ all$DS_1 <- DS01_15$number_reads[match(all$DC01_15.name_gen, DS01_15$name_gen)]
 all$DS_2 <- DS02_15$number_reads[match(all$DC01_15.name_gen, DS02_15$name_gen)]
 all$DS_4 <- DS04_15$number_reads[match(all$DC01_15.name_gen, DS04_15$name_gen)]
 
-all$HC_1 <- HC01_15$number_reads[match(all$DC01_15.name_gen, HC01_15$name_gen)]
-all$HC_2 <- HC02_15$number_reads[match(all$DC01_15.name_gen, HC02_15$name_gen)]
-all$HC_3 <- HC03_15$number_reads[match(all$DC01_15.name_gen, HC03_15$name_gen)]
-all$HC_4 <- HC04_15$number_reads[match(all$DC01_15.name_gen, HC04_15$name_gen)]
-all$HC_5 <- HC05_15$number_reads[match(all$DC01_15.name_gen, HC05_15$name_gen)]
+all$TC_1 <- HC01_15$number_reads[match(all$DC01_15.name_gen, HC01_15$name_gen)]
+all$TC_2 <- HC02_15$number_reads[match(all$DC01_15.name_gen, HC02_15$name_gen)]
+all$TC_3 <- HC03_15$number_reads[match(all$DC01_15.name_gen, HC03_15$name_gen)]
+all$TC_4 <- HC04_15$number_reads[match(all$DC01_15.name_gen, HC04_15$name_gen)]
+all$TC_5 <- HC05_15$number_reads[match(all$DC01_15.name_gen, HC05_15$name_gen)]
 
-all$HS_1 <- HS01_15$number_reads[match(all$DC01_15.name_gen, HS01_15$name_gen)]
-all$HS_2 <- HS02_15$number_reads[match(all$DC01_15.name_gen, HS02_15$name_gen)]
-all$HS_5 <- HS05_15$number_reads[match(all$DC01_15.name_gen, HS05_15$name_gen)]
+all$TS_1 <- HS01_15$number_reads[match(all$DC01_15.name_gen, HS01_15$name_gen)]
+all$TS_2 <- HS02_15$number_reads[match(all$DC01_15.name_gen, HS02_15$name_gen)]
+all$TS_5 <- HS05_15$number_reads[match(all$DC01_15.name_gen, HS05_15$name_gen)]
 
-all$HC17 <- HC01_17$number_reads[match(all$DC01_15.name_gen, HC01_17$name_gen)]
+all$TC17 <- HC01_17$number_reads[match(all$DC01_15.name_gen, HC01_17$name_gen)]
 all$DC47 <- DC04_17$number_reads[match(all$DC01_15.name_gen, DC04_17$name_gen)]
 
 head(all)
@@ -104,15 +118,15 @@ sum(all$DS_1)
 sum(all$DS_2)
 sum(all$DS_4)
 
-sum(all$HC_1)
-sum(all$HC_2)
-sum(all$HC_3)
-sum(all$HC_4)
-sum(all$HC_5)
+sum(all$TC_1)
+sum(all$TC_2)
+sum(all$TC_3)
+sum(all$TC_4)
+sum(all$TC_5)
 
-sum(all$HS_1)
-sum(all$HS_2)
-sum(all$HS_5)
+sum(all$TS_1)
+sum(all$TS_2)
+sum(all$TS_5)
 
 # Count genes with 0 reads
 nrow(all[all$DC_1 == 0,])
@@ -125,15 +139,15 @@ nrow(all[all$DS_1 == 0,])
 nrow(all[all$DS_2 == 0,])
 nrow(all[all$DS_4 == 0,])
 
-nrow(all[all$HC_1 == 0,])
-nrow(all[all$HC_2 == 0,])
-nrow(all[all$HC_3 == 0,])
-nrow(all[all$HC_4 == 0,])
-nrow(all[all$HC_5 == 0,])
+nrow(all[all$TC_1 == 0,])
+nrow(all[all$TC_2 == 0,])
+nrow(all[all$TC_3 == 0,])
+nrow(all[all$TC_4 == 0,])
+nrow(all[all$TC_5 == 0,])
 
-nrow(all[all$HS_1 == 0,])
-nrow(all[all$HS_2 == 0,])
-nrow(all[all$HS_5 == 0,])
+nrow(all[all$TS_1 == 0,])
+nrow(all[all$TS_2 == 0,])
+nrow(all[all$TS_5 == 0,])
 
 # Export table to .txt format
 write.table(all, file="../../metadata/all_genes/allreadsgenes.txt", sep = "\t", eol = "\n", dec = ".",
