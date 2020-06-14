@@ -2,17 +2,18 @@
 
 This repository contains the scripts, data, metadata and part of the results from the study **"Abies vs ozone"**.
 
-##Prerequisites
+## Prerequisites
 
 VCFtools 0.1.15
 PLINK v1.9
 R 3.4.2
 Admixture 1.3
 
-###R packages:
-SNPStats
-ggplot2
-SNPRelate
+### R packages:
+
+* SNPStats
+* ggplot2
+* SNPRelate
 
 # Repository structure:
 
@@ -72,10 +73,8 @@ SNPRelate
 
 
 
-###Contact
+### Contact
 Verónica Reyes Galindo
-
+```
 veronica.rg.pb@gmail.com
-
-
-
+``
