@@ -1,13 +1,13 @@
 # README Paper Abies vs ozone
 
-This repository contains the scripts, data, metadata and part of the results from the study **"Abies vs ozone"**.
+This repository contains scripts, data, metadata and part of the results from the study **"Abies vs ozone"**.
 
 ## Prerequisites
 
-VCFtools 0.1.15
-PLINK v1.9
-R 3.4.2
-Admixture 1.3
+* VCFtools 0.1.15
+* PLINK v1.9
+* R 3.4.2
+* Admixture 1.3
 
 ### R packages:
 
