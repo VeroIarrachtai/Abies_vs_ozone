@@ -15,12 +15,13 @@ Analyzes to answer each particular aim can be found in separate directories with
 There's repository structure:
 
 ```
-+----- Abie_vs_ozone/
++----- Abies_vs_ozone/
 |	+--1.-Sampling/
 |	+--2.-Metabolomics/
 |	+--3.-Genomics/
 |	+--4.-Transcriptomics/
-| +--README.md
+|	+--5.-INFO_PROJECT/
+|	+--README.md
 ```
 
 
