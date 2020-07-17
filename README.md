@@ -6,9 +6,9 @@ In these directories you will find analysis to answer these project's particular
 
 * To evaluate the healthy and damaged trees' differential expression in two ozone's periods (TRANSCRIPTOMICS).
 
-* To identify tolerance Sacred fir's origins (GENOMICS).
+* To identify tolerance sacred fir's origins (GENOMICS).
 
-* To quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone concenrations' periods (METABOLOMICS).
+* To quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone's concenration periods (METABOLOMICS).
 
 ## Principal directories:
 
@@ -29,11 +29,11 @@ There's repository structure:
 
 **1.-Sampling**: There's a directory with coordinates and samples' disposition in omics' analisys .
 
-**2.-Metabolomics**: There're metabolites analysis generated with gas chromatograph spectrum mass (GC-SM). Data from html files were loaded into tables. Subsequently, relative abundance was calculated. Finally, values between samples were compared from a barplot, ANOVA, and PCA analysis.
+**2.-Metabolomics**: There're metabolites' analysis generated with gas chromatograph spectrum mass (GC-SM). Data from html files were loaded into tables. Subsequently, relative abundance was calculated. Finally, values between samples were compared from a barplot, ANOVA, and PCA analysis.
 
-**3.-Genomics**: There're genomic analysis from GBS sequencing. ipyRAD was used to assemble *de novo*, VCFTools and plink were used to make more specific filters. Relationship was calculated without multiple SNPs in same loci. Mantel test, PCA, and admixture were performed.
+**3.-Genomics**: There're genomic analysis from GBS sequencing. ipyRAD was used to assemble *de novo*, **VCFTools** and **plink** were used to make more specific filters. Relationship was calculated without multiple SNPs in same loci. Mantel test, PCA, and admixture were performed.
 
-**4.-Transcriptomics**: There're transcriptomic analysis from RNAseq data. Samples were cut with Timmomatic and they mapped to a reference transcriptome with BWA. Rstudio allowed to evaluate differential expression between samples with edgeR and DESeq2. Subsequently, volcanoplot was performed to show overexpressed and underexpressed genes.
+**4.-Transcriptomics**: There're transcriptomic analysis from RNAseq data. Samples were cut with **Trimmomatic** and they mapped to a reference transcriptome with **BWA**. Rstudio allowed to evaluate differential expression between samples with **edgeR** and **DESeq2**. Subsequently, volcanoplot was performed to show overexpressed and underexpressed geges.
 
 **5.-INFO_PROJECT**: There're exhibitions, summaries and final analysis.
 
