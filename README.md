@@ -4,11 +4,11 @@ This repository contains scripts, data, metadata, and results to perform transcr
 
 In these directories you will find analysis to answer these project's particular aims:
 
-* To evaluate the healthy and damaged trees' differential expression in two ozone's periods [TRANSCRIPTOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics).
+* To evaluate the healthy and damaged trees' differential expression in two ozone's periods [Transcriptomics analisys](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics).
 
-* To identify tolerance sacred fir's origins  [GENOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics).
+* To identify tolerance sacred fir's origins  [Genomics analisys](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics).
 
-* To quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone's concenration periods [METABOLOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics).
+* To quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone's concenration periods [Metabolomics analisys](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics).
 
 ## Principal directories:
 
