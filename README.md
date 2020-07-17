@@ -4,11 +4,11 @@ This repository contains scripts, data, metadata, and results to perform transcr
 
 In these directories you will find analysis to answer these project's particular aims:
 
-* To evaluate the healthy and damaged trees' differential expression in two ozone's periods (TRANSCRIPTOMICS).
+* To evaluate the healthy and damaged trees' differential expression in two ozone's periods [TRANSCRIPTOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics).
 
-* To identify tolerance sacred fir's origins (GENOMICS).
+* To identify tolerance sacred fir's origins  [GENOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics).
 
-* To quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone's concenration periods (METABOLOMICS).
+* To quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone's concenration periods [METABOLOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics).
 
 ## Principal directories:
 
@@ -50,7 +50,7 @@ Check more information about this pipeline in: [README_genomics](https://github.
 
 To see a short summary about final genomics' analysis you can go here: [Analysis_genomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/GENOMICS_ligth_analysis.md)
 
-# [METABOLOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
+## [METABOLOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
 
 ### Quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone concenrations' periods (METABOLOMICS).
 
@@ -60,7 +60,7 @@ Check more information about this pipeline in: [README_metabolomics](https://git
 
 To see a short summary about final metabolomics' analysis you can go here: [Analysis_metabolomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/METABOLOMICS_ligth_analysis.md)
 
-#[TRANSCRIPTOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
+## [TRANSCRIPTOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
 
 ### Evaluate differential expression of healthy and damaged trees in two ozone's periods (TRANSCRIPTOMICS).
 
