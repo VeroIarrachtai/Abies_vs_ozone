@@ -1,8 +1,8 @@
 # README Paper Abies vs ozone
 
-This repository contains scripts, data, metadata and results to perform transcriptomic, genetic and metabolic analysis to **"Abies vs ozone's project"**.
+This repository contains scripts, data, metadata, and results to perform transcriptomic, genetic, and metabolic analysis to **"Abies vs ozone's project"**.
 
-Analyzes to answer each particular aim can be found in separate directories with data and pictures:
+In this directories you will find analysis to answer each particular aim:
 
 * Evaluate differential expression of healthy and damaged trees in two ozone's periods (TRANSCRIPTOMICS).
 
@@ -64,7 +64,7 @@ To see a short summary about the analysis of the final data you can to go here: 
 
 ![](4.-Transcriptomics/metadata/Transcriptomic_methods.png)
 
-Check more info about this pipeline in the [README_transcriptomics](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/blob/master/4.-Transcriptomics/README_TRANSCRIPTOMICS.md).
+Check more info about this pipeline in the [README_transcriptomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/4.-Transcriptomics/README_TRANSCRIPTOMICS.md).
 
 To see a short summary about the analysis of the final data you can to go here: [Analysis_transcriptomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/TRANSCRIPTOMICS_ligth_analysis.md)
 
