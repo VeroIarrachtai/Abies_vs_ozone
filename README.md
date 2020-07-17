@@ -38,16 +38,6 @@ There's repository structure:
 
 # Principal analysis workflow:
 
-## [GENOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics)
-
-### Identify tolerance sacred fir's origins.
-
-![](3.-Genomics/metadata/Genomic_methods.png)
-
-Check more information about this pipeline in [README_genomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/3.-Genomics/README_genomics.md).
-
-To see a short summary about final genomics' analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/GENOMICS_ligth_analysis.md).
-
 ## [METABOLOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
 
 ### Quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone concenrations' periods.
@@ -57,6 +47,16 @@ To see a short summary about final genomics' analysis you can go [here](https://
 Check more information about this pipeline in [README_metabolomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics/README_metabolomics.md).
 
 To see a short summary about final metabolomics' analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/METABOLOMICS_ligth_analysis.md).
+
+## [GENOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics)
+
+### Identify tolerance sacred fir's origins.
+
+![](3.-Genomics/metadata/Genomic_methods.png)
+
+Check more information about this pipeline in [README_genomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/3.-Genomics/README_genomics.md).
+
+To see a short summary about final genomics' analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/GENOMICS_ligth_analysis.md).
 
 ## [TRANSCRIPTOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
 
