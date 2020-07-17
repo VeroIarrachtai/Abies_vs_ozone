@@ -1,5 +1,6 @@
-# README Paper Abies vs ozone
 
+
+Before starting the analysis here are the programs that need to be installed:
 
 ##Prerequisites
 
@@ -75,6 +76,4 @@ Verónica Reyes Galindo
 veronica.rg.pb@gmail.com
 
 
-Data S2: specific number of readings and the percentage of mapping per individual and condition 
-
-
+Data S2: specific number of readings and the percentage of mapping per individual and condition
