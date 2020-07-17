@@ -69,7 +69,7 @@ Check more info about this pipeline in the [README_transcriptomics](https://gith
 To see a short summary about the analysis of the final data you can to go here: [Analysis_transcriptomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/TRANSCRIPTOMICS_ligth_analysis.md)
 
 ### Contact
-MAndar mail
+
 ```
 Verónica Reyes Galindo
 ```
