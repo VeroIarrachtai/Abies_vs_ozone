@@ -44,7 +44,7 @@ There's repository structure:
 
 ![](3.-Genomics/metadata/Genomic_methods.png)
 
-Check more information about this pipeline in: [README_genomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/3.-Genomics/README_genomics.md).
+Check more information about this pipeline in [README_genomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/3.-Genomics/README_genomics.md).
 
 To see a short summary about final genomics' analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/GENOMICS_ligth_analysis.md).
 
@@ -54,7 +54,7 @@ To see a short summary about final genomics' analysis you can go [here](https://
 
 ![](2.-Metabolomics/metadata/Metabolomic_methods.png)
 
-Check more information about this pipeline in: [README_metabolomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics/README_metabolomics.md).
+Check more information about this pipeline in [README_metabolomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics/README_metabolomics.md).
 
 To see a short summary about final metabolomics' analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/METABOLOMICS_ligth_analysis.md).
 
@@ -64,7 +64,7 @@ To see a short summary about final metabolomics' analysis you can go [here](http
 
 ![](4.-Transcriptomics/metadata/Transcriptomic_methods.png)
 
-Check more information about this pipeline in: [README_transcriptomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/4.-Transcriptomics/README_TRANSCRIPTOMICS.md).
+Check more information about this pipeline in [README_transcriptomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/4.-Transcriptomics/README_TRANSCRIPTOMICS.md).
 
 To see a short summary about final transcriptomics' analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/TRANSCRIPTOMICS_ligth_analysis.md).
 
