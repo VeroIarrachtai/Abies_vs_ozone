@@ -73,4 +73,3 @@ To see a short summary about the analysis of the final data you can to go here: 
 ```
 Verónica Reyes Galindo
 ```
-``
