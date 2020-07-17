@@ -1,77 +1,73 @@
 # README Paper Abies vs ozone
 
-This repository contains scripts, data, metadata and part of the results from the study **"Abies vs ozone"**.
+This repository contains scripts, data, metadata and results to perform transcriptomic, genetic and metabolic analysis to **"Abies vs ozone's project"**.
 
-## Prerequisites
+Analyzes to answer each particular aim can be found in separate directories with data and pictures:
 
-* VCFtools 0.1.15
-* PLINK v1.9
-* R 3.4.2
-* Admixture 1.3
+* Evaluate differential expression of healthy and damaged trees in two ozone's periods (TRANSCRIPTOMICS).
 
-### R packages:
+* Identify tolerance sacred fir's origins (GENOMICS).
 
-* SNPStats
-* ggplot2
-* SNPRelate
-
-# Repository structure:
+* Quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone concenrations' periods (METABOLOMICS).
 
 ## Principal directories:
 
+There's repository structure:
+
 ```
-+----- Abies_religiosa_vs_ozone/
-|	+--README.md
++----- Abie_vs_ozone/
 |	+--1.-Sampling/
 |	+--2.-Metabolomics/
 |	+--3.-Genomics/
 |	+--4.-Transcriptomics/
+| +--README.md
 ```
 
 
-**README.md**: is a intro about my project. This include the structure of this repository.
+**README.md**: There's a markdown file about my project. This file includes repository's disposition.
 
-**1.-Sampling**
+**1.-Sampling**: There's a directory with coordinates and samples' disposition in omics' analisys .
 
-**2.-Metabolomics**: This is an analysis of metabolites measured with a gas chromatograph spectrum mass (GC-SM). Data from html files were loaded into tables that were subsequently calculated for their relative abundance. The values between samples were compared from a barplot, ANOVA and finally a PCA analysis was made with the final metabolites.
+**2.-Metabolomics**: There's metabolites analysis generated with gas chromatograph spectrum mass (GC-SM). Data from html files were loaded into tables. Subsequently relative abundance was calculated. Finally, values between samples were compared from a barplot, ANOVA and PCA analysis.
 
-**3.-Genomics**: It is a genomic analysis from samples product of a GBS sequencing, ipyRAD was used to assemble de novo, VCFTools and plink to make more specific filters. The relationship was calculated, multiple SNPs were discarded in the same loci, a Mantel test, PCA and admixture were performed and the Heterocity was calculated.
+**3.-Genomics**: There's genomic analysis from GBS sequencing. ipyRAD was used to assemble *de novo*, VCFTools and plink were used to make more specific filters. Relationship was calculated without multiple SNPs in same loci. Mantel test, PCA and admixture were performed and the Heterocity was calculated.
 
-**4.-Transcriptomics**: This is a transcriptomic analysis from samples sequenced with RNAseq. Samples were cut(Timmomatic) and mapped (BWA) to a reference transcriptome. Sequence counting was carried out through command lines in Rstudio that subsequently allowed the evaluation of differential expression between samples. From the counting table, a volcanoplot was performed to exemplify the overexpressed and underexpressed genes.
-
-
-
-## Complete directories
-```
-+----- Abies_religiosa_vs_ozone/
-|	+--README.md
-|	+--1.-Sampling/
-|		+--bin/
-|		+--data/
-|		+--metadata/
-|		+--outputs/
-|		+--README_sampling.md
-|	+--2.-Metabolomics/
-|		+--bin/
-|		+--data/
-|		+--metadata/
-|		+--outputs/
-|		+--README_metabolomics.md
-|	+--3.-Genomics/
-|		+--bin/
-|		+--data/
-|		+--metadata/
-|		+--outputs/
-|		+--README_genomics.md
-|	+--4.-Transcriptomics/
-|		+--bin/
-|		+--data/
-|		+--metadata/
-|		+--outputs/
-|		+--README_transcriptomics.md
-```
+**4.-Transcriptomics**: There's transcriptomic analysis from samples sequenced with RNAseq. Samples were cut with Timmomatic and mapped to a reference transcriptome with BWA. Rstudio allowed to evaluate differential expression between samples with edgeR and DESeq2. Subsequently, volcanoplot was performed to show overexpressed and underexpressed genes.
 
 
+# Principal analysis workflow:
+
+## GENOMICS
+
+### Identify origins of sacred fir with tolerance to O3.
+
+![](5.-wonderful_images/Genomic_methods.png)
+
+Check more info about this pipeline in the [README_genomics](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/1.-GENOMICS/README_genomics.md).
+
+To see a short summary about the analysis of the final data you can go to [Analysis_genomics](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/blob/master/4.-INFO_PROJECT/GENOMICS_ligth_analysis.md)
+
+# METABOLOMICS
+
+### Quantify the relative abundance of secondary metabolites in healthy y damaged trees in two periods of concentration of O3
+
+![](5.-wonderful_images/Metabolomic_methods.png)
+
+Check more info about this pipeline in the [README_metabolomics](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/2.-METABOLOMICS/README_metabolomics.md).
+
+To see a short summary about the analysis of the final data you can go to [Analysis_metabolomics](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/blob/master/4.-INFO_PROJECT/METABOLOMICS_ligth_analysis.md)
+
+# TRANSCRIPTOMICS (ALERT: I keep developing this section)
+
+### Evaluate the differential expression of healthy and damaged trees in two periods of [O3].
+
+
+
+![](5.-wonderful_images/Transcriptomic_methods.png)
+
+Check more info about this pipeline in the [README_transcriptomics](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/blob/master/3.-TRANSCRIPTOMICS/README_TRANSCRIPTOMICS.md).
+
+To see a short summary about the analysis of the final data you can go to [Analysis_transcriptomics](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/blob/master/4.-INFO_PROJECT/TRANSCRIPTOMICS_ligth_analysis.md)
 
 ### Contact
 Verónica Reyes Galindo
