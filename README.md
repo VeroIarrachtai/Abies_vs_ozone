@@ -2,13 +2,13 @@
 
 This repository contains scripts, data, metadata, and results to perform transcriptomic, genetic, and metabolic analysis to **"Abies vs ozone's project"**.
 
-In this directories you will find analysis to answer each particular aim:
+In these directories you will find analysis to answer these project's particular aims:
 
-* Evaluate differential expression of healthy and damaged trees in two ozone's periods (TRANSCRIPTOMICS).
+* To evaluate the healthy and damaged trees' differential expression in two ozone's periods (TRANSCRIPTOMICS).
 
-* Identify tolerance sacred fir's origins (GENOMICS).
+* To identify tolerance Sacred fir's origins (GENOMICS).
 
-* Quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone concenrations' periods (METABOLOMICS).
+* To quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone concenrations' periods (METABOLOMICS).
 
 ## Principal directories:
 
