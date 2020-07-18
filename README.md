@@ -8,7 +8,7 @@ In these directories you will find some analysis to answer these project's parti
 
 * To identify tolerance sacred fir's origins.  [Genomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics)
 
-* To quantify secondary metabolites relative abundance in tolerance and damaged trees during two ozone concentration periods. [Metabolomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
+* To quantify the secondary-metabolite relative-abundance in tolerance and damaged trees during two ozone concentration periods. [Metabolomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
 
 ## Principal directories.
 
