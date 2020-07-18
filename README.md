@@ -2,13 +2,13 @@
 
 This repository contains scripts, data, metadata, and results to perform transcriptomic, genetic, and metabolic analysis to **"Abies vs ozone's project"**.
 
-In these directories you will find analysis to answer these project's particular aims:
+In these directories you will find some analysis to answer these project's particular aims:
 
-* To evaluate the healthy and damaged trees' differential expression in two ozone's periods [Transcriptomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics).
+* To evaluate the tolerant and damaged trees differential expression in two ozone periods. [Transcriptomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
 
 * To identify tolerance sacred fir's origins  [Genomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics).
 
-* To quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone's concenration periods [Metabolomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics).
+* To quantify secundary metabolites relative abundance in healthy and damaged trees during two ozone concentration periods [Metabolomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics).
 
 ## Principal directories.
 
@@ -26,9 +26,9 @@ There's repository structure:
 
 **README.md**: There's a markdown file about my project. This file includes repository's disposition.
 
-**1.-Sampling**: There's a directory with coordinates and samples' disposition in omics' analisys.
+**1.-Sampling**: There's a directory with coordinates and samples' disposition in omics analisys.
 
-**2.-Metabolomics**: There're metabolites' analysis generated with gas chromatograph spectrum mass (GC-SM). Data from html files were loaded into tables. Subsequently, relative abundance was calculated. Finally, values between samples were compared from a barplot, ANOVA, and PCA analysis.
+**2.-Metabolomics**: There're metabolites analysis generated with gas chromatograph spectrum mass (GC-SM). Data from html files were loaded into tables. Subsequently, relative abundance was calculated. Finally, values between samples were compared from a barplot, ANOVA, and PCA analysis.
 
 **3.-Genomics**: There're genomic analysis from GBS sequencing. **ipyRAD** was used to assemble *de novo*, **VCFTools** and **plink** were used to make more specific filters. Relationship was calculated without multiple SNPs in same loci. Mantel test, PCA, and admixture were performed.
 
@@ -40,13 +40,13 @@ There's repository structure:
 
 ## [METABOLOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
 
-### Quantify secundary metabolites' relative abundance in healthy and damaged trees during two ozone concenrations' periods.
+### Quantify secundary metabolites relative abundance in healthy and damaged trees during two ozone concenrations periods.
 
 ![](2.-Metabolomics/metadata/Metabolomic_methods.png)
 
 Check more information about this pipeline in [README_metabolomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics/README_metabolomics.md).
 
-To see a short summary about final metabolomics' analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/METABOLOMICS_ligth_analysis.md).
+To see a short summary about final metabolomics analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/METABOLOMICS_ligth_analysis.md).
 
 ## [GENOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics)
 
@@ -56,7 +56,7 @@ To see a short summary about final metabolomics' analysis you can go [here](http
 
 Check more information about this pipeline in [README_genomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/3.-Genomics/README_genomics.md).
 
-To see a short summary about final genomics' analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/GENOMICS_ligth_analysis.md).
+To see a short summary about final genomics analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/GENOMICS_ligth_analysis.md).
 
 ## [TRANSCRIPTOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
 
@@ -66,7 +66,7 @@ To see a short summary about final genomics' analysis you can go [here](https://
 
 Check more information about this pipeline in [README_transcriptomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/4.-Transcriptomics/README_TRANSCRIPTOMICS.md).
 
-To see a short summary about final transcriptomics' analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/TRANSCRIPTOMICS_ligth_analysis.md).
+To see a short summary about final transcriptomics analysis you can go [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/TRANSCRIPTOMICS_ligth_analysis.md).
 
 ### Contact
 
