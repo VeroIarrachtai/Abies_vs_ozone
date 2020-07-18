@@ -4,7 +4,7 @@ This repository contains scripts, data, metadata, and results to perform transcr
 
 In these directories you will find some analysis to answer these project's particular aims:
 
-* To evaluate the tolerant and damaged trees differential expression in two ozone periods. [Transcriptomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
+* To evaluate the tolerant and damaged trees differential expression in two ozone concentration periods. [Transcriptomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
 
 * To identify tolerance sacred fir's origins.  [Genomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics)
 
