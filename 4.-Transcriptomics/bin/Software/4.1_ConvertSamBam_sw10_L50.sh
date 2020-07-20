@@ -1,12 +1,14 @@
-#!/bin/bash
+#!/bin/sh
 
-#SBATCH -p keri
-#SBATCH -n 5
-#SBATCH --mem=10000
+#SBATCH -w nodo3
+#SBATCH -n 4
+
+# Veronica Reyes 
+# Paper:
+# Convert sam to bam files
 
 
-cd ../../data/sam
+for f in DPVR1_S179 DPVR2_S180 DPVR3_S181 DPVR4_S182 DPVR5_S183 DPVR6_S184 DPVR7_S185 DPVR8_S186 DPVR9_S187 DPVR10_S188 DPVR11_S189 DPVR12_S190 DPVR13_S191 DPVR14_S192 DPVR15_S193 DPVR16_S194 DPVR17_S195 DPVR18_S196;
+do samtools view -Sb ../../data/SAM/${f}_sw10L50.sam > ../../data/BAM/${f}_sw10L50.bam
+done
 
-for i in DC01_15_sw10L50_28 DC04_17_sw10L50_28 DS04_15_sw10L50_28 SC03_15_sw10L50_28 SS02_15_sw10L50_28 DC02_15_sw10L50_28 DC05_15_sw10L50_28 SC01_15_sw10L50_28 SC04_15_sw10L50_28 SS05_15_sw10L50_28 DC03_15_sw10L50_28 DS01_15_sw10L50_28 SC01_17_sw10L50_28 SC05_15_sw10L50_28 DC04_15_sw10L50_28 DS02_15_sw10L50_28 SC02_15_sw10L50_28 SS01_15_sw10L50_28; do samtools view -Sb ../../data/SAM/$i.sam > ../../data/BAM/$i.bam; done
-
-cd ../../bin/Software
