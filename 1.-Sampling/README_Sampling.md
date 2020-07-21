@@ -28,18 +28,16 @@ SNPRelate
 |          +--README_Sampling.md
 ```
 
-**README.md**: is a intro about my project. This include the structure of this repository.
+:file_folder: **`/bin`**
 
-**1.-Sampling**
+:file_folder: **`/data`**
+Here are the product files of the sequencing and analysis of them (bam, sam, and fastqc.zip files).
 
-**bin**:
+:file_folder: **`/metadata`** Here are tables and data that complement the omics data. Such as name of samples, count per genes, name of genes, name of sequences, index, reference transcriptome, etc.
 
-**data**: It is a genomic analysis from samples product of a GBS sequencing, ipyRAD was used to assemble de novo, VCFTools and plink to make more specific filters. The relationship was calculated, multiple SNPs were discarded in the same loci, a Mantel test, PCA and admixture were performed and the Heterocity was calculated.
+:file_folder: **`/outputs`** The figures from Rstudio are stored here.
 
-**metadata**: This is a transcriptomic analysis from samples sequenced with RNAseq. Samples were cut(Timmomatic) and mapped (BWA) to a reference transcriptome. Sequence counting was carried out through command lines in Rstudio that subsequently allowed the evaluation of differential expression between samples. From the counting table, a volcanoplot was performed to exemplify the overexpressed and underexpressed genes.
-
-**outputs**
-
+:page_facing_up: **`/README_Sampling`** This is a README that describes the steps to perform the data analysis. It is organized numerically. It is explained that input is necessary and what outputs are obtained from each step.
 
 ### Contact
 ```

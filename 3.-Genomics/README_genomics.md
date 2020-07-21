@@ -416,4 +416,7 @@ SCRIPT in 1.-GENOMICS/Rstudio/[7.3_Admixture.R](bin/Rstudio/7.3_Admixture.R)
 
 ![](outputs/7.3_Cross_val.png)
 
-
+```
+Verónica Reyes Galindo
+veronica.rg.pb@gmail.com
+```

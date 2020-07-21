@@ -263,3 +263,8 @@ SCRIPT in 4.-Transcriptomics/Rstudio/[8.1_Volcanoplot.R](bin/Rstudio/8.1_Volcano
 
 ![](outputs/8.1_VPSol_DESeq2.png)
 ![](outputs/8.1_VPSol_edge.png)
+
+```
+Verónica Reyes Galindo
+veronica.rg.pb@gmail.com
+```

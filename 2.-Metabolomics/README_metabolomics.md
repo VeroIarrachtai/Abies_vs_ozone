@@ -17,7 +17,7 @@ Before starting the analysis here are the programs that need to be installed:
 * **corrplot**
 
 
-## Directory structure (2.-Metabolomics):
+## METABOLOMICS directory structure:
 
 ```
 +---- Abies_religiosa_vs_ozone/
@@ -65,11 +65,11 @@ Here you will find the scripts that are needed to perform the analyses. There is
 
 Here are the product files of the Gas chromatography–mass spectrometry (GC-MS).
 
-**`/metadata`** 
+**`/metadata`**
 
 Here are tables and data that complement the omics data. Such as name of samples, name of genes, name of sequences.
 
-**`/outputs`** 
+**`/outputs`**
 
 The figures from Rstudio are stored here.
 
@@ -248,52 +248,7 @@ Tablas_datos/Metabolitos-Tesis-Vero.xlsx
 ![Lista metabolitos](../5.-wonderful_images/Tabla_final.png)
 
 ###Contact
-
+```
 Verónica Reyes Galindo
-
 veronica.rg.pb@gmail.com
-
-	
-		
-		
-		
-		
-		
-		
-		
-	
-		
-	
-		
-			
-			
-			
-			
-	
-		
-	
-	
-		
-		
-		
-		
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
