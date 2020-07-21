@@ -11,9 +11,7 @@ In these directories you will find some analysis to answer these project's parti
 * To evaluate the tolerant and damaged trees differential expression in two ozone concentration periods. [Transcriptomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
 
 
-## Principal directories.
-
-There's a repository structure:
+## GENERAL directory structure:
 
 ```
 +----- Abies_vs_ozone/

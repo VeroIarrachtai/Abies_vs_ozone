@@ -16,9 +16,8 @@ SNPStats
 ggplot2
 SNPRelate
 
-# Repository structure:
+## SAMPLING directory structure:
 
-## Principal directories:
 ```
 +---- Abies_religiosa_vs_ozone/
 |	+--1.-Sampling/
