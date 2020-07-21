@@ -4,11 +4,12 @@ This repository contains scripts, data, metadata, and results to perform transcr
 
 In these directories you will find some analysis to answer these project's particular aims:
 
-* To evaluate the tolerant and damaged trees differential expression in two ozone concentration periods. [Transcriptomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
+* To quantify the secondary metabolite relative abundance in tolerant and damaged trees during two ozone concentration periods. [Metabolomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
 
 * To identify tolerance sacred fir's origins.  [Genomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics)
 
-* To quantify the secondary metabolite relative abundance in tolerant and damaged trees during two ozone concentration periods. [Metabolomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
+* To evaluate the tolerant and damaged trees differential expression in two ozone concentration periods. [Transcriptomics analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
+
 
 ## Principal directories.
 
@@ -34,13 +35,13 @@ There's a repository structure:
 
 **4.-Transcriptomics**: There're a transcriptomic analysis from RNAseq data. Samples were cut with **Trimmomatic** and they mapped to a reference transcriptome with **BWA**. Rstudio allowed to evaluate differential expression between samples with **edgeR** and **DESeq2**. Subsequently, volcanoplot was performed to show overexpressed and underexpressed genes.
 
-**5.-INFO_PROJECT**: There're an exhibitions, summaries and final analysis.
+**5.-INFO_PROJECT**: There're an exhibitions, summaries, and final analysis.
 
 # Principal analysis workflow:
 
 ## [METABOLOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
 
-### Quantify secundary metabolites relative abundance in healthy and damaged trees during two ozone concenrations periods.
+### To Quantify secundary metabolites relative abundance in healthy and damaged trees during two ozone concenrations periods.
 
 ![](2.-Metabolomics/metadata/Metabolomic_methods.png)
 
@@ -50,7 +51,7 @@ To see a short summary about final metabolomics analysis you can go [here](https
 
 ## [GENOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics)
 
-### Identify tolerance sacred fir's origins.
+### To Identify tolerance sacred fir's origins.
 
 ![](3.-Genomics/metadata/Genomic_methods.png)
 
@@ -60,7 +61,7 @@ To see a short summary about final genomics analysis you can go [here](https://g
 
 ## [TRANSCRIPTOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
 
-### Evaluate differential expression of healthy and damaged trees in two ozone's periods.
+### To Evaluate differential expression of healthy and damaged trees in two ozone's periods.
 
 ![](4.-Transcriptomics/metadata/Transcriptomic_methods.png)
 
