@@ -31,15 +31,15 @@ In these directories you will find some analysis to answer these project's parti
 
 **3.-Genomics**: There are some genomic analysis from GBS sequencing. **ipyRAD** was used to assemble *de novo*, **VCFTools** and **plink** were used to make more specific filters. Relationship was calculated without multiple SNPs in the same loci. Mantel test, PCA, and admixture were performed in order to identify local origin samples.
 
-**4.-Transcriptomics**: There are some transcriptomic analysis from RNAseq data. Samples were cut with **Trimmomatic** and they mapped to a reference transcriptome with **BWA**. Rstudio allowed to evaluate differential expression between samples with **edgeR** and **DESeq2**. Subsequently, volcanoplot was performed to show overexpressed and underexpressed genes.
+**4.-Transcriptomics**: There are some transcriptomic analysis from RNAseq data. Samples were cut with **Trimmomatic** and they were mapped to a reference transcriptome with **BWA**. **Rstudio** allowed to evaluate differential expression between samples with **edgeR** and **DESeq2**. Subsequently, volcanoplot was performed to show overexpressed and underexpressed genes.
 
-**5.-INFO_PROJECT**: There are some exhibitions, summaries, and final analysis.
+**5.-INFO_PROJECT**: There are some ---, summaries, and final analysis.
 
 # Principal analysis workflow:
 
 ## [METABOLOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
 
-### To Quantify secundary metabolites relative abundance in healthy and damaged trees during two ozone concenrations periods.
+### To quantify secundary metabolites relative abundance in healthy and damaged trees during two ozone concenrations periods.
 
 ![](2.-Metabolomics/metadata/Metabolomic_methods.png)
 
@@ -49,7 +49,7 @@ To see a short summary about final metabolomics analysis you can go [here](https
 
 ## [GENOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics)
 
-### To Identify tolerance sacred fir's origins.
+### To identify tolerance sacred fir's origins.
 
 ![](3.-Genomics/metadata/Genomic_methods.png)
 
@@ -59,7 +59,7 @@ To see a short summary about final genomics analysis you can go [here](https://g
 
 ## [TRANSCRIPTOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
 
-### To Evaluate differential expression of healthy and damaged trees in two ozone's periods.
+### To evaluate differential expression of healthy and damaged trees in two ozone's periods.
 
 ![](4.-Transcriptomics/metadata/Transcriptomic_methods.png)
 
