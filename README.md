@@ -29,7 +29,7 @@ In these directories you will find some analysis to answer these project's parti
 
 **2.-Metabolomics**: There are some metabolite-generated analysis with gas chromatograph spectrum mass (GC-SM). Data from html files were loaded into tables. Subsequently, relative abundance was calculated. Finally, all the samples' values were compared using a barplot, ANOVA, and PCA analysis.
 
-**3.-Genomics**: There are some genomic analysis from GBS sequencing. **ipyRAD** was used to assemble *de novo*, **VCFTools** and **plink** were used to make more specific filters. Relationship was calculated without multiple SNPs in the same loci. Mantel test, PCA, and admixture were performed in order to identify local origin samples.
+**3.-Genomics**: There are some genomic analysis from GBS sequencing. **ipyRAD** was used to assemble *de novo*, **VCFTools** and **plink** were used to make more specific filters. The relationship was calculated without multiple SNPs in the same loci. The mantel test, PCA, and admixture were performed in order to identify local origin samples.
 
 **4.-Transcriptomics**: There are some transcriptomic analysis from RNAseq data. Samples were cut with **Trimmomatic** and they were mapped to a reference transcriptome with **BWA**. **Rstudio** allowed to evaluate differential expression between samples with **edgeR** and **DESeq2**. Subsequently, volcanoplot was performed to show overexpressed and underexpressed genes.
 
@@ -63,7 +63,7 @@ To see a short summary about final genomic analysis click [here](https://github.
 
 ![](4.-Transcriptomics/metadata/Transcriptomic_methods.png)
 
-Check more information about this pipeline in [README_transcriptomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/4.-Transcriptomics/README_TRANSCRIPTOMICS.md).
+Check more information about this pipeline in [README_transcriptomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/4.-Transcriptomics/README_Transcriptomics.md).
 
 To see a short summary about final transcriptomic analysis click [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/TRANSCRIPTOMICS_ligth_analysis.md).
 
