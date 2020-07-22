@@ -23,17 +23,17 @@ In these directories you will find some analysis to answer these project's parti
 |	+--README.md
 ```
 
-**README.md**: There is a markdown file about this project. This file includes repository's disposition.
+**README.md**: There is a markdown file about this project. This file includes the repository's disposition.
 
-**1.-Sampling**: There is a directory with coordinates and samples' disposition in omics analisys.
+**1.-Sampling**: There is a directory with coordinates and the samples' disposition in omics analisys.
 
-**2.-Metabolomics**: There're a metabolites analysis generated with gas chromatograph spectrum mass (GC-SM). Data from html files were loaded into tables. Subsequently, relative abundance was calculated. Finally, values between samples were compared from a barplot, ANOVA, and PCA analysis.
+**2.-Metabolomics**: There are some metabolite-generated analysis with gas chromatograph spectrum mass (GC-SM). Data from html files were loaded into tables. Subsequently, relative abundance was calculated. Finally, values between samples were compared from a barplot, ANOVA, and PCA analysis.
 
-**3.-Genomics**: There're a genomic analysis from GBS sequencing. **ipyRAD** was used to assemble *de novo*, **VCFTools** and **plink** were used to make more specific filters. Relationship was calculated without multiple SNPs in same loci. Mantel test, PCA, and admixture were performed.
+**3.-Genomics**: There are some genomic analysis from GBS sequencing. **ipyRAD** was used to assemble *de novo*, **VCFTools** and **plink** were used to make more specific filters. Relationship was calculated without multiple SNPs in same loci. Mantel test, PCA, and admixture were performed.
 
-**4.-Transcriptomics**: There're a transcriptomic analysis from RNAseq data. Samples were cut with **Trimmomatic** and they mapped to a reference transcriptome with **BWA**. Rstudio allowed to evaluate differential expression between samples with **edgeR** and **DESeq2**. Subsequently, volcanoplot was performed to show overexpressed and underexpressed genes.
+**4.-Transcriptomics**: There are some transcriptomic analysis from RNAseq data. Samples were cut with **Trimmomatic** and they mapped to a reference transcriptome with **BWA**. Rstudio allowed to evaluate differential expression between samples with **edgeR** and **DESeq2**. Subsequently, volcanoplot was performed to show overexpressed and underexpressed genes.
 
-**5.-INFO_PROJECT**: There're an exhibitions, summaries, and final analysis.
+**5.-INFO_PROJECT**: There are some exhibitions, summaries, and final analysis.
 
 # Principal analysis workflow:
 
