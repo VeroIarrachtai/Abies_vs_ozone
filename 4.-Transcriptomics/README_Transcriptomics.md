@@ -2,7 +2,7 @@
 
 ## Pre-requisitos
 
-Before starting the analysis here are the programs that need to be installed:
+Before to start the genomic analysis you will need to install:
 
 ## SOFTWARE
 
@@ -76,7 +76,8 @@ Before starting the analysis here are the programs that need to be installed:
 ## TRANSCRIPTOMICS content
 
 :file_folder: **`/bin`**
-Here you will find the scripts that are needed to perform the analyses. There is a folder for scripts that run in [Rstudio](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/4.-Transcriptomics/bin/Rstudio) and another one for those that run in another program through the [terminal](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/4.-Transcriptomics/bin/Software) and command line.
+There are the scripts and data necessary to do transcriptomic analysis.
+Inside of this directory there are two directories. **Software** directory contains the scripts that run in [terminal](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/4.-Transcriptomics/bin/Software) using command line. **Rstudio** directory contains the scripts that run in [Rstudio](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/4.-Transcriptomics/bin/Rstudio).
 
 :file_folder: **`/data`**
 Here are the product files of the sequencing and analysis of them (bam, sam, and fastqc.zip files).
