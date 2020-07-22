@@ -39,7 +39,7 @@ In these directories you will find some analysis to answer these project's parti
 
 ## [METABOLOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
 
-### To quantify secundary metabolites relative abundance in healthy and damaged trees during two ozone concenrations periods.
+### To quantify secundary metabolite relative abundance in healthy and damaged trees during two ozone concenrations periods.
 
 ![](2.-Metabolomics/metadata/Metabolomic_methods.png)
 
@@ -59,7 +59,7 @@ To see a short summary about final genomics analysis you can go [here](https://g
 
 ## [TRANSCRIPTOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
 
-### To evaluate differential expression of healthy and damaged trees in two ozone's periods.
+### To evaluate healthy and damaged trees differential expression in two ozone's periods.
 
 ![](4.-Transcriptomics/metadata/Transcriptomic_methods.png)
 
