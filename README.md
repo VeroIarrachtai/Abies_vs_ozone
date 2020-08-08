@@ -15,11 +15,11 @@ In these directories you will find some analysis to answer these project's parti
 
 ```
 +----- Abies_vs_ozone/
-|	+--1.-Sampling/
-|	+--2.-Metabolomics/
-|	+--3.-Genomics/
-|	+--4.-Transcriptomics/
-|	+--5.-INFO_PROJECT/
+|	+--1_Sampling/
+|	+--2_Metabolomics/
+|	+--3_Genomics/
+|	+--4_Transcriptomics/
+|	+--5_INFO_PROJECT/
 |	+--README.md
 ```
 
