@@ -51,7 +51,7 @@ To see a short summary about the final metabolomics analysis click [here](https:
 
 ### To identify the tolerance sacred fir's origins.
 
-![](3.-Genomics/metadata/Genomic_methods.png)
+![](3_Genomics/metadata/Genomic_methods.png)
 
 Check more information about this pipeline in [README_genomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/3_Genomics/README_genomics.md).
 
