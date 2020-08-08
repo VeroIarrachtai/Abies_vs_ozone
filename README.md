@@ -37,13 +37,13 @@ In these directories you will find some analysis to answer these project's parti
 
 # Principal analysis workflow:
 
-## [METABOLOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
+## [METABOLOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2_Metabolomics)
 
 ### To quantify the secondary metabolite relative abundance in the healthy and the damaged trees during the two ozone concenrations periods.
 
-![](2.-Metabolomics/metadata/Metabolomic_methods.png)
+![](2_Metabolomics/metadata/Metabolomic_methods.png)
 
-Check more information about this pipeline in [README_metabolomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics/README_metabolomics.md).
+Check more information about this pipeline in [README_metabolomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2_Metabolomics/README_metabolomics.md).
 
 To see a short summary about the final metabolomics analysis click [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/METABOLOMICS_ligth_analysis.md).
 
@@ -53,19 +53,19 @@ To see a short summary about the final metabolomics analysis click [here](https:
 
 ![](3.-Genomics/metadata/Genomic_methods.png)
 
-Check more information about this pipeline in [README_genomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/3.-Genomics/README_genomics.md).
+Check more information about this pipeline in [README_genomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/3_Genomics/README_genomics.md).
 
-To see a short summary about the final genomic analysis click [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/GENOMICS_ligth_analysis.md).
+To see a short summary about the final genomic analysis click [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5_INFO_PROJECT/GENOMICS_ligth_analysis.md).
 
-## [TRANSCRIPTOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
+## [TRANSCRIPTOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4_Transcriptomics)
 
 ### To evaluate the healthy and the damaged trees differential expression in the two ozone's periods.
 
-![](4.-Transcriptomics/metadata/Transcriptomic_methods.png)
+![](4_Transcriptomics/metadata/Transcriptomic_methods.png)
 
-Check more information about this pipeline in [README_transcriptomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/4.-Transcriptomics/README_Transcriptomics.md).
+Check more information about this pipeline in [README_transcriptomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/4_Transcriptomics/README_Transcriptomics.md).
 
-To see a short summary about the final transcriptomic analysis click [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/TRANSCRIPTOMICS_ligth_analysis.md).
+To see a short summary about the final transcriptomic analysis click [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5_INFO_PROJECT/TRANSCRIPTOMICS_ligth_analysis.md).
 
 ### Contact
 
