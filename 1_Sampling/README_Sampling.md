@@ -5,9 +5,11 @@ Before starting the analysis here are the programs that need to be installed:
 Before to start the analysis you need to install these programs:
 
 ## Prerequisites
+
 R 3.4.2
 
 ### R packages:
+
 mxmaps
 ggplot2
 rnaturalearth
@@ -42,7 +44,9 @@ There are the scripts necessary to do the maps.
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
 |DPVR11_SC0115|DPVR1_S1791|Healthy|Contingency|2015_2016|ArDlS1_ArDlS1|ContiH1-15|19.28614473|-99.30166201|HEALTHY_01|
 
-Bioanalyzer_name: 
+Describe data:
+
+Bioanalyzer_name:
 Sample_name:
 Condition:
 Seasson:
@@ -54,6 +58,7 @@ Long:
 key_individual:
 
 ### Contact
+
 ```
 Verónica Reyes Galindo
 veronica.rg.pb@gmail.com
