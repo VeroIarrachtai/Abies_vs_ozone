@@ -12,7 +12,6 @@ Before to start the genomic analysis you will need to install:
 * [R](https://cran.r-project.org)
 * [Rstudio (optional)](https://rstudio.com)
 
-
 ## R packages
 
 * **VennDiagram**
@@ -81,13 +80,13 @@ Before to start the genomic analysis you will need to install:
 ## TRANSCRIPTOMICS content
 
 :file_folder: **`/bin`**
-There are the scripts and data necessary to do transcriptomic analysis.
-Inside of this directory there are two directories. **Software** directory contains the scripts that run in [terminal](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/4.-Transcriptomics/bin/Software) using command line. **Rstudio** directory contains the scripts that run in [Rstudio](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/4.-Transcriptomics/bin/Rstudio).
+There are scripts and data necessary to do transcriptomic analysis.
+Inside of this directory there are two directories. **Software** directory contains scripts that run in [terminal](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/4.-Transcriptomics/bin/Software) using command line. **Rstudio** directory contains the scripts that run in [Rstudio](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/4.-Transcriptomics/bin/Rstudio).
 
 :file_folder: **`/data`**
-Here are the product files of the sequencing and analysis of them (bam, sam, and fastqc.zip files).
+There are the producted files of the sequencing and analysis of them (bam, sam, and fastqc.zip files).
 
-:file_folder: **`/metadata`** Here are tables and data that complement the omics data. Such as name of samples, count per genes, name of genes, name of sequences, index, reference transcriptome, etc.
+:file_folder: **`/metadata`** There are tables and data that complement the omics data. Such as name of samples, count per genes, name of genes, name of sequences, index, reference transcriptome, etc.
 
 :file_folder: **`/outputs`** The figures from Rstudio are stored here.
 
