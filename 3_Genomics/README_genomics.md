@@ -2,7 +2,7 @@
 
 ## Pre-requirements
 
-Before starting the analysis here are the programs that need to be installed:
+Before to  start the analysis, here are the programs that need to be installed:
 
 ## SOFTWARE
 
@@ -99,14 +99,14 @@ Before starting the analysis here are the programs that need to be installed:
 ## GENOMICS content
 
 **`/bin`**
-Here you will find the scripts that are needed to perform the analyses. There is a folder for scripts that run in [Rstudio](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/1.-GENOMICS/bin/Rstudio) and another one for those that run in another program through the [terminal](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/1.-GENOMICS/bin/Software) and command line.
+There are you will find the scripts that are needed to perform the analyses. There is a folder for scripts that run in [Rstudio](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/1.-GENOMICS/bin/Rstudio) and another one for those that run in another program through the [terminal](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/1.-GENOMICS/bin/Software) and command line.
 
 **`/data`**
-Here are the product files of the sequencing and analysis of them (plink and vcf files).
+There are the product files of the sequencing and analysis of them (plink and vcf files).
 
-**`/metadata`** Here are tables and data that complement the omics data. Such as name of samples, coordinates, name of genes, name of sequences.
+**`/metadata`** There are tables and data that complement the omics data. Such as name of samples, coordinates, name of genes, name of sequences.
 
-**`/outputs`** Here are outs product of the analysis of the data that do not serve as input for another analysis(.gds file). In the same way, the figures from Rstudio are stored here.
+**`/outputs`** There are outs product of the analysis of the data that do not serve as input for another analysis(.gds file). In the same way, the figures from Rstudio are stored here.
 
 **`/README_genomics`** This is a README that describes the steps to perform the data analysis. It is organized numerically. It is explained that input is necessary and what outputs are obtained from each step.
 
