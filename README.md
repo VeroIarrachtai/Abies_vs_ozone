@@ -4,11 +4,11 @@ This repository contains the scripts, data, metadata, and results to perform the
 
 In these directories you will find some analysis to answer these project's particular aims:
 
-* To quantify the secondary metabolite relative abundance in the tolerant and the damaged trees during two ozone concentration periods. [Metabolomic analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2.-Metabolomics)
+* To quantify the secondary metabolite relative abundance in the tolerant and the damaged trees during two ozone concentration periods. [Metabolomic analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2_Metabolomics)
 
-* To identify the tolerance sacred fir's origins.  [Genomic analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics)
+* To identify the tolerance sacred fir's origins.  [Genomic analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3_Genomics)
 
-* To evaluate the tolerant and the damaged trees differential expression in the two ozone concentration periods. [Transcriptomic analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4.-Transcriptomics)
+* To evaluate the tolerant and the damaged trees differential expression in the two ozone concentration periods. [Transcriptomic analysis](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/4_Transcriptomics)
 
 
 ## GENERAL directory structure:
@@ -25,15 +25,15 @@ In these directories you will find some analysis to answer these project's parti
 
 **README.md**: There is a markdown file about this project. This file includes the repository's disposition.
 
-**1.-Sampling**: There is a directory with the coordinates and the samples' disposition in the omics analisys.
+**1_Sampling**: There is a directory with the coordinates and the samples' disposition in the omics analisys.
 
-**2.-Metabolomics**: There are some metabolite-generated analysis with a gas chromatograph spectrum mass (GC-SM). Data from the html files were loaded into the tables. Subsequently, the relative abundance was calculated. Finally, all the samples' values were compared using a barplot, ANOVA, and PCA analysis.
+**2_Metabolomics**: There are some metabolite-generated analysis with a gas chromatograph spectrum mass (GC-SM). Data from the html files were loaded into the tables. Subsequently, the relative abundance was calculated. Finally, all the samples' values were compared using a barplot, ANOVA, and PCA analysis.
 
-**3.-Genomics**: There are some genomic analysis from the GBS sequencing. **ipyRAD** was used to assemble *de novo*, **VCFTools** and **plink** were used to make more specific filters. The relationship was calculated without multiple SNPs in the same loci. The mantel test, PCA, and admixture were performed in order to identify samples' local origin.
+**3_Genomics**: There are some genomic analysis from the GBS sequencing. **ipyRAD** was used to assemble *de novo*, **VCFTools** and **plink** were used to make more specific filters. The relationship was calculated without multiple SNPs in the same loci. The mantel test, PCA, and admixture were performed in order to identify samples' local origin.
 
-**4.-Transcriptomics**: There are some transcriptomic analysis from RNAseq data. Samples were cut with **Trimmomatic** and they were mapped to a reference transcriptome with **BWA**. **Rstudio** allowed to evaluate differential expression between the samples with **edgeR** and **DESeq2**. Subsequently, a volcanoplot was performed to show overexpressed and underexpressed genes.
+**4_Transcriptomics**: There are some transcriptomic analysis from RNAseq data. Samples were cut with **Trimmomatic** and they were mapped to a reference transcriptome with **BWA**. **Rstudio** allowed to evaluate differential expression between the samples with **edgeR** and **DESeq2**. Subsequently, a volcanoplot was performed to show overexpressed and underexpressed genes.
 
-**5.-INFO_PROJECT**: There are some slide-shows, summaries, and final analysis.
+**5_INFO_PROJECT**: There are some slide-shows, summaries, and final analysis.
 
 # Principal analysis workflow:
 
@@ -45,7 +45,7 @@ In these directories you will find some analysis to answer these project's parti
 
 Check more information about this pipeline in [README_metabolomics](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/2_Metabolomics/README_metabolomics.md).
 
-To see a short summary about the final metabolomics analysis click [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5.-INFO_PROJECT/METABOLOMICS_ligth_analysis.md).
+To see a short summary about the final metabolomics analysis click [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5_INFO_PROJECT/METABOLOMICS_ligth_analysis.md).
 
 ## [GENOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics)
 
