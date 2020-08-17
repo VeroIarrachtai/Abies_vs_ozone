@@ -47,7 +47,7 @@ Check more information about this pipeline in [README_metabolomics](https://gith
 
 To see a short summary about the final metabolomics analysis click [here](https://github.com/VeroIarrachtai/Abies_vs_ozone/blob/master/5_INFO_PROJECT/METABOLOMICS_ligth_analysis.md).
 
-## [GENOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3.-Genomics)
+## [GENOMICS](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/3_Genomics)
 
 ### To identify the tolerance sacred fir's origins.
 
