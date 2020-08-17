@@ -21,7 +21,7 @@ Before starting the analysis here are the programs that need to be installed:
 
 ```
 +---- Abies_religiosa_vs_ozone/
-|	+--2.-METABOLOMICS/
+|	+--2_METABOLOMICS/
 |          +--bin/
 |               +--Rstudio/
 |                 +--1.1.-Make_df_allsamples_metabol.R
@@ -55,7 +55,7 @@ Before starting the analysis here are the programs that need to be installed:
 |          +--README_metabolomics.md
 ```
 
-## Content (2.-Metabolomics)
+## Content (2_Metabolomics)
 
 **`/bin`**
 
@@ -99,7 +99,7 @@ The .htm files were loaded into a table that included the data:
 
 ## 1.1.-Make data frame with all metabolites samples
 
-SCRIPT in 2.-Metabolomics/Rstudio/[1.1.-Make_df_allsamples_metabol.R](bin/Rstudio/1.1.-Make_df_allsamples_metabol.R)
+SCRIPT in 2_Metabolomics/Rstudio/[1_1_Make_df_allsamples_metabol.R](bin/Rstudio/1_1_Make_df_allsamples_metabol.R)
 
 ```
 **INPUT**:
@@ -137,7 +137,7 @@ The following script was used to calculate the relative concentration of metabol
 
 ## 2.1.-Calculate_relative_abs
 
-SCRIPT in 2.-METABOLOMICS/Rstudio/[2.1.-Calculate_relative_abs.R](bin/Rstudio/2.1.-Calculate_relative_abs.R)
+SCRIPT in 2_METABOLOMICS/Rstudio/[2_1_Calculate_relative_abs.R](bin/Rstudio/2_1_Calculate_relative_abs.R)
 
 **INPUT**:**metabolitos.csv/htm_df.txt**(metabolitos_Tesis_Vero.csv)
 
@@ -156,10 +156,10 @@ Do ANOVA analysis to compare effect between season, condition and year of exposu
 
 # 3.1.-Make ANOVA
 
-SCRIPT in 2.-METABOLOMICS/Rstudio/[3.1.-ANOVA.R](bin/Rstudio/3.1.-ANOVA.R)
+SCRIPT in 2_METABOLOMICS/Rstudio/[3_1_ANOVA.R](bin/Rstudio/3_1_ANOVA.R)
 
 * **OUTPUT: ANOVA_tables.png**
-![ANOVA](../5.-wonderful_images/ANOVA_IW.png)
+![ANOVA](../5_wonderful_images/ANOVA_IW.png)
 
 # 4.-Make barplots
 
@@ -174,11 +174,11 @@ Compare metabolites between season, condition and year of exposure
 
 # 4.1.-Make barplots
 
-SCRIPT in 2.-METABOLOMICS/Rstudio/[4.1.-Barplots](bin/Rstudio/4.1.-Barplots.R)
+SCRIPT in 2_METABOLOMICS/Rstudio/[4_1_Barplots](bin/Rstudio/4_1_Barplots.R)
 
 **OUT: barplot_images.png**
 
-![](outputs/4.1_barplot_images_SS.png)
+![](outputs/4_1_barplot_images_SS.png)
 ![](outputs/4.1_barplot_images_conti.png)
 
 # 5.-Make PCA
@@ -195,25 +195,25 @@ Compare metabolites between season, condition and year of exposure
 
 # 5.1.-Make PCA
 
-SCRIPT in 2.-METABOLOMICS/Rstudio/[5.1.-PCA](bin/Rstudio/5.1.-PCA.R)
+SCRIPT in 2_METABOLOMICS/Rstudio/[5_1_PCA](bin/Rstudio/5_1_PCA.R)
 
 **OUT: exp_table.csv, exp_table.txt, PCA_images.png****
 
-![](outputs/5.1_PCA_moderated_HvsD.png)
+![](outputs/5_1_PCA_moderated_HvsD.png)
 ![](outputs/5.1_PCA_conti_HvsD.png)
 
 # ANEXX 1
 
 GC-MS data were obtained in lists for each sample.
 
-![Lista metabolitos](../5.-wonderful_images/List-GC-MS.png)
+![Lista metabolitos](../5_wonderful_images/List-GC-MS.png)
 
 Each pk (peak), RT (retention time), Area% (percentage of area) CAS # (CAS number) and Qual (value) of all samples is recorded in an excel table.
 
 ```
  	Tablas_datos/Metabolites_GC-MS_ALL.xls
 ```
-![Lista metabolitos](../5.-wonderful_images/Tabla_GC-MS_ALL.png)
+![Lista metabolitos](../5_wonderful_images/Tabla_GC-MS_ALL.png)
 
 Subsequently, each metabolite present in the samples was ordered according to CAS #. The first CAS option was taken to order the metabolites.
 
@@ -221,14 +221,14 @@ Subsequently, each metabolite present in the samples was ordered according to CA
 ```
  	Tablas_datos/Metabolitos_orderCAS.xlsx
 ```
-![Lista metabolitos](../5.-wonderful_images/Tabla_orderCAS.png)
+![Lista metabolitos](../5_wonderful_images/Tabla_orderCAS.png)
 
 Once organized by CAS, the CAS number was converted to the ID of each metabolite according to the NSI page and the name Library / ID given by the team
 
 ```
  	Tablas_datos/Metabolitos_GC-MS_orderbyCAS.xlsx
 ```
-![Lista metabolitos](../5.-wonderful_images/Tabla_GC-MS_orderbyCAS.png)
+![Lista metabolitos](../5_wonderful_images/Tabla_GC-MS_orderbyCAS.png)
 
 Two Tables were generated: One with the metabolites present in at least half of the samples / plus their related metabolites and another with minor presences.
 
@@ -245,9 +245,10 @@ The final table is:
 ```
 Tablas_datos/Metabolitos-Tesis-Vero.xlsx
 ```
-![Lista metabolitos](../5.-wonderful_images/Tabla_final.png)
+![Lista metabolitos](../5_wonderful_images/Tabla_final.png)
 
 ###Contact
+
 ```
 Verónica Reyes Galindo
 veronica.rg.pb@gmail.com
