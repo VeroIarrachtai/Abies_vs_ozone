@@ -25,11 +25,11 @@ Before to start the genomic analysis you will need to install:
 +----- Abies_religiosa_vs_ozone/
 |	+--3_TRASNCRIPTOMICS/
 |		+--bin/
-|	   	    +--Rstudio/
+|	   	    +--R_scripts/
 |	   	       +--6_1_Countreads_makematrix.R
 |	   	       +--7_1_5HCvs5DC.R
 |	   	       +--8_1_Volcanoplot.R
-|	   	    +--Software/
+|	   	    +--shell_scripts/
 |	   	       +--1_1_FastQC.sh
 |	   	       +--2_1_Trimming.sh
 |	   	       +--3_1_index.sh
@@ -103,7 +103,7 @@ There are the producted files of the sequencing and analysis of them (bam, sam, 
 
 ## 1.1.-You have to get how often the loci have
 
-SCRIPT in 4_Transcriptomics/Software/[1_1_FastQC.sh](bin/Software/1_1_FastQC.sh)
+SCRIPT in 4_Transcriptomics/shell_scripts/[1_1_FastQC.sh](bin/shell_scripts/1_1_FastQC.sh)
 
 ```
 
@@ -123,7 +123,7 @@ SCRIPT in 4_Transcriptomics/Software/[1_1_FastQC.sh](bin/Software/1_1_FastQC.sh)
 
 ## 2.1.-
 
-SCRIPT in 4_Transcriptomics/Software/[2_1_Trimming.sh](bin/Software/2_1_Trimming.sh)
+SCRIPT in 4_Transcriptomics/shell_scripts/[2_1_Trimming.sh](bin/shell_scripts/2_1_Trimming.sh)
 
 ```
 #Do Trimmer  with Trimmomatic-0.36
@@ -145,7 +145,7 @@ java -jar ../../Programas/Trimmomatic/Trimmomatic_bin/Trimmomatic-0.36/trimmomat
 
 ## 3.1.- Do Index
 
-SCRIPT in 4_Transcriptomics/Software/[3_1_index.sh](bin/Software/3_1_index.sh)
+SCRIPT in 4_Transcriptomics/shell_scripts/[3_1_index.sh](bin/shell_scripts/3_1_index.sh)
 
 ```
 bwa index -p ../../metadata/INDEX/index_Areligiosa -a is ../../metadata/Reference_Transcriptome/GCAT_AB-RNA-1.0.16.fa
@@ -154,7 +154,7 @@ bwa index -p ../../metadata/INDEX/index_Areligiosa -a is ../../metadata/Referenc
 
 ## 3.2.- Mapeo en A. balsamea
 
-SCRIPT in 4_Transcriptomics/Software/[3_2_Alignment_AbP_paired_sw10_L50](bin/Software/3_2_Alignment_AbP_paired_sw10_L50.sh)
+SCRIPT in 4_Transcriptomics/shell_scripts/[3_2_Alignment_AbP_paired_sw10_L50](bin/shell_scripts/3_2_Alignment_AbP_paired_sw10_L50.sh)
 
 ```
 bwa mem ../../metadata/index_GCAT_AB-RNA-1.0.16/index_Areligiosa ../../data/TRIMMING/Trimm18s_sw10-28_ml50_28/Trimmer_DPVR1_S179_L007_R1_001_paired.fq.gz ../../data/TRIMMING/Trimm18s_sw10-28_ml50_28/Trimmer_DPVR1_S179_L007_R2_001_paired.fq.gz > ../../data/SAM/SC01_15_sw10L50_28.sam
@@ -172,14 +172,14 @@ bwa mem ../../metadata/index_GCAT_AB-RNA-1.0.16/index_Areligiosa ../../data/TRIM
 
 ## 4.1.-
 
-SCRIPT in 4_Transcriptomics/Software/[4_1_ConvertSamBam_sw10_L50](bin/Software/4_1_ConvertSamBam_sw10_L50.sh)
+SCRIPT in 4_Transcriptomics/shell_scripts/[4_1_ConvertSamBam_sw10_L50](bin/shell_scripts/4_1_ConvertSamBam_sw10_L50.sh)
 
 ```
 cd ../../data/sam
 
 for i in DC01_15_sw10L50_28 DC04_17_sw10L50_28 DS04_15_sw10L50_28 SC03_15_sw10L50_28 SS02_15_sw10L50_28 DC02_15_sw10L50_28 DC05_15_sw10L50_28 SC01_15_sw10L50_28 SC04_15_sw10L50_28 SS05_15_sw10L50_28 DC03_15_sw10L50_28 DS01_15_sw10L50_28 SC01_17_sw10L50_28 SC05_15_sw10L50_28 DC04_15_sw10L50_28 DS02_15_sw10L50_28 SC02_15_sw10L50_28 SS01_15_sw10L50_28; do samtools view -Sb ../../data/SAM/$i.sam > ../../data/BAM/$i.bam; done
 
-cd ../../bin/Software
+cd ../../bin/shell_scripts
 
 ```
 
@@ -196,7 +196,7 @@ cd ../../bin/Software
 
 ## 5.1.-
 
-SCRIPT in 4_Transcriptomics/Software/[5_1_Count_genes_bamfile](bin/Software/5_1_Count_genes_bamfile.sh)
+SCRIPT in 4_Transcriptomics/shell_scripts/[5_1_Count_genes_bamfile](bin/shell_scripts/5_1_Count_genes_bamfile.sh)
 
 ```
 cd ../../data/BAM
@@ -213,7 +213,7 @@ for i in DC01_15_sw10L50_28 DC04_17_sw10L50_28 DS04_15_sw10L50_28 SC03_15_sw10L5
 ## 5.2.-Statistics con BWA
 
 
-SCRIPT in 4_Transcriptomics/Software/[5_2_Statistics_map](bin/Software/5_2_Statistics_map.sh)
+SCRIPT in 4_Transcriptomics/shell_scripts/[5_2_Statistics_map](bin/shell_scripts/5_2_Statistics_map.sh)
 
 ```
 ./samtools flagstat ../../data/BAM/DC01_15_sw10L50_TR.bam > ../../metadata/Statistics_map/DC01_15_sw10L50_TR.txt
@@ -229,7 +229,7 @@ SCRIPT in 4_Transcriptomics/Software/[5_2_Statistics_map](bin/Software/5_2_Stati
 
 ## 6.1.- Table of transcript counts
 
-SCRIPT in 4_Transcriptomics/Rstudio/[6_1_Countreads_makematrix.R](bin/Rstudio/6_1_Countreads_makematrix.R)
+SCRIPT in 4_Transcriptomics/R_scripts/[6_1_Countreads_makematrix.R](bin/R_scripts/6_1_Countreads_makematrix.R)
 
 **OUT: allreadsgenes.txt**
 
@@ -245,7 +245,7 @@ SCRIPT in 4_Transcriptomics/Rstudio/[6_1_Countreads_makematrix.R](bin/Rstudio/6_
 
 ## 7.1.- DGE analysis
 
-SCRIPT in 4_Transcriptomics/Rstudio/[7_1_5HCvs5DC.R](bin/Rstudio/7_1_5HCvs5DC.R)
+SCRIPT in 4_Transcriptomics/R_scripts/[7_1_5HCvs5DC.R](bin/Rstudio/7_1_5HCvs5DC.R)
 
 **OUT: DESeq2.txt, EdgeR.txt**
 
@@ -262,7 +262,7 @@ SCRIPT in 4_Transcriptomics/Rstudio/[7_1_5HCvs5DC.R](bin/Rstudio/7_1_5HCvs5DC.R)
 
 ## 8.1.- Volcano plot
 
-SCRIPT in 4_Transcriptomics/Rstudio/[8_1_Volcanoplot.R](bin/Rstudio/8_1_Volcanoplot.R)
+SCRIPT in 4_Transcriptomics/R_scripts/[8_1_Volcanoplot.R](bin/R_scripts/8_1_Volcanoplot.R)
 
 **OUT: images.png**
 
