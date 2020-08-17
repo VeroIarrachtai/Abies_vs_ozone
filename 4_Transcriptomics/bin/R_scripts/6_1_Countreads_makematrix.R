@@ -2,7 +2,6 @@
 ## 15 Oct 2018
 ## Veronica Reyes
 
-setwd("../../metadata/genes_order/")
 
 #Load libraries
 
@@ -11,34 +10,28 @@ library(readr)
 
 # Load files
 
-list_file<-list.files(pattern =  "*.txt") %>% #This will read 1 file at a time with * being awilcard
-  lapply(read.table, stringsAsFactor = F) %>%
-  dplyr::bind_rows() 
-list_file
+HC01_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR1_S179_sw10L50.genesorder.txt", header= FALSE)
+HC02_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR2_S180_sw10L50.genesorder.txt", header= FALSE)
+HC03_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR3_S181_sw10L50.genesorder.txt", header= FALSE)
+HC04_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR4_S182_sw10L50.genesorder.txt", header= FALSE)
+HC05_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR5_S183_sw10L50.genesorder.txt", header= FALSE)
 
+HS01_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR11_S189_sw10L50.genesorder.txt", header= FALSE)
+HS02_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR12_S190_sw10L50.genesorder.txt", header= FALSE)
+HS05_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR13_S191_sw10L50.genesorder.txt", header= FALSE)
 
-DC01_15<-read.delim("../../data/TXT/GENES_ORDER/DC01_15_sw10L50.genesorder.txt", header= FALSE)
-DC02_15<-read.delim("../../data/TXT/GENES_ORDER/DC02_15_sw10L50.genesorder.txt", header= FALSE)
-DC03_15<-read.delim("../../data/TXT/GENES_ORDER/DC03_15_sw10L50.genesorder.txt", header= FALSE)
-DC04_15<-read.delim("../../data/TXT/GENES_ORDER/DC04_15_sw10L50.genesorder.txt", header= FALSE)
-DC05_15<-read.delim("../../data/TXT/GENES_ORDER/DC05_15_sw10L50.genesorder.txt", header= FALSE)
+DC01_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR6_S184_sw10L50.genesorder.txt", header= FALSE)
+DC02_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR7_S185_sw10L50.genesorder.txt", header= FALSE)
+DC03_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR8_S186_sw10L50.genesorder.txt", header= FALSE)
+DC04_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR9_S187_sw10L50.genesorder.txt", header= FALSE)
+DC05_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR10_S188_sw10L50.genesorder.txt", header= FALSE)
 
-DS01_15<-read.delim("../../data/TXT/GENES_ORDER/DS01_15_sw10L50.genesorder.txt", header= FALSE)
-DS02_15<-read.delim("../../data/TXT/GENES_ORDER/DS02_15_sw10L50.genesorder.txt", header= FALSE)
-DS04_15<-read.delim("../../data/TXT/GENES_ORDER/DS04_15_sw10L50.genesorder.txt", header= FALSE)
+DS01_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR14_S192_sw10L50.genesorder.txt", header= FALSE)
+DS02_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR15_S193_sw10L50.genesorder.txt", header= FALSE)
+DS04_15<-read.delim("../../data/TXT/GENES_ORDER/DPVR16_S194_sw10L50.genesorder.txt", header= FALSE)
 
-HC01_15<-read.delim("../../data/TXT/GENES_ORDER/SC01_15_sw10L50.genesorder.txt", header= FALSE)
-HC02_15<-read.delim("../../data/TXT/GENES_ORDER/SC02_15_sw10L50.genesorder.txt", header= FALSE)
-HC03_15<-read.delim("../../data/TXT/GENES_ORDER/SC03_15_sw10L50.genesorder.txt", header= FALSE)
-HC04_15<-read.delim("../../data/TXT/GENES_ORDER/SC04_15_sw10L50.genesorder.txt", header= FALSE)
-HC05_15<-read.delim("../../data/TXT/GENES_ORDER/SC05_15_sw10L50.genesorder.txt", header= FALSE)
-
-HS01_15<-read.delim("../../data/TXT/GENES_ORDER/SS01_15_sw10L50.genesorder.txt", header= FALSE)
-HS02_15<-read.delim("../../data/TXT/GENES_ORDER/SS02_15_sw10L50.genesorder.txt", header= FALSE)
-HS05_15<-read.delim("../../data/TXT/GENES_ORDER/SS05_15_sw10L50.genesorder.txt", header= FALSE)
-
-HC01_17<-read.delim("../../data/TXT/GENES_ORDER/SC01_17_sw10L50.genesorder.txt", header= FALSE)
-DC04_17<-read.delim("../../data/TXT/GENES_ORDER/DC04_17_sw10L50.genesorder.txt", header= FALSE)
+HC01_17<-read.delim("../../data/TXT/GENES_ORDER/DPVR17_S195_sw10L50.genesorder.txt", header= FALSE)
+DC04_17<-read.delim("../../data/TXT/GENES_ORDER/DPVR18_S196_sw10L50.genesorder.txt", header= FALSE)
 
 head(DC04_17)
 
@@ -150,5 +143,5 @@ nrow(all[all$TS_2 == 0,])
 nrow(all[all$TS_5 == 0,])
 
 # Export table to .txt format
-write.table(all, file="../../metadata/all_genes/allreadsgenes.txt", sep = "\t", eol = "\n", dec = ".",
+write.table(all, file="../../data/allreadsgenes.txt", sep = "\t", eol = "\n", dec = ".",
             row.names = TRUE, col.names = TRUE)
