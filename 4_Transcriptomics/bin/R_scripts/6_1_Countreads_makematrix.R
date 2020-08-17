@@ -17,28 +17,28 @@ list_file<-list.files(pattern =  "*.txt") %>% #This will read 1 file at a time w
 list_file
 
 
-DC01_15<-read.delim("../../metadata/genes_order/DC01_15_sw10L50.genesorder.txt", header= FALSE)
-DC02_15<-read.delim("../../metadata/genes_order/DC02_15_sw10L50.genesorder.txt", header= FALSE)
-DC03_15<-read.delim("../../metadata/genes_order/DC03_15_sw10L50.genesorder.txt", header= FALSE)
-DC04_15<-read.delim("../../metadata/genes_order/DC04_15_sw10L50.genesorder.txt", header= FALSE)
-DC05_15<-read.delim("../../metadata/genes_order/DC05_15_sw10L50.genesorder.txt", header= FALSE)
+DC01_15<-read.delim("../../data/TXT/GENES_ORDER/DC01_15_sw10L50.genesorder.txt", header= FALSE)
+DC02_15<-read.delim("../../data/TXT/GENES_ORDER/DC02_15_sw10L50.genesorder.txt", header= FALSE)
+DC03_15<-read.delim("../../data/TXT/GENES_ORDER/DC03_15_sw10L50.genesorder.txt", header= FALSE)
+DC04_15<-read.delim("../../data/TXT/GENES_ORDER/DC04_15_sw10L50.genesorder.txt", header= FALSE)
+DC05_15<-read.delim("../../data/TXT/GENES_ORDER/DC05_15_sw10L50.genesorder.txt", header= FALSE)
 
-DS01_15<-read.delim("../../metadata/genes_order/DS01_15_sw10L50.genesorder.txt", header= FALSE)
-DS02_15<-read.delim("../../metadata/genes_order/DS02_15_sw10L50.genesorder.txt", header= FALSE)
-DS04_15<-read.delim("../../metadata/genes_order/DS04_15_sw10L50.genesorder.txt", header= FALSE)
+DS01_15<-read.delim("../../data/TXT/GENES_ORDER/DS01_15_sw10L50.genesorder.txt", header= FALSE)
+DS02_15<-read.delim("../../data/TXT/GENES_ORDER/DS02_15_sw10L50.genesorder.txt", header= FALSE)
+DS04_15<-read.delim("../../data/TXT/GENES_ORDER/DS04_15_sw10L50.genesorder.txt", header= FALSE)
 
-HC01_15<-read.delim("../../metadata/genes_order/SC01_15_sw10L50.genesorder.txt", header= FALSE)
-HC02_15<-read.delim("../../metadata/genes_order/SC02_15_sw10L50.genesorder.txt", header= FALSE)
-HC03_15<-read.delim("../../metadata/genes_order/SC03_15_sw10L50.genesorder.txt", header= FALSE)
-HC04_15<-read.delim("../../metadata/genes_order/SC04_15_sw10L50.genesorder.txt", header= FALSE)
-HC05_15<-read.delim("../../metadata/genes_order/SC05_15_sw10L50.genesorder.txt", header= FALSE)
+HC01_15<-read.delim("../../data/TXT/GENES_ORDER/SC01_15_sw10L50.genesorder.txt", header= FALSE)
+HC02_15<-read.delim("../../data/TXT/GENES_ORDER/SC02_15_sw10L50.genesorder.txt", header= FALSE)
+HC03_15<-read.delim("../../data/TXT/GENES_ORDER/SC03_15_sw10L50.genesorder.txt", header= FALSE)
+HC04_15<-read.delim("../../data/TXT/GENES_ORDER/SC04_15_sw10L50.genesorder.txt", header= FALSE)
+HC05_15<-read.delim("../../data/TXT/GENES_ORDER/SC05_15_sw10L50.genesorder.txt", header= FALSE)
 
-HS01_15<-read.delim("../../metadata/genes_order/SS01_15_sw10L50.genesorder.txt", header= FALSE)
-HS02_15<-read.delim("../../metadata/genes_order/SS02_15_sw10L50.genesorder.txt", header= FALSE)
-HS05_15<-read.delim("../../metadata/genes_order/SS05_15_sw10L50.genesorder.txt", header= FALSE)
+HS01_15<-read.delim("../../data/TXT/GENES_ORDER/SS01_15_sw10L50.genesorder.txt", header= FALSE)
+HS02_15<-read.delim("../../data/TXT/GENES_ORDER/SS02_15_sw10L50.genesorder.txt", header= FALSE)
+HS05_15<-read.delim("../../data/TXT/GENES_ORDER/SS05_15_sw10L50.genesorder.txt", header= FALSE)
 
-HC01_17<-read.delim("../../metadata/genes_order/SC01_17_sw10L50.genesorder.txt", header= FALSE)
-DC04_17<-read.delim("../../metadata/genes_order/DC04_17_sw10L50.genesorder.txt", header= FALSE)
+HC01_17<-read.delim("../../data/TXT/GENES_ORDER/SC01_17_sw10L50.genesorder.txt", header= FALSE)
+DC04_17<-read.delim("../../data/TXT/GENES_ORDER/DC04_17_sw10L50.genesorder.txt", header= FALSE)
 
 head(DC04_17)
 
