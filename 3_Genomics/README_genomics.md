@@ -33,25 +33,25 @@ Before to  start the analysis, here are the programs that need to be installed:
 ## GENOMICS directory structure:
 
 ```
-+--- Abies_religiosa_vs_ozone/
-|+--1.-GENOMICS/
++--- Abies_vs_ozone/
+|+--1_GENOMICS/
 |   +--bin/
-|	   	 +--Rstudio/
-|	   	       +--3.3_Without_SNPs_in_same_loci.R
-|	   	       +--4.2_Relatedness.R
-|	   	       +--5.1_Mantel_test.R
-|	   	       +--6.1_PCA.R
-|	   	       +--7.3_Admixture.R
-|	   	       +--8.2_Calculate_He.R
-|	   	 +--Software
-|	   	       +--1.1_Run_relaxed_assembly.sh
-|	   	       +--2.3_Samples_missdata_maf.sh
-|	   	       +--3.1_Calculate_frequences.sh
-|	   	       +--3.2_ConvertFiles_vcf_to_plink.sh
-|	   	       +--3.4_Extract_positions_HM.sh
-|	   	       +--4.1_Calculate_relatedness.sh
-|	   	       +--7.1_Calculate_CV_Admixture.sh
-|	   	       +--8.1_Calculate_Heterozigozity.sh
+|	   	 +--R_scripts/
+|	   	       +--3_3_Without_SNPs_in_same_loci.R
+|	   	       +--4_2_Relatedness.R
+|	   	       +--5_1_Mantel_test.R
+|	   	       +--6_1_PCA.R
+|	   	       +--7_3_Admixture.R
+|	   	       +--8_2_Calculate_He.R
+|	   	 +--shell_scripts
+|	   	       +--1_1_Run_relaxed_assembly.sh
+|	   	       +--2_3_Samples_missdata_maf.sh
+|	   	       +--3_1_Calculate_frequences.sh
+|	   	       +--3_2_ConvertFiles_vcf_to_plink.sh
+|	   	       +--3_4_Extract_positions_HM.sh
+|	   	       +--4_1_Calculate_relatedness.sh
+|	   	       +--7_1_Calculate_CV_Admixture.sh
+|	   	       +--8_1_Calculate_Heterozigozity.sh
 |   +--data/
 |	   	 +--relatedness/
 |	   	       +--relsnp_snp_withoutDupLoci_88ind_maxmiss0.9_maf0.05.bed
@@ -88,18 +88,18 @@ Before to  start the analysis, here are the programs that need to be installed:
 |	   	 +--samples_het_relat.txt
 |   +--outputs/
 |	   	 +--files_gds.gds
-|	   	 +--4.2_Relatedness.png
-|	   	 +--5.1_Mantel_test_NON_Linear.png
-|	   	 +--5.1_Mantel_test_Linear.png
-|	   	 +--6.1_PCA.png
-|	   	 +--7.3_Admixture.png
-|	   	 +--7.3_Admixture_2.png
+|	   	 +--4_2_Relatedness.png
+|	   	 +--5_1_Mantel_test_NON_Linear.png
+|	   	 +--5_1_Mantel_test_Linear.png
+|	   	 +--6_1_PCA.png
+|	   	 +--7_3_Admixture.png
+|	   	 +--7_3_Admixture_2.png
 |   +--README_genomics.md
 ```
 ## GENOMICS content
 
 **`/bin`**
-There are you will find the scripts that are needed to perform the analyses. There is a folder for scripts that run in [Rstudio](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/1.-GENOMICS/bin/Rstudio) and another one for those that run in another program through the [terminal](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/1.-GENOMICS/bin/Software) and command line.
+There are you will find the scripts that are needed to perform the analyses. There is a folder for scripts that run in [Rstudio](https://github.com/VeroIarrachtai/Abies_religiosa_vs_ozone/tree/master/1.-GENOMICS/bin/Rstudio) and another one for those that run in another program through the [terminal](https://github.com/VeroIarrachtai/Abies_vs_ozone/tree/master/1.-GENOMICS/bin/shell_scripts) and command line.
 
 **`/data`**
 There are the product files of the sequencing and analysis of them (plink and vcf files).
@@ -127,7 +127,7 @@ You will need [ipyrad](https://ipyrad.readthedocs.io/en/latest/)
 ```
 
 ## 1.1.-Run relaxed assembly with ipyrad
-SCRIPT in 1.-GENOMICS/Software/[1.1_Run_relaxed_assembly.sh](bin/Software/1.1_Run_relaxed_assembly.sh)
+SCRIPT in 1_GENOMICS/shell_scripts/[1_1_Run_relaxed_assembly.sh](bin/shell_scripts/1_1_Run_relaxed_assembly.sh)
 
 ```
 ipyrad -p ../data/TMVB_5SNPrad.vcf -s 1234567 -f
@@ -182,7 +182,7 @@ You will need [vcfTools](https://vcftools.github.io/man_latest.html)
 ```
 
 ## 2.1.-Selected samples, missing data and maf. Only 89 *Abies religiosa* samples with missing data max 10% and maf 0.05
-SCRIPT in 1.-GENOMICS/Software/[2.1_Samples_missdata_maf.sh](bin/Software/2.1_Samples_missdata_maf.sh)
+SCRIPT in 1_GENOMICS/shell_scripts/[2_1_Samples_missdata_maf.sh](bin/shell_scripts/2_1_Samples_missdata_maf.sh)
 
 ```
 vcftools --vcf ../data/TMVB_5SNPradlocus.vcf --keep ../metadata/89_ind.txt --max-missing 0.9 --maf 0.05 --recode --out ../data/89ind_maxmiss0.9_maf0.05
@@ -215,7 +215,7 @@ You will need [vcfTools](https://vcftools.github.io/man_latest.html), [PLINK](ht
 
 ## 3.1.-First you have to get how often the loci have
 
-SCRIPT in 1.-GENOMICS/Software/[3.1_Calculate_frequences.sh](bin/Software/3.1_Calculate_frequences.sh)
+SCRIPT in 1_GENOMICS/shell_scripts/[3_1_Calculate_frequences.sh](bin/shell_scripts/3_1_Calculate_frequences.sh)
 
 To rule out SNPs from the same locus we need to calculate the frequencies of each SNP. We use the flag --freq. This command throws us the data in a file that we can read as .txt in the R terminal
 
@@ -237,7 +237,7 @@ locus_13:8
 
 To discard SNPs from the same locus we need to transform the .vcf file to .bam / .bim / .fam
 
-SCRIPT in 1.-GENOMICS/Software/[3.2_ConvertFiles_vcf_to_plink.sh](bin/Software/3.2_ConvertFiles_vcf_to_plink.sh)
+SCRIPT in 1_GENOMICS/shell_scripts/[3_2_ConvertFiles_vcf_to_plink.sh](bin/shell_scripts/3_2_ConvertFiles_vcf_to_plink.sh)
 
 ```
 vcftools --vcf ../data/89ind_maxmiss0.9_maf0.05.recode.vcf --plink --out ../data/89ind_maxmiss0.9_maf0.05
@@ -249,7 +249,7 @@ vcftools --vcf ../data/89ind_maxmiss0.9_maf0.05.recode.vcf --plink --out ../data
 
 With this script, locus with more than one SNP is discarded. The resulting .txt file contains the positions of SNPs that we want to keep in the following files.
 
-SCRIPT in 1.-GENOMICS/Rstudio/[3.3_Without_SNPs_in_same_loci.R](bin/Rstudio/3.3_Without_SNPs_in_same_loci.R)
+SCRIPT in 1_GENOMICS/R_scripts/[3_3_Without_SNPs_in_same_loci.R](bin/R_scripts/3_3_Without_SNPs_in_same_loci.R)
 
 **OUT: positions_s88_Ar0.9.txt**
 
@@ -257,7 +257,7 @@ SCRIPT in 1.-GENOMICS/Rstudio/[3.3_Without_SNPs_in_same_loci.R](bin/Rstudio/3.3_
 
 The .txt file product of step 3.3 is required to form a new .vcf file without loci with more than one SNP.
 
-SCRIPT in 1.-GENOMICS/Software/[3.4_Extract_positions_HM.sh](bin/Software/3.4_Extract_positions_HM.sh)
+SCRIPT in 1_GENOMICS/shell_scripts/[3.4_Extract_positions_HM.sh](bin/shell_scripts/3_4_Extract_positions_HM.sh)
 ```
 ./plink --file ../data/89ind_maxmiss0.9_maf0.05 --extract ../metadata/positions_s89_Ar0.9.txt  --make-bed --out ../data/snp_withoutDupLoci_89s_maxmiss0.9_maf0.05
 ```
@@ -285,7 +285,7 @@ You will need [PLINK](https://www.cog-genomics.org/plink2/),[R](https://cran.r-p
 
 ## 4.1.-The resulting files are converted to .plink and .vcf format, using the following commands:
 
-SCRIPT in 1.-GENOMICS/Software/[4.1_Calculate_relatedness.sh](bin/Software/4.1_Calculate_relatedness.sh)
+SCRIPT in 1_GENOMICS/shell_scripts/[4_1_Calculate_relatedness.sh](bin/shell_scripts/4_1_Calculate_relatedness.sh)
 
 ```
 ./plink --bfile ../data/snp_withoutDupLoci_without_duplicates89s_maxmiss0.9_maf0.05 --make-rel square --make-bed --out ../data/relsnp_withoutDupLoci_without_duplicates89s_maxmiss0.9_maf0.05
@@ -305,7 +305,7 @@ Example:
 ArDlD5	ArDlD5	0	0	0	-9
 SantaRosaXochiac	ArDlD5	0	0	0	-9
 ```
-SCRIPT in 1.-GENOMICS/Rstudio/[4.2_Relatedness.R](bin/Rstudio/4.2_Relatedness.R)
+SCRIPT in 1_GENOMICS/R_scripts/[4_2_Relatedness.R](bin/R_scripts/4.2_Relatedness.R)
 
 
 
@@ -334,11 +334,11 @@ You will need [R](https://cran.r-project.org) and [Rstudio (optional)](https://r
 
 ## 5.1.-Correlation between genetic distance and geographical distance
 
-SCRIPT in 1.-GENOMICS/Rstudio/[5.1_Mantel_test.R](bin/Rstudio/5.1_Mantel_test.R)
+SCRIPT in 1_GENOMICS/R_scripts/[5_1_Mantel_test.R](bin/R_scripts/5_1_Mantel_test.R)
 
 **OUT: Mantel_test_images**
 
-![](outputs/5.1_Mantel_test_Linear.png)
+![](outputs/5_1_Mantel_test_Linear.png)
 
 
 
@@ -357,11 +357,11 @@ You will need [R](https://cran.r-project.org) and [Rstudio (optional)](https://r
   * **PCA_images**
 
 ## 6.1.-Plot PCA
-SCRIPT in 1.-GENOMICS/Rstudio/[6.1_PCA.R](bin/Rstudio/6.1_PCA.R)
+SCRIPT in 1_GENOMICS/R_scripts/[6_1_PCA.R](bin/R_scripts/6_1_PCA.R)
 
 **OUT: PCA_images**
 
-![](outputs/6.1_PCA.png)
+![](outputs/6_1_PCA.png)
 
 # 7.0.-Genetic structure of populations with admixture
 
@@ -386,7 +386,7 @@ You will need [admixture](http://software.genetics.ucla.edu/admixture/), [R](htt
 
 ## 7.1.-Run admixture
 
-SCRIPT in 1.-GENOMICS/Software/[7.1_Calculate_CV_Admixture.sh](bin/Software/7.1_Calculate_CV_Admixture.sh)
+SCRIPT in 1_GENOMICS/shell_scripts/[7_1_Calculate_CV_Admixture.sh](bin/shell_scripts/7_1_Calculate_CV_Admixture.sh)
 ```
 for K in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20;
 do ./admixture --cv=20 ../data/snp_withoutDupLoci_88s_maxmiss0.9_maf0.05.bed $K | tee log${K}.out; done
@@ -406,17 +406,19 @@ ArDlD5	ArDlD5	0	0	0	-9
 SantaRosaXochiac	ArDlD5	0	0	0	-9
 ```
 ## 7.3.-Admixture Plot
-SCRIPT in 1.-GENOMICS/Rstudio/[7.3_Admixture.R](bin/Rstudio/7.3_Admixture.R)
+SCRIPT in 1_GENOMICS/R_scripts/[7_3_Admixture.R](bin/R_scripts/7_3_Admixture.R)
 
 ```
 **OUT: cross_validation_images, Admixture_images**
 ```
 
-![](outputs/7.3_Admixture.png)
+![](outputs/7_3_Admixture.png)
 
-![](outputs/7.3_Cross_val.png)
+![](outputs/7_3_Cross_val.png)
 
 ```
+# Contact
+
 Verónica Reyes Galindo
 veronica.rg.pb@gmail.com
 ```
