@@ -52,7 +52,7 @@ Before starting the analysis here are the programs that need to be installed:
 |              +--4.1_barplot_images_SS.png
 |              +--5.1_PCA_conti_HvsD.png
 |              +--5.1_PCA_moderated_HvsD.png
-|          +--README_metabolomics.md
+|          +--README.md
 ```
 
 ## Content (2_Metabolomics)
@@ -73,7 +73,7 @@ Here are tables and data that complement the omics data. Such as name of samples
 
 The figures from Rstudio are stored here.
 
-**`/README_metabolomics`**
+**`/README.md`**
 
 This is a README that describes the steps to perform the data analysis. It is organized numerically. It is explained that input is necessary and what outputs are obtained from each step.
 

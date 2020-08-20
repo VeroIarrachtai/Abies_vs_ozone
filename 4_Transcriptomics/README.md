@@ -73,7 +73,7 @@ Before to start the genomic analysis you will need to install:
 |	   	    +--RNA_sacred_fir.csv
 |	   	    +--laneBarcode.html
 |		+--outputs/
-|		+--README_transcriptomics.md
+|		+--README.md
 |		+--Transcriptomic_methods.png
 ```
 
@@ -90,7 +90,7 @@ There are the producted files of the sequencing and analysis of them (bam, sam, 
 
 :file_folder: **`/outputs`** The figures from Rstudio are stored here.
 
-:page_facing_up: **`/README_transcriptomics`** This is a README that describes the steps to perform the data analysis. It is organized numerically. It is explained that input is necessary and what outputs are obtained from each step.
+:page_facing_up: **`/README.md`** This is a README that describes the steps to perform the data analysis. It is organized numerically. It is explained that input is necessary and what outputs are obtained from each step.
 
 # 1.0.- Evaluate sequences with fastqc
 

@@ -94,7 +94,7 @@ Before to  start the analysis, here are the programs that need to be installed:
 |	   	 +--6_1_PCA.png
 |	   	 +--7_3_Admixture.png
 |	   	 +--7_3_Admixture_2.png
-|   +--README_genomics.md
+|   +--README.md
 ```
 ## GENOMICS content
 
@@ -108,7 +108,7 @@ There are the product files of the sequencing and analysis of them (plink and vc
 
 **`/outputs`** There are outs product of the analysis of the data that do not serve as input for another analysis(.gds file). In the same way, the figures from Rstudio are stored here.
 
-**`/README_genomics`** This is a README that describes the steps to perform the data analysis. It is organized numerically. It is explained that input is necessary and what outputs are obtained from each step.
+**`/README.md`** This is a README that describes the steps to perform the data analysis. It is organized numerically. It is explained that input is necessary and what outputs are obtained from each step.
 
 
 # 1.0.-RUN de novo ASSEMBLY
