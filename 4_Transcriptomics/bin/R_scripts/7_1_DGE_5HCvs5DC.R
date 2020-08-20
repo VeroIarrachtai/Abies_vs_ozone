@@ -9,7 +9,7 @@ library(ggbiplot)
 library (ggplot2)
 
 # Load count table 
-alldata <-read.delim("../../metadata/all_genes/allreadsgenes.txt")
+alldata <-read.delim("../../data/allreadsgenes.txt")
 
 # Convert dataframe to data matrix
 x<-alldata
