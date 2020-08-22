@@ -1,4 +1,6 @@
-# Verónica Reyes, febrero 2020
+# Verónica Reyes 
+# febrero 2020
+# DE
 
 # Load libraries
 library(limma)
