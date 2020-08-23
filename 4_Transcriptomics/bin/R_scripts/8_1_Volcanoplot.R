@@ -1,4 +1,7 @@
-
+# Make Volcano plot
+# Verónica Reyes 
+# agosto 2020
+ 
 library(VennDiagram)
 library(limma)
 library(edgeR)
