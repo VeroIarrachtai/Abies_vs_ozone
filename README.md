@@ -31,7 +31,7 @@ In these directories you will find some analysis to answer these project's parti
 
 **3_Genomics**: There are some genomic analysis from the GBS sequencing. **ipyRAD** was used to assemble *de novo*, **VCFTools** and **plink** were used to make more specific filters. The relationship was calculated without multiple SNPs in the same loci. The mantel test, PCA, and admixture were performed in order to identify samples' local origin.
 
-**4_Transcriptomics**: There are some transcriptomic analysis from RNAseq data. Samples were cut with **Trimmomatic** and they were mapped to a reference transcriptome with **BWA**. **Rstudio** allowed to evaluate differential expression between the samples with **edgeR** and **DESeq2**. Subsequently, a volcanoplot was performed to show overexpressed and underexpressed genes.
+**4_Transcriptomics**: transcriptomic analysis from RNAseq data. Samples were cut with **Trimmomatic** and they were mapped to a reference transcriptome with **BWA**. **R** allowed to evaluate differential expression between the samples with the packages **edgeR** and **DESeq2**. Subsequently, a volcanoplot was performed to show overexpressed and underexpressed genes.
 
 **5_INFO_PROJECT**: There are some slide-shows, summaries, and final analysis.
 
