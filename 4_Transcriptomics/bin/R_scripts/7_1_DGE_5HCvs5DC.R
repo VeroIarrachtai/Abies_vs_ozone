@@ -35,8 +35,8 @@ targets <- data.frame(treatment,label,samples)
 rownames(targets) <- label
 targets
 
-# Filtering genes 
-table(rowSums(DCvsTC)==0)
+# Filtering genes
+table(rowSums(DCvsTC)==0) #Descart genes with zero in all samples T & D
 suma <- rowSums(DCvsTC)
 filtconteos <- DCvsTC[suma != 0,] 
 dim(filtconteos)
@@ -49,7 +49,7 @@ d <- DGEList(counts = filtconteos[,1:10], group = targets$treatment) ## Normaliz
 colnames(d) <- targets$label
 
 ## Normalization
-d <- calcNormFactors(d)
+d <- calcNormFactors(d) 
 plotMDS(d, main="plotMDS DCvsTC")
 
 ## Dispersors stimation
@@ -114,7 +114,7 @@ plotMA(res, main="MA-plot DESeq2", ylim=c(-5,5))
 
 ### Sort the genes according to the attached p-value they have obtained
 # edgeR
-topSig <- top[top$table$FDR < 0.0, ]
+topSig <- top[top$table$FDR < 0.01, ]
 dim(topSig)
 head(topSig)
 genesDEedgeR <- rownames(topSig)
@@ -122,7 +122,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../metadata/DGE/EdgeR_HvsD170ppb_FDR_0.01.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_HvsD170ppb_FDR_0.01.txt", sep="\t", row.names=T)
 
 # DESeq2
 # Sort by p-valores
