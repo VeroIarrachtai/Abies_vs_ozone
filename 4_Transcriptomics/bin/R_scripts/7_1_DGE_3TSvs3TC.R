@@ -8,7 +8,7 @@ library(ggbiplot)
 library (ggplot2)
 
 # Load data. Count table 
-alldata <-read.delim("../../metadata/all_genes/allreadsgenes.txt")
+alldata <-read.delim("../../data/allreadsgenes.txt")
 alldata <- as.data.frame(alldata)
 
 # Convert dataframe to data matrix
@@ -21,28 +21,28 @@ alldata<-as.matrix(x)
 ##################################################################################################################
 ##################################################################################################################
 # Select subset data(descart data)
-HSvsHC<- subset(alldata, select = c(HS_1, HS_2, HS_5,
-                                     HC_1, HC_2, HC_4))
+TSvsTC<- subset(alldata, select = c(TS_1, TS_2, TS_5,
+                                     TC_1, TC_2, TC_4))
 
 
 ############################################
 # Add characteristics 
 ############################################
-tratamiento <- c("HS","HS","HS",
-                 "HC","HC","HC")
-label <- c("HS_1", "HS_2", "HS_5",
-           "HC_1", "HC_2", "HC_4")
-samples <-c("HS1", "HS2", "HS5",
-            "HC1", "HC2", "HC4")
+tratamiento <- c("TS","TS","TS",
+                 "TC","TC","TC")
+label <- c("TS_1", "TS_2", "TS_5",
+           "TC_1", "TC_2", "TC_4")
+samples <-c("TS1", "TS2", "TS5",
+            "TC1", "TC2", "TC4")
 targets <- data.frame(tratamiento,label,samples)
 rownames(targets) <- label
 
 targets
 
 ### Filtering genes 
-table(rowSums(HSvsHC)==0)
-suma <- rowSums(HSvsHC)
-filtconteos <- HSvsHC[suma != 0,] 
+table(rowSums(TSvsTC)==0)
+suma <- rowSums(TSvsTC)
+filtconteos <- TSvsTC[suma != 0,] 
 dim(filtconteos)
 head(filtconteos)
 
@@ -56,17 +56,17 @@ colnames(d) <- targets$label
 
 ## Normalization
 d <- calcNormFactors(d)
-plotMDS(d, main="plotMDS HSvsHC")
+plotMDS(d, main="plotMDS TSvsTC")
 
 ## Dispersors stimation
 d <- estimateCommonDisp(d,verbose=TRUE)
 d <- estimateTagwiseDisp(d)
-plotBCV(d, main="plotBCV HSvsHC")
+plotBCV(d, main="plotBCV TSvsTC")
 
 ## Test
-et <- exactTest(d,pair=c("HS","HC"))
+et <- exactTest(d,pair=c("TS","TC"))
 top<- topTags(et, n= Inf)
-hist(top$table$FDR, breaks = 100, main = "Hist FDR HSvsHC")
+hist(top$table$FDR, breaks = 100, main = "Hist FDR TSvsTC")
 abline(v=0.05, col="red",lwd=3)
 
 ##################################################################################################################
@@ -155,7 +155,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../metadata/DGE/EdgeR_HSvsHC_FDR_0.05.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_TSvsTC_FDR_0.05.txt", sep="\t", row.names=T)
 
 ########
 # DESeq2
@@ -174,7 +174,7 @@ head(resSig2)
 resSig2_export<-resSig2
 resSig2_export$ID<-resSig2_export
 head(resSig2_export)
-write.table(resSig2_export, "../../metadata/DGE/DESeq2_HSvsHC_FDR_0.05.txt", sep="\t", row.names=T)
+write.table(resSig2_export, "../../data/DGE/DESeq2_TSvsTC_FDR_0.05.txt", sep="\t", row.names=T)
 
 ##################################################################
 ### Sort the genes according to the attached p-value they have obtained
@@ -190,7 +190,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../metadata/DGE/EdgeR_HSvsHC_FDR_5.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_TSvsTC_FDR_5.txt", sep="\t", row.names=T)
 
 ########
 # DESeq2
@@ -204,7 +204,7 @@ head(resSig2)
 resSig2_export<-resSig2
 resSig2_export$ID<-resSig2_export
 head(resSig2_export)
-write.table(resSig2_export, "../../metadata/DGE/DESeq2_HSvsHC_FDR_5.txt", sep="\t", row.names=T)
+write.table(resSig2_export, "../../data/DGE/DESeq2_TSvsTC_FDR_5.txt", sep="\t", row.names=T)
 
 
 ###################################################
