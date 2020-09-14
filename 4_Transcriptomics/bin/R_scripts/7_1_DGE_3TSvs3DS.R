@@ -8,7 +8,7 @@ library(ggbiplot)
 library (ggplot2)
 
 # Load data. Count table 
-alldata <-read.delim("../../metadata/all_genes/allreadsgenes.txt")
+alldata <-read.delim("../../data/allreadsgenes.txt")
 alldata <- as.data.frame(alldata)
 
 # Convert dataframe to data matrix
@@ -21,28 +21,28 @@ alldata<-as.matrix(x)
 ##################################################################################################################
 ##################################################################################################################
 # Select subset data(descart data)
-DSvsHS<- subset(alldata, select = c(DS_1, DS_2, DS_4,
-                                     HS_1, HS_2, HS_5))
+DSvsTS<- subset(alldata, select = c(DS_1, DS_2, DS_4,
+                                     TS_1, TS_2, TS_5))
 
 
 ############################################
 # Add characteristics 
 ############################################
 tratamiento <- c("DS","DS","DS",
-                 "HS","HS","HS")
+                 "TS","TS","TS")
 label <- c("DS_1", "DS_2","DS_4",
-          "HS_1","HS_2","HS_5")
+          "TS_1","TS_2","TS_5")
 samples <-c("DS1", "DS2","DS4",
-            "HS1","HS2","HS5")
+            "TS1","TS2","TS5")
 targets <- data.frame(tratamiento,label,samples)
 rownames(targets) <- label
 
 targets
 
 ### Filtering genes 
-table(rowSums(DSvsHS)==0)
-suma <- rowSums(DSvsHS)
-filtconteos <- DSvsHS[suma != 0,] 
+table(rowSums(DSvsTS)==0)
+suma <- rowSums(DSvsTS)
+filtconteos <- DSvsTS[suma != 0,] 
 dim(filtconteos)
 head(filtconteos)
 
@@ -64,7 +64,7 @@ d <- estimateTagwiseDisp(d)
 plotBCV(d, main="plotBCV DCvsHC")
 
 ## Test
-et <- exactTest(d,pair=c("HS","DS"))
+et <- exactTest(d,pair=c("TS","DS"))
 top<- topTags(et, n= Inf)
 hist(top$table$FDR, breaks = 100, main = "Hist FDR DSvsHS")
 abline(v=0.05, col="red",lwd=3)
@@ -155,7 +155,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../metadata/DGE/EdgeR_DSvsHS_FDR_0.05.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_DSvsTS_FDR_0.05.txt", sep="\t", row.names=T)
 
 ########
 # DESeq2
@@ -174,7 +174,7 @@ head(resSig2)
 resSig2_export<-resSig2
 resSig2_export$ID<-resSig2_export
 head(resSig2_export)
-write.table(resSig2_export, "../../metadata/DGE/DESeq2_DSvsHS_FDR_0.05.txt", sep="\t", row.names=T)
+write.table(resSig2_export, "../../data/DGE/DESeq2_DSvsTS_FDR_0.05.txt", sep="\t", row.names=T)
 
 ##################################################################
 ### Sort the genes according to the attached p-value they have obtained
@@ -190,7 +190,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../metadata/DGE/EdgeR_DSvsHS_FDR_5.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_DSvsTS_FDR_5.txt", sep="\t", row.names=T)
 
 ########
 # DESeq2
@@ -204,7 +204,7 @@ head(resSig2)
 resSig2_export<-resSig2
 resSig2_export$ID<-resSig2_export
 head(resSig2_export)
-write.table(resSig2_export, "../../metadata/DGE/DESeq2_DSvsHS_FDR_5.txt", sep="\t", row.names=T)
+write.table(resSig2_export, "../../data/DGE/DESeq2_DSvsTS_FDR_5.txt", sep="\t", row.names=T)
 
 
 ###################################################

@@ -3,7 +3,7 @@ library("DESeq2")
 
 
 # Load data
-alldata<-read.delim("../../allreadsgenes.txt")
+alldata<-read.delim("../../data/allreadsgenes.txt")
 alldata <- as.data.frame(alldata)
 head (alldata)
 
@@ -18,28 +18,28 @@ alldata<-as.matrix(x)
 ##################################################################################################################
 # Select subset data(descart data)
 DCvsHC<- subset(alldata, select = -c(DS_1, DS_2, DS_4,
-                                     HS_1, HS_2, HS_5,
-                                     HC17, DC47))
+                                     TS_1, TS_2, TS_5,
+                                     TC17, DC47))
 
 
 ############################################
 # Add characteristics 
 ############################################
 tratamiento <- c("DC","DC","DC","DC","DC",
-                 "HC","HC","HC","HC","HC")
+                 "TC","TC","TC","TC","TC")
 label<- c("DC_1", "DC_2","DC_3","DC_4","DC_5",
-          "HC_1","HC_2","HC_3","HC_4","HC_5")
+          "TC_1","TC_2","TC_3","TC_4","TC_5")
 samples<-c("DC1", "DC2","DC3","DC4","DC5",
-           "HC1","HC2","HC3","HC4","HC5")
+           "TC1","TC2","TC3","TC4","TC5")
 targets<- data.frame(tratamiento,label,samples)
 rownames(targets)<- label
 
 targets
 
 ### Filtering genes 
-table(rowSums(DCvsHC)==0)
-suma <- rowSums(DCvsHC)
-filtconteos <- DCvsHC[suma != 0,] 
+table(rowSums(DCvsTC)==0)
+suma <- rowSums(DCvsTC)
+filtconteos <- DCvsTC[suma != 0,] 
 dim(filtconteos)
 head(filtconteos)
 # DESeq2

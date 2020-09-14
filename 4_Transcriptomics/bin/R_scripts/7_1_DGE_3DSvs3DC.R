@@ -10,7 +10,7 @@ library(ggbiplot)
 library (ggplot2)
 
 # Load data. Count table 
-alldata <-read.delim("../../metadata/all_genes/allreadsgenes.txt")
+alldata <-read.delim("../../data/allreadsgenes.txt")
 alldata <- as.data.frame(alldata)
 
 # Convert dataframe to data matrix
@@ -157,7 +157,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../metadata/DGE/EdgeR_DSvsDC_FDR_0.05.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_DSvsDC_FDR_0.05.txt", sep="\t", row.names=T)
 
 ########
 # DESeq2
@@ -176,7 +176,7 @@ head(resSig2)
 resSig2_export<-resSig2
 resSig2_export$ID<-resSig2_export
 head(resSig2_export)
-write.table(resSig2_export, "../../metadata/DGE/DESeq2_DSvsDC_FDR_0.05.txt", sep="\t", row.names=T)
+write.table(resSig2_export, "../../data/DGE/DESeq2_DSvsDC_FDR_0.05.txt", sep="\t", row.names=T)
 
 ##################################################################
 ### Sort the genes according to the attached p-value they have obtained
@@ -192,7 +192,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../metadata/DGE/EdgeR_DSvsDC_FDR_5.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_DSvsDC_FDR_5.txt", sep="\t", row.names=T)
 
 ########
 # DESeq2
@@ -206,7 +206,7 @@ head(resSig2)
 resSig2_export<-resSig2
 resSig2_export$ID<-resSig2_export
 head(resSig2_export)
-write.table(resSig2_export, "../../metadata/DGE/DESeq2_DSvsDC_FDR_5.txt", sep="\t", row.names=T)
+write.table(resSig2_export, "../../data/DGE/DESeq2_DSvsDC_FDR_5.txt", sep="\t", row.names=T)
 
 
 ###################################################
