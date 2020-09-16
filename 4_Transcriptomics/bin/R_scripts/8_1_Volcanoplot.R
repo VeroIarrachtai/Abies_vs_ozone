@@ -2,7 +2,6 @@
 # Verónica Reyes 
 # agosto 2020
  
-library(VennDiagram)
 library(limma)
 library(edgeR)
 library(DESeq2)
@@ -11,8 +10,8 @@ library (ggplot2)
 
 
 #Load data DESeq2 and EdgeR
-results_DESeq2<- read.delim("../../metadata/DGE/DESeq2_HvsD170ppb_FDR_5.txt")
-results_Edge<- read.delim("../../metadata/DGE/EdgeR_HvsD170ppb_FDR_5.txt")
+results_DESeq2<- read.delim("../../data/DGE/DESeq2_TvsD170ppb_FDR_5.txt")
+results_Edge<- read.delim("../../data/DGE/EdgeR_TvsD170ppb_FDR_5.txt")
 
 #Indicate data to plot##
 results_DESeq2$sig <- -log10(results_DESeq2$padj) ##Create a column with aditional info of FDR (padj)##
@@ -58,9 +57,9 @@ VPSol_DESeq2$color <- ifelse((VPSol_DESeq2$FoldChange > 1) & (VPSol_DESeq2$pValu
                                                   ifelse((VPSol_DESeq2$FoldChange < 1) & (VPSol_DESeq2$pValue  > 0.05), "Col_5", "Col_6")))))
 
 VPSol_DESeq2col_1_sobre <- VPSol_DESeq2[VPSol_DESeq2$color == "Col_1",]
-write.table(VPSol_DESeq2col_1_sobre, "../../metadata/DGE/VPSol_DESeq2col_1_sobre.txt", sep="\t", row.names=T)
+write.table(VPSol_DESeq2col_1_sobre, "../../data/DGE/VPSol_DESeq2col_1_sobre.txt", sep="\t", row.names=T)
 VPSol_DESeq2col_2_sub <- VPSol_DESeq2[VPSol_DESeq2$color == "Col_2",]
-write.table(VPSol_DESeq2col_2_sub, "../../metadata/DGE/VPSol_DESeq2col_2_sub.txt", sep="\t", row.names=T)
+write.table(VPSol_DESeq2col_2_sub, "../../data/DGE/VPSol_DESeq2col_2_sub.txt", sep="\t", row.names=T)
 
 
 VPSol_edge$color <- ifelse((VPSol_edge$FoldChange > 1) & (VPSol_edge$pValue  < 0.05), "Col_1",
@@ -70,10 +69,10 @@ VPSol_edge$color <- ifelse((VPSol_edge$FoldChange > 1) & (VPSol_edge$pValue  < 0
                                                 ifelse((VPSol_edge$FoldChange < 1) & (VPSol_edge$pValue  > 0.05), "Col_5", "Col_6")))))
 
 VPSol_edgecol_1_sobre <- VPSol_edge[VPSol_edge$color == "Col_1",]
-write.table(VPSol_edgecol_1_sobre, "../../metadata/DGE/VPSol_edgecol_1_sobre.txt", sep="\t", row.names=T)
+write.table(VPSol_edgecol_1_sobre, "../../data/DGE/VPSol_edgecol_1_sobre.txt", sep="\t", row.names=T)
 
 VPSol_edgecol_2_sub <- VPSol_edge[VPSol_edge$color == "Col_2",]
-write.table(VPSol_edgecol_2_sub, "../../metadata/DGE/VPSol_edgecol_2_sub.txt", sep="\t", row.names=T)
+write.table(VPSol_edgecol_2_sub, "../../data/DGE/VPSol_edgecol_2_sub.txt", sep="\t", row.names=T)
 
 ##Create plot##
 ggplot(VPSol_DESeq2, aes(x=FoldChange, y=pValue)) +
@@ -89,8 +88,8 @@ ggsave("../../outputs/8.1_VPSol_edge_FDR0.05.png")
 
 
 #Load data
-results_DESeq2<- read.delim("../../metadata/DGE/DESeq2_HvsD170ppb_FDR_5.txt")
-results_Edge<- read.delim("../../metadata/DGE/EdgeR_HvsD170ppb_FDR_5.txt")
+results_DESeq2<- read.delim("../../data/DGE/DESeq2_TvsD170ppb_FDR_5.txt")
+results_Edge<- read.delim("../../data/DGE/EdgeR_TvsD170ppb_FDR_5.txt")
 
 #Indicate data to plot##
 results_DESeq2$sig <- -log10(results_DESeq2$padj) ##Create a column with aditional info of FDR (padj)##

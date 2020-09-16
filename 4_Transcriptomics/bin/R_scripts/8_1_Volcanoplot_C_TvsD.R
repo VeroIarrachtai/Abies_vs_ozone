@@ -5,8 +5,8 @@ library(ggplot2)
 library(ggrepel)
 
 #Load data DESeq2 and EdgeR
-results_DESeq2<- read.delim("../../metadata/DGE/DESeq2_HvsD170ppb_FDR_5.txt") ## TENGO ESTO 2 VECES EN LA MISMA TABLA
-results_Edge<- read.delim("../../metadata/DGE/EdgeR_HvsD170ppb_FDR_5.txt")
+results_DESeq2<- read.delim("../../data/DGE/DESeq2_TvsD170ppb_FDR_5.txt") ## TENGO ESTO 2 VECES EN LA MISMA TABLA
+results_Edge<- read.delim("../../data/DGE/EdgeR_TvsD170ppb_FDR_5.txt")
 
 # Change value EdgeR LoadChange
 

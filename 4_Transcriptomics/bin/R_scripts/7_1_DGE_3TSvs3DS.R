@@ -128,6 +128,35 @@ res[rownames(topTags(et, n= Inf)),]
 ################################
 #Plot Log fold change
 ################################
+
+########
+# EdgeR
+########
+
+topSig <- top[top$table$FDR < 0.05, ]
+dim(topSig)
+genesDEedgeR <- rownames(topSig)
+head(genesDEedgeR)
+topSig_export<-topSig
+topSig_export$ID<-genesDEedgeR
+head(topSig_export)
+write.table(topSig_export, "../../data/DGE/EdgeR_DSvsTS_FDR_0.05.txt", sep="\t", row.names=T)
+
+########
+# DESeq2
+########
+xx <-res[order(res$padj,na.last=NA),] 
+resSig2 <- xx[xx$padj < 0.05, ]
+dim(resSig2)
+head(resSig2)
+genesDEDESeq2 <- rownames(resSig2)
+head(resSig2)
+resSig2_export<-resSig2
+resSig2_export$ID<-resSig2_export
+head(resSig2_export)
+write.table(resSig2_export, "../../data/DGE/DESeq2_DSvsTS_FDR_0.05.txt", sep="\t", row.names=T)
+
+
 ########
 # edgeR
 ########p.value=0.1

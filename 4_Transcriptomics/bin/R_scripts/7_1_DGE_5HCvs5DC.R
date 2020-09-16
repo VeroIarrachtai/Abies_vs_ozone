@@ -114,7 +114,7 @@ plotMA(res, main="MA-plot DESeq2", ylim=c(-5,5))
 
 ### Sort the genes according to the attached p-value they have obtained
 # edgeR
-topSig <- top[top$table$FDR < 0.01, ]
+topSig <- top[top$table$FDR < 0.05, ]
 dim(topSig)
 head(topSig)
 genesDEedgeR <- rownames(topSig)
@@ -122,7 +122,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../data/DGE/EdgeR_TvsD170ppb_FDR_0.01.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_TvsD170ppb_FDR_0.05.txt", sep="\t", row.names=T)
 
 # DESeq2
 # Sort by p-valores
@@ -130,7 +130,7 @@ resOrdered <- res[order(res$padj),]
 # Only DEG
 xx <-res[order(res$padj,na.last=NA),] 
 head(xx)
-resSig2 <- xx[xx$padj < 0.01, ]
+resSig2 <- xx[xx$padj < 0.05, ]
 dim(resSig2)
 head(resSig2)
 genesDEDESeq2 <- rownames(resSig2)
@@ -139,7 +139,7 @@ head(resSig2)
 resSig2_export<-resSig2
 resSig2_export$ID<-resSig2_export
 head(resSig2_export)
-write.table(resSig2_export, "../../data/DGE/DESeq2_TvsD170ppb_FDR_0.01.txt", sep="\t", row.names=T)
+write.table(resSig2_export, "../../data/DGE/DESeq2_TvsD170ppb_FDR_0.05.txt", sep="\t", row.names=T)
 
 ### Sort the genes according to the attached p-value they have obtained
 # EdgeR
