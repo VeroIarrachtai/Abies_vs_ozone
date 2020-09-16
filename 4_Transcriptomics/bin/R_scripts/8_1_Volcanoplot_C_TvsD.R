@@ -6,6 +6,7 @@ library(ggrepel)
 
 #Load data DESeq2 and EdgeR
 results_DESeq2<- read.delim("../../data/DGE/DESeq2_TvsD170ppb_FDR_5.txt") ## TENGO ESTO 2 VECES EN LA MISMA TABLA
+results_DESeq2<- results_DESeq2[,1:6]
 results_Edge<- read.delim("../../data/DGE/EdgeR_TvsD170ppb_FDR_5.txt")
 
 # Change value EdgeR LoadChange
@@ -40,7 +41,7 @@ ggplot(results_DESeq2_rt, aes(x=log2FoldChange, y=sig)) +
   geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
   geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
-ggsave("../../outputs/8.1_VP_DE2_C_t_vsD.png")
+ggsave("../../outputs/8_1_VP_DE2_C_TvsD.png")
 
 ggplot(results_Edge_rt, aes(x=logFC, y=sig)) +
   geom_point(aes(colour = TDE ),size =3.5)+
@@ -54,7 +55,7 @@ ggplot(results_Edge_rt, aes(x=logFC, y=sig)) +
   geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
   geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
-ggsave("../../outputs/8.1_VP_ER_C_t_vsD.png")
+ggsave("../../outputs/8_1_VP_ER_C_TvsD.png")
 
 # Make table with over and down expressed
 overxpress_Ds2 <- results_DESeq2_rt[results_DESeq2_rt[,"padj"]< 0.05 & results_DESeq2_rt[,"log2FoldChange"]> 1, ]
@@ -71,9 +72,9 @@ genesDEcomun_down <- intersect(rownames(downxpress_Ds2),rownames(downxpress_Ed))
 comun_genes_od <- c(genesDEcomun_over,genesDEcomun_down)
 comun_genes_od
 # Export data 
-write.table(overxpress_Ds2, "../../metadata/DGE/oxs_DE2_C_TvsD.txt", sep="\t", row.names=T)
-write.table(downxpress_Ds2, "../../metadata/DGE/sxs_DE2_C_TvsD.txt", sep="\t", row.names=T)
+write.table(overxpress_Ds2, "../../data/Over_Down/over_DE2_C_TvsD.txt", sep="\t", row.names=T)
+write.table(downxpress_Ds2, "../../data/Over_Down/down_DE2_C_TvsD.txt", sep="\t", row.names=T)
 
-write.table(overxpress_Ed , "../../metadata/DGE/oxs_ER_C_TvsD.txt", sep="\t", row.names=T)
-write.table(downxpress_Ed , "../../metadata/DGE/sxs_ER_C_TvsD.txt", sep="\t", row.names=T)
+write.table(overxpress_Ed , "../../data/Over_Down/over_ER_C_TvsD.txt", sep="\t", row.names=T)
+write.table(downxpress_Ed , "../../data/Over_Down/down_ER_C_TvsD.txt", sep="\t", row.names=T)
 
