@@ -122,7 +122,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../data/DGE/EdgeR_HvsD170ppb_FDR_0.01.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_TvsD170ppb_FDR_0.01.txt", sep="\t", row.names=T)
 
 # DESeq2
 # Sort by p-valores
@@ -139,7 +139,7 @@ head(resSig2)
 resSig2_export<-resSig2
 resSig2_export$ID<-resSig2_export
 head(resSig2_export)
-write.table(resSig2_export, "../../data/DGE/DESeq2_HvsD170ppb_FDR_0.01.txt", sep="\t", row.names=T)
+write.table(resSig2_export, "../../data/DGE/DESeq2_TvsD170ppb_FDR_0.01.txt", sep="\t", row.names=T)
 
 ### Sort the genes according to the attached p-value they have obtained
 # EdgeR
@@ -150,7 +150,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../data/DGE/EdgeR_HvsD170ppb_FDR_5.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_TvsD170ppb_FDR_5.txt", sep="\t", row.names=T)
 
 # DESeq2
 xx <-res[order(res$padj,na.last=NA),] 
@@ -162,7 +162,7 @@ head(resSig2)
 resSig2_export<-resSig2
 resSig2_export$ID<-resSig2_export
 head(resSig2_export)
-write.table(resSig2_export, "../../data/DGE/DESeq2_HvsD170ppb_FDR_5.txt", sep="\t", row.names=T)
+write.table(resSig2_export, "../../data/DGE/DESeq2_TvsD170ppb_FDR_5.txt", sep="\t", row.names=T)
 
 ### How many common DE genes exist edgeR vs DESeq2
 genesDEcomunes <- intersect(genesDEedgeR,genesDEDESeq2) 
