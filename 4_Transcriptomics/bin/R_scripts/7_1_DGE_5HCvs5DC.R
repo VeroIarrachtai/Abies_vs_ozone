@@ -58,7 +58,7 @@ d <- estimateTagwiseDisp(d)
 plotBCV(d, main="plotBCV DCvsTC")
 
 ## Test
-et <- exactTest(d,pair=c("TC","DC"))
+et <- exactTest(d,pair=c("DC","TC"))
 top<- topTags(et, n= Inf)
 hist(top$table$FDR, breaks = 100, main = "Hist FDR DCvsTC")
 abline(v=0.05, col="red",lwd=3)
