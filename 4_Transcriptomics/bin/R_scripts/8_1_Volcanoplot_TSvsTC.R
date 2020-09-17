@@ -31,7 +31,7 @@ results_Edge_rt$TDE <- (results_Edge_rt$FDR< 0.05) & (abs(results_Edge_rt$logFC)
 # Plot Volcano plot
 ggplot(results_DESeq2_rt, aes(x=log2FoldChange, y=sig)) +
   geom_point(aes(colour = TDE ),size =3.5)+
-  geom_text(aes(label=ifelse((results_DESeq2_rt$padj< 0.05) & (abs(results_DESeq2_rt$log2FoldChange) > 1),
+  geom_text(aes(label=ifelse((padj< 0.05) & (abs(log2FoldChange) > 1),
                              as.character(row.names(results_DESeq2_rt)),'')),hjust=0.5,vjust=0.5, size= 2, angle=35)+
   scale_color_manual(values=c("grey", "#d44792"))+
   xlab("log2 fold change")+
@@ -45,7 +45,7 @@ ggsave("../../outputs/8_1_VP_DE2_TSvsTC.png")
 
 ggplot(results_Edge_rt, aes(x=logFC, y=sig)) +
   geom_point(aes(colour = TDE ),size =3.5)+
-  geom_text(aes(label=ifelse((results_Edge_rt$FDR< 0.05) & (abs(results_Edge_rt$logFC) > 1),
+  geom_text(aes(label=ifelse((FDR< 0.05) & (abs(logFC) > 1),
                              as.character(row.names(results_Edge_rt)),'')),hjust=0.5,vjust=0.5, size= 2, angle=35)+
   scale_color_manual(values=c("grey", "#ddaee8"))+
   xlab("log2 fold change")+
@@ -72,9 +72,9 @@ genesDEcomun_down <- intersect(rownames(downxpress_Ds2),rownames(downxpress_Ed))
 comun_genes_od <- c(genesDEcomun_over,genesDEcomun_down)
 
 # Export data 
-write.table(overxpress_Ds2, "../../data/Over_Down/over_DE2_HSvsHC.txt", sep="\t", row.names=T)
-write.table(downxpress_Ds2, "../../data/Over_Down/down_DE2_HSvsHC.txt", sep="\t", row.names=T)
+write.table(overxpress_Ds2, "../../data/Over_Down/over_DE2_TSvsTC.txt", sep="\t", row.names=T)
+write.table(downxpress_Ds2, "../../data/Over_Down/down_DE2_TSvsTC.txt", sep="\t", row.names=T)
 
-write.table(overxpress_Ed , "../../data/Over_Down/over_ER_HSvsHC.txt", sep="\t", row.names=T)
-write.table(downxpress_Ed , "../../data/Over_Down/down_ER_HSvsHC.txt", sep="\t", row.names=T)
+write.table(overxpress_Ed , "../../data/Over_Down/over_ER_TSvsTC.txt", sep="\t", row.names=T)
+write.table(downxpress_Ed , "../../data/Over_Down/down_ER_TSvsTC.txt", sep="\t", row.names=T)
 
