@@ -1,4 +1,6 @@
 # Verónica Reyes Galindo
+# febrero 2020
+# Damaged vs Tolerant 170 ppb
 
 #Load libraries
 library(ggplot2)
@@ -76,24 +78,30 @@ write.table(downxpress_Ed , "../../data/Over_Down/down_ER_C_TvsD.txt", sep="\t",
 
 
 # PLOT GENERAL
-
+# To create column with row name
 results_DESeq2_rt$rownames <- rownames(results_DESeq2_rt) 
 results_Edge_rt$rownames <- rownames(results_Edge_rt)
 
+# To create new data frame with differential expression data (DESeq2 and edgeR) 
 df_general<- merge(results_DESeq2_rt, results_Edge_rt, by = "rownames",  all.x=TRUE)
 colnames(df_general)<- c( "rownames","log2FoldChange_D2","pvalue_D2","padj_D2" ,
                           "sig_D2", "sigadj_D2","TDE_D2","logFC_ER","PValue_ER",
                           "FDR_ER", "sig_ER", "sigadj_ER","TDE_ER")
 
 ###Colors
+#Add column with color cathegory accord to diferential expression with DESeq2 and edgeR
 
 df_general$color <- ifelse((df_general$TDE_D2 == TRUE) & (df_general$TDE_ER == TRUE), "Col_1", #DESeq2 and EdgeR
                    ifelse((df_general$TDE_D2 == TRUE) & (df_general$TDE_ER == FALSE), "Col_2", # Only DESeq2 
                           ifelse((df_general$TDE_D2 == FALSE) & (df_general$TDE_ER == TRUE), "Col_3", # Only EdgeR
                                  ifelse((df_general$TDE_D2 == FALSE) & (df_general$TDE_ER == FALSE), "Col_4", "Col_5"))))# No Differential Expression
-
 rownames(df_general)<- df_general$rownames
+
+# Export data
+write.table(df_general, "../../data/Over_Down/GENERAL_C_TvsD.txt", sep="\t", row.names=T)
+
 # Plot Volcano plot
+
 ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_point(aes(colour =  color ),size =3.5)+
   geom_text(aes(label=ifelse((padj_D2< 0.05) & (abs(log2FoldChange_D2) > 1),

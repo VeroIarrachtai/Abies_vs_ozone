@@ -1,6 +1,6 @@
 # Verónica Reyes 
 # febrero 2020
-# DE
+# DAMAGED 
 
 # Load libraries
 library(limma)
@@ -11,7 +11,6 @@ library (ggplot2)
 
 # Load data. Count table 
 alldata <-read.delim("../../data/allreadsgenes.txt")
-alldata <- as.data.frame(alldata)
 
 # Convert dataframe to data matrix
 x<-alldata
@@ -23,8 +22,8 @@ alldata<-as.matrix(x)
 ##################################################################################################################
 ##################################################################################################################
 # Select subset data(descart data)
-DSvsDC<- subset(alldata, select = c(DS_1, DS_2, DS_4,
-                                     DC_1, DC_4, DC_5))
+DCvsDS<- subset(alldata, select = c(DS_1, DS_2, DS_4,
+                                    DC_1, DC_4, DC_5))
 
 
 ############################################
@@ -42,9 +41,9 @@ rownames(targets) <- label
 targets
 
 ### Filtering genes 
-table(rowSums(DSvsDC)==0)
-suma <- rowSums(DSvsDC)
-filtconteos <- DSvsDC[suma != 0,] 
+table(rowSums(DCvsDS)==0)
+suma <- rowSums(DCvsDS)
+filtconteos <- DCvsDS[suma != 0,] 
 dim(filtconteos)
 head(filtconteos)
 
@@ -58,17 +57,17 @@ colnames(d) <- targets$label
 
 ## Normalization
 d <- calcNormFactors(d)
-plotMDS(d, main="plotMDS DSvsDC")
+plotMDS(d, main="plotMDS DCvsDS")
 
 ## Dispersors stimation
 d <- estimateCommonDisp(d,verbose=TRUE)
 d <- estimateTagwiseDisp(d)
-plotBCV(d, main="plotBCV DSvsDC")
+plotBCV(d, main="plotBCV DCvsDS")
 
 ## Test
-et <- exactTest(d,pair=c("DS","DC"))
+et <- exactTest(d,pair=c("DC","DS"))
 top<- topTags(et, n= Inf)
-hist(top$table$FDR, breaks = 100, main = "Hist FDR DSvsDC")
+hist(top$table$FDR, breaks = 100, main = "Hist FDR DCvsDS")
 abline(v=0.05, col="red",lwd=3)
 
 ##################################################################################################################
@@ -157,7 +156,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../data/DGE/EdgeR_DSvsDC_FDR_0.05.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_DCvsDS_FDR_0.05.txt", sep="\t", row.names=T)
 
 ########
 # DESeq2
@@ -176,7 +175,7 @@ head(resSig2)
 resSig2_export<-resSig2
 resSig2_export$ID<-resSig2_export
 head(resSig2_export)
-write.table(resSig2_export, "../../data/DGE/DESeq2_DSvsDC_FDR_0.05.txt", sep="\t", row.names=T)
+write.table(resSig2_export, "../../data/DGE/DESeq2_DCvsDS_FDR_0.05.txt", sep="\t", row.names=T)
 
 ##################################################################
 ### Sort the genes according to the attached p-value they have obtained
@@ -192,7 +191,7 @@ head(genesDEedgeR)
 topSig_export<-topSig
 topSig_export$ID<-genesDEedgeR
 head(topSig_export)
-write.table(topSig_export, "../../data/DGE/EdgeR_DSvsDC_FDR_5.txt", sep="\t", row.names=T)
+write.table(topSig_export, "../../data/DGE/EdgeR_DCvsDS_FDR_5.txt", sep="\t", row.names=T)
 
 ########
 # DESeq2
@@ -206,7 +205,7 @@ head(resSig2)
 resSig2_export<-resSig2
 resSig2_export$ID<-resSig2_export
 head(resSig2_export)
-write.table(resSig2_export, "../../data/DGE/DESeq2_DSvsDC_FDR_5.txt", sep="\t", row.names=T)
+write.table(resSig2_export, "../../data/DGE/DESeq2_DCvsDS_FDR_5.txt", sep="\t", row.names=T)
 
 
 ###################################################

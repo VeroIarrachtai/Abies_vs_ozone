@@ -1,4 +1,6 @@
-# Verónica Reyes, febrero 2020
+# Verónica Reyes,
+# febrero 2020
+# Damaged vs Tolerant 87 ppb
 
 # Load libraries
 library(limma)
@@ -56,15 +58,15 @@ colnames(d) <- targets$label
 
 ## Normalization
 d <- calcNormFactors(d)
-plotMDS(d, main="plotMDS DCvsTC")
+plotMDS(d, main="plotMDS DSvsTS")
 
 ## Dispersors stimation
 d <- estimateCommonDisp(d,verbose=TRUE)
 d <- estimateTagwiseDisp(d)
-plotBCV(d, main="plotBCV DCvsTC")
+plotBCV(d, main="plotBCV DSvsTS")
 
 ## Test
-et <- exactTest(d,pair=c("TS","DS"))
+et <- exactTest(d,pair=c("DS","TS"))
 top<- topTags(et, n= Inf)
 hist(top$table$FDR, breaks = 100, main = "Hist FDR DSvsTS")
 abline(v=0.05, col="red",lwd=3)
