@@ -25,7 +25,7 @@ In these directories you will find analyses to answer the project's particular a
 
 **README.md**: a markdown file about this project. This file includes the repository's disposition.
 
-**1_Sampling**: a directory with the coordinates and the samples' disposition in the omics analisys.
+**1_Sampling**: samples field metadata and scripts to perform maps.
 
 **2_Metabolomics**: metabolite-generated analyses with a gas chromatograph spectrum mass (GC-SM). Data from the html files were loaded into the tables. Subsequently, the relative abundance was calculated. Finally, all the samples' values were compared using a barplot, ANOVA, and PCA analysis.
 
