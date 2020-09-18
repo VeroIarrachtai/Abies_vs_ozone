@@ -103,7 +103,7 @@ df_general$color <- ifelse((df_general$TDE_D2 == TRUE) & (df_general$TDE_ER == T
 rownames(df_general)<- df_general$rownames
 
 # Export data
-write.table(df_general, "../../data/Over_Down/GENERAL_D_170Cvs87SS.txt", sep="\t", row.names=T)
+write.table(df_general, "../../data/Over_Down/GENERAL_T_170Cvs87SS.txt", sep="\t", row.names=T)
 
 # Plot Volcano plot
 
@@ -123,7 +123,7 @@ ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
   geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
-ggsave("../../outputs/8_1_VP_General_D_170Cvs87SS.png")
+ggsave("../../outputs/8_1_VP_General_T_170Cvs87SS.png")
 
 
 ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
@@ -140,4 +140,4 @@ ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
   geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
-ggsave("../../outputs/8_1_VP_General_sinN_D_170Cvs87SS.png")
+ggsave("../../outputs/8_1_VP_General_sinN_T_170Cvs87SS.png")

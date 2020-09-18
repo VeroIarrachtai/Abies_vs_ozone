@@ -1,6 +1,6 @@
 # Verónica Reyes
 # febrero 2020
-# DAMAGED 
+# TOLERANT
 
 # Load libraries
 library(limma)
@@ -23,22 +23,22 @@ alldata<-as.matrix(x)
 ##################################################################################################################
 ##################################################################################################################
 # Select subset data(descart data)
-TSvsTC<- subset(alldata, select = c(TS_1, TS_2, TS_5,
-                                    TC_1, TC_2, TC_4
+TSvsTC<- subset(alldata, select = c(TC_1, TC_2, TC_4,
+                                    TS_1, TS_2, TS_5
                                     ))
 
 
 ############################################
 # Add characteristics 
 ############################################
-tratamiento <- c("TS","TS","TS",
-                 "TC","TC","TC"
+tratamiento <- c("TC","TC","TC",
+                 "TS","TS","TS"
                  )
-label <- c("TS_1", "TS_2", "TS_5",
-           "TC_1", "TC_2", "TC_4"
+label <- c("TC_1", "TC_2", "TC_4",
+           "TS_1", "TS_2", "TS_5"
            )
-samples <-c("TS1", "TS2", "TS5",
-            "TC1", "TC2", "TC4"
+samples <-c("TC1", "TC2", "TC4",
+            "TS1", "TS2", "TS5"
             )
 targets <- data.frame(tratamiento,label,samples)
 rownames(targets) <- label
@@ -70,7 +70,7 @@ d <- estimateTagwiseDisp(d)
 plotBCV(d, main="plotBCV TSvsTC")
 
 ## Test
-et <- exactTest(d,pair=c("TS","TC"))
+et <- exactTest(d,pair=c("TC","TS"))
 top<- topTags(et, n= Inf)
 hist(top$table$FDR, breaks = 100, main = "Hist FDR TSvsTC")
 abline(v=0.05, col="red",lwd=3)
