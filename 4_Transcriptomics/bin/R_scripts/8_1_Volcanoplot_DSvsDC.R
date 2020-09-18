@@ -74,7 +74,6 @@ write.table(overxpress_Ed , "../../data/Over_Down/over_ER_DCvsDS.txt", sep="\t",
 write.table(downxpress_Ed , "../../data/Over_Down/down_ER_DCvsDS.txt", sep="\t", row.names=T)
 
 
-
 # PLOT GENERAL
 # To create column with row name
 results_DESeq2_rt$rownames <- rownames(results_DESeq2_rt) 
@@ -136,4 +135,21 @@ ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
 ggsave("../../outputs/8_1_VP_General_sinN_D_170Cvs87SS.png")
+
+# Export data 
+
+# color 1= pink D2 and ER
+# color 2= blue Only D2
+# color 3= purple Only ER
+
+D2_ER_genes <-subset(df_general, subset= color == "Col_1")
+D2_ER_genes$rownames
+D2_genes <-subset(df_general, subset= color == "Col_2")
+D2_genes$rownames
+ER_genes <-subset(df_general, subset= color == "Col_3")
+ER_genes$rownames
+
+write.table(D2_ER_genes, "../../data/Over_Down/SPECIFIC/D2_ER_D_170Cvs87SS.txt", sep="\t", row.names=T)
+write.table(D2_genes, "../../data/Over_Down/SPECIFIC/D2_D_170Cvs87SS.txt", sep="\t", row.names=T)
+write.table(ER_genes, "../../data/Over_Down/SPECIFIC/ER_D_170Cvs87SS.txt", sep="\t", row.names=T)
 

@@ -139,3 +139,22 @@ ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
 ggsave("../../outputs/8_1_VP_General_sinN_C_TvsD.png")
 
+# Export data 
+
+# color 1= pink D2 and ER
+# color 2= blue Only D2
+# color 3= purple Only ER
+
+D2_ER_genes <-subset(df_general, subset= color == "Col_1")
+D2_ER_genes$rownames
+D2_genes <-subset(df_general, subset= color == "Col_2")
+D2_genes$rownames
+ER_genes <-subset(df_general, subset= color == "Col_3")
+ER_genes$rownames
+
+write.table(D2_ER_genes, "../../data/Over_Down/SPECIFIC/D2_ER_C_TvsD.txt", sep="\t", row.names=T)
+write.table(D2_genes, "../../data/Over_Down/SPECIFIC/D2_C_TvsD.txt", sep="\t", row.names=T)
+write.table(ER_genes, "../../data/Over_Down/SPECIFIC/ER_C_TvsD.txt", sep="\t", row.names=T)
+
+
+
