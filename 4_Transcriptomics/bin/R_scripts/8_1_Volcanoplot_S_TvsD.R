@@ -120,3 +120,22 @@ ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
 ggsave("../../outputs/8_1_VP_General_S_TvsD.png")
 
+
+# Plot Volcano plot
+
+ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
+  geom_point(aes(colour =  color ),size =3.5)+
+  scale_color_manual(values=c("#c2619d", # pink D2 and ER
+                              "#47bac3", # blue Only D2
+                              "#7f5ad3", # purple Only ER
+                              "grey", 
+                              "#cb6637"))+ #orange
+  xlab("log2 fold change")+
+  ylab("-log10 (P value)")+
+  theme_light(base_size = 10)+
+  theme(legend.position = "none")+
+  geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
+  geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
+  geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
+ggsave("../../outputs/8_1_VP_General_sinN_S_TvsD.png")
+

@@ -11,6 +11,7 @@ library (ggplot2)
 
 # Load data. Count table 
 alldata <-read.delim("../../data/allreadsgenes.txt")
+alldata <- as.data.frame(alldata)
 
 # Convert dataframe to data matrix
 x<-alldata
@@ -22,19 +23,20 @@ alldata<-as.matrix(x)
 ##################################################################################################################
 ##################################################################################################################
 # Select subset data(descart data)
-DSvsDC<- subset(alldata, select = c(DC_1, DC_4, DC_5,
-                                    DS_1, DS_2, DS_4))
+DSvsDC<- subset(alldata, select = c(DS_1, DS_2, DS_4,
+                                    DC_1, DC_4, DC_5
+                                    ))
 
 
 ############################################
 # Add characteristics 
 ############################################
-tratamiento <- c("DC","DC","DC",
-                 "DS","DS","DS")
-label <- c("DC_1", "DC_4", "DC_5",
-           "DS_1", "DS_2", "DS_4")
-samples <-c("DC1", "DC4", "DC5",
-            "DS1", "DS2", "DS4")
+tratamiento <- c("DS","DS","DS",
+                 "DC","DC","DC")
+label <- c("DS_1", "DS_2", "DS_4",
+           "DC_1", "DC_4", "DC_5")
+samples <-c("DS1", "DS2", "DS4",
+            "DC1", "DC4", "DC5")
 targets <- data.frame(tratamiento,label,samples)
 rownames(targets) <- label
 

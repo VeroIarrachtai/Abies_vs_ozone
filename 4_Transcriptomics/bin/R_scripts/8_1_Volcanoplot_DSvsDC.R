@@ -5,9 +5,9 @@ library(ggplot2)
 library(ggrepel)
 
 #Load data DESeq2 and EdgeR 87ppb
-results_DESeq2<- read.delim("../../data/DGE/DESeq2_DCvsDS_FDR_5.txt") ## TENGO ESTO 2 VECES EN LA MISMA TABLA
+results_DESeq2<- read.delim("../../data/DGE/DESeq2_DSvsDC_FDR_5.txt") ## TENGO ESTO 2 VECES EN LA MISMA TABLA
 results_DESeq2<- results_DESeq2[,1:6]
-results_Edge<- read.delim("../../data/DGE/EdgeR_DCvsDS_FDR_5.txt")
+results_Edge<- read.delim("../../data/DGE/EdgeR_DSvsDC_FDR_5.txt")
 
 # Remake tables with info that I want
 results_DESeq2_rt <- data.frame(results_DESeq2[,c(2,5,6)])
@@ -118,4 +118,22 @@ ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
 ggsave("../../outputs/8_1_VP_General_D_170Cvs87SS.png")
 
+
+# Plot Volcano plot
+
+ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
+  geom_point(aes(colour =  color ),size =3.5)+
+  scale_color_manual(values=c("#c2619d", # pink D2 and ER
+                              "#47bac3", # blue Only D2
+                              "grey", 
+                              "#7f5ad3", # purple Only ER
+                              "#cb6637"))+ #orange
+  xlab("log2 fold change")+
+  ylab("-log10 (P value)")+
+  theme_light(base_size = 10)+
+  theme(legend.position = "none")+
+  geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
+  geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
+  geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
+ggsave("../../outputs/8_1_VP_General_sinN_D_170Cvs87SS.png")
 
