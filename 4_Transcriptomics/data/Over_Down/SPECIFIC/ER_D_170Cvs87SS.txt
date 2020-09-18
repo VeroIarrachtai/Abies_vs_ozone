@@ -1,0 +1,1 @@
+"rownames"	"log2FoldChange_D2"	"pvalue_D2"	"padj_D2"	"sig_D2"	"sigadj_D2"	"TDE_D2"	"logFC_ER"	"PValue_ER"	"FDR_ER"	"sig_ER"	"sigadj_ER"	"TDE_ER"	"color"
