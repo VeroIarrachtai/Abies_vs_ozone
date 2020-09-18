@@ -23,7 +23,7 @@ Before to start the genomic analysis you will need to install:
 
 ```
 +----- Abies_religiosa_vs_ozone/
-|	+--3_TRASNCRIPTOMICS/
+|	+--4_TRASNCRIPTOMICS/
 |		+--bin/
 |	   	    +--R_scripts/
 |	   	       +--6_1_Countreads_makematrix.R
@@ -46,7 +46,7 @@ Before to start the genomic analysis you will need to install:
 |	   	       +--*.sam
 |	   	    +--TRIMMING/
 |	   	       +--Trimm18s_sw10-28_ml50_28/
-|	   	           +--Trimmer_DPVR1_S179_L007_R1_001_paired_fastqc.zip
+|	   	       +--Trimmer_DPVR1_S179_L007_R1_001_paired_fastqc.zip
 |	   	    +--TXT/
 |	   	       +--*.allgenes.txt
 |	   	       +--*.countgenes.txt
