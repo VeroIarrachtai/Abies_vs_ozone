@@ -158,4 +158,6 @@ write.table(D2_ER_genes, "../../data/Over_Down/SPECIFIC/D2_ER_S_TvsD.txt", sep="
 write.table(D2_genes, "../../data/Over_Down/SPECIFIC/D2_S_TvsD.txt", sep="\t", row.names=T)
 write.table(ER_genes, "../../data/Over_Down/SPECIFIC/ER_S_TvsD.txt", sep="\t", row.names=T)
 
+write.table(genesDEcomun_over ,"../../data/Over_Down/SPECIFIC/D2_ER_S_TvsD_IDs_over.txt",sep = "\t", row.names = F, col.names = F)
+write.table(genesDEcomun_down ,"../../data/Over_Down/SPECIFIC/D2_ER_S_TvsD_IDs_down.txt",sep = "\t", row.names = F, col.names = F)
 

@@ -9,11 +9,6 @@ results_DESeq2<- read.delim("../../data/DGE/DESeq2_TSvsTC_FDR_5.txt") ## TENGO E
 results_DESeq2<- results_DESeq2[,1:6]
 results_Edge<- read.delim("../../data/DGE/EdgeR_TSvsTC_FDR_5.txt")
 
-# Change value EdgeR LoadChange
-
-results_Edge$logFC <- -(results_Edge$logFC)
-
-
 # Remake tables with info that I want
 results_DESeq2_rt <- data.frame(results_DESeq2[,c(2,5,6)])
 results_Edge_rt <- data.frame(results_Edge[,c(1,3,4)])
@@ -77,10 +72,6 @@ write.table(downxpress_Ds2, "../../data/Over_Down/down_DE2_TSvsTC.txt", sep="\t"
 
 write.table(overxpress_Ed , "../../data/Over_Down/over_ER_TSvsTC.txt", sep="\t", row.names=T)
 write.table(downxpress_Ed , "../../data/Over_Down/down_ER_TSvsTC.txt", sep="\t", row.names=T)
-
-
-
-
 
 # PLOT GENERAL
 # To create column with row name
@@ -160,3 +151,6 @@ write.table(D2_ER_genes, "../../data/Over_Down/SPECIFIC/D2_ER_T_170Cvs87SS.txt",
 write.table(D2_genes, "../../data/Over_Down/SPECIFIC/D2_T_170Cvs87SS.txt", sep="\t", row.names=T)
 write.table(ER_genes, "../../data/Over_Down/SPECIFIC/ER_T_170Cvs87SS.txt", sep="\t", row.names=T)
 
+
+write.table(genesDEcomun_over ,"../../data/Over_Down/SPECIFIC/D2_ER_T_170Cvs87SS_IDs_over.txt",sep = "\t", row.names = F, col.names = F)
+write.table(genesDEcomun_down ,"../../data/Over_Down/SPECIFIC/D2_ER_T_170Cvs87SS_IDs_down.txt",sep = "\t", row.names = F, col.names = F)
