@@ -1,0 +1,34 @@
+AB_000610_T.1	PF00332	346.9	9.9e-104	Glyco_hydro_17	Glycosyl hydrolases family 17
+AB_000611_T.1	PF00722	189.7	2.6e-56	Glyco_hydro_16	Glycosyl hydrolases family 16
+AB_043005_T.1	PF06203	62.4	2.8e-17	CCT	CCT motif
+AB_043005_T.1	PF00643	28.6	1e-06	zf-B_box	B-box zinc finger
+AB_043006_T.1	PF04072	88.1	6e-25	LCM	Leucine carboxyl methyltransferase
+AB_013152_T.1	PF07859	198.8	8.2e-59	Abhydrolase_3	alpha/beta hydrolase fold
+AB_013152_T.1	PF00135	25.1	7e-06	COesterase	Carboxylesterase family
+AB_013154_T.1	PF05680	30.1	4e-07	ATP-synt_E	ATP synthase E chain
+AB_028624_T.1	PF02298	79.0	1.9e-22	Cu_bind_like	Plastocyanin-like domain
+AB_028625_T.1	PF01201	156.5	3.9e-46	Ribosomal_S8e	Ribosomal protein S8e
+AB_010244_T.1	PF01545	103.5	1.1e-29	Cation_efflux	Cation efflux family
+AB_010244_T.1	PF16916	46.0	3.9e-12	ZT_dimer	Dimerisation domain of Zinc Transporter
+AB_010245_T.1	PF03083	119.4	4.5e-35	MtN3_slv	Sugar efflux transporter for intercellular exchange
+AB_013716_T.1	PF08392	474.1	1.3e-142	FAE1_CUT1_RppA	FAE1/Type III polyketide synthase-like protein
+AB_013716_T.1	PF08541	50.0	2.3e-13	ACP_syn_III_C	3-Oxoacyl-[acyl-carrier-protein (ACP)] synthase III C terminal
+AB_013716_T.1	PF02797	39.5	4.7e-10	Chal_sti_synt_C	Chalcone and stilbene synthases, C-terminal domain
+AB_013717_T.1	PF00201	75.9	2.6e-21	UDPGT	UDP-glucoronosyl and UDP-glucosyl transferase
+AB_020437_T.1	PF15511	34.5	1.6e-08	CENP-T_C	Centromere kinetochore component CENP-T histone fold
+AB_020438_T.1	PF03016	253.2	2.7e-75	Exostosin	Exostosin family
+AB_021997_T.1	PF00463	879.1	8.1e-265	ICL	Isocitrate lyase family
+AB_021997_T.1	PF13714	46.7	2.4e-12	PEP_mutase	Phosphoenolpyruvate phosphomutase
+AB_021998_T.1	PF00149	125.0	4.9e-36	Metallophos	Calcineurin-like phosphoesterase
+AB_002147_T.1	PF00141	249.0	4.1e-74	peroxidase	Peroxidase
+AB_002148_T.1	PF00249	116.2	4.6e-34	Myb_DNA-binding	Myb-like DNA-binding domain
+AB_022256_T.1	PF02773	209.3	1.7e-62	S-AdoMet_synt_C	S-adenosylmethionine synthetase, C-terminal domain
+AB_022256_T.1	PF02772	158.8	5.5e-47	S-AdoMet_synt_M	S-adenosylmethionine synthetase, central domain
+AB_022256_T.1	PF00438	145.8	4.5e-43	S-AdoMet_synt_N	S-adenosylmethionine synthetase, N-terminal domain
+AB_022258_T.1	PF00012	134.8	2.5e-39	HSP70	Hsp70 protein
+AB_015079_T.1	PF00538	65.8	2.9e-18	Linker_histone	linker histone H1 and H5 family
+AB_015083_T.1	PF13561	204.8	1.3e-60	adh_short_C2	Enoyl-(Acyl carrier protein) reductase
+AB_025629_T.1	PF00931	197.6	2e-58	NB-ARC	NB-ARC domain
+AB_025630_T.1	PF02114	61.6	5e-17	Phosducin	Phosducin
+AB_040533_T.1	PF03018	119.0	1.4e-34	Dirigent	Dirigent-like protein
+AB_040537_T.1	PF00125	184.1	1.2e-54	Histone	Core histone H2A/H2B/H3/H4

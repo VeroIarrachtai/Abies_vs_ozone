@@ -1,0 +1,7 @@
+AB_015079_T.1	PF00538	65.8	2.9e-18	Linker_histone	linker histone H1 and H5 family
+AB_015083_T.1	PF13561	204.8	1.3e-60	adh_short_C2	Enoyl-(Acyl carrier protein) reductase
+AB_023740_T.1	PF00722	199.4	2.8e-59	Glyco_hydro_16	Glycosyl hydrolases family 16
+AB_023740_T.1	PF06955	61.4	5.1e-17	XET_C	Xyloglucan endo-transglycosylase (XET) C-terminus
+AB_023741_T.1	PF01192	58.4	4.4e-16	RNA_pol_Rpb6	RNA polymerase Rpb6
+AB_029211_T.1	PF02365	92.7	1.7e-26	NAM	No apical meristem (NAM) protein
+AB_029212_T.1	PF00571	96.0	1.1e-27	CBS	CBS domain

@@ -1,0 +1,4 @@
+AB_036475_T.1	PF00182	149.5	1.2e-43	Glyco_hydro_19	Chitinase class I
+AB_036476_T.1	PF03358	47.6	1.2e-12	FMN_red	NADPH-dependent FMN reductase
+AB_015092_T.1	PF06813	251.0	1.1e-74	Nodulin-like	Nodulin-like
+AB_015094_T.1	PF06026	193.5	1.9e-57	Rib_5-P_isom_A	Ribose 5-phosphate isomerase A (phosphoriboisomerase A)

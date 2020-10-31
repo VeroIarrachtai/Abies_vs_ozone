@@ -1,0 +1,23 @@
+AB_013716_T.1	PF08392	474.1	1.3e-142	FAE1_CUT1_RppA	FAE1/Type III polyketide synthase-like protein
+AB_013716_T.1	PF08541	50.0	2.3e-13	ACP_syn_III_C	3-Oxoacyl-[acyl-carrier-protein (ACP)] synthase III C terminal
+AB_013716_T.1	PF02797	39.5	4.7e-10	Chal_sti_synt_C	Chalcone and stilbene synthases, C-terminal domain
+AB_013717_T.1	PF00201	75.9	2.6e-21	UDPGT	UDP-glucoronosyl and UDP-glucosyl transferase
+AB_040651_T.1	PF00304	53.3	2.2e-14	Gamma-thionin	Gamma-thionin family
+AB_040652_T.1	PF00383	27.5	1.9e-06	dCMP_cyt_deam_1	Cytidine and deoxycytidylate deaminase zinc-binding region
+AB_010334_T.1	PF00314	221.7	8.4e-66	Thaumatin	Thaumatin family
+AB_010335_T.1	PF10276	51.8	5.7e-14	zf-CHCC	Zinc-finger domain
+AB_009199_T.1	PF08241	49.8	3.6e-13	Methyltransf_11	Methyltransferase domain
+AB_009199_T.1	PF13649	44.2	2.2e-11	Methyltransf_25	Methyltransferase domain
+AB_009199_T.1	PF08242	36.3	6.2e-09	Methyltransf_12	Methyltransferase domain
+AB_009200_T.1	PF14803	46.6	2.1e-12	Nudix_N_2	Nudix N-terminal
+AB_008062_T.1	PF03083	164.7	3.4e-49	MtN3_slv	Sugar efflux transporter for intercellular exchange
+AB_008063_T.1	PF05562	146.5	7.1e-43	WCOR413	Cold acclimation protein WCOR413
+AB_015092_T.1	PF06813	251.0	1.1e-74	Nodulin-like	Nodulin-like
+AB_015094_T.1	PF06026	193.5	1.9e-57	Rib_5-P_isom_A	Ribose 5-phosphate isomerase A (phosphoriboisomerase A)
+AB_015960_T.1	PF01370	90.0	1.5e-25	Epimerase	NAD dependent epimerase/dehydratase family
+AB_015960_T.1	PF01073	58.4	5e-16	3Beta_HSD	3-beta hydroxysteroid dehydrogenase/isomerase family
+AB_015960_T.1	PF16363	56.8	2.2e-15	GDP_Man_Dehyd	GDP-mannose 4,6 dehydratase
+AB_015960_T.1	PF13460	49.2	5.2e-13	NAD_binding_10	NAD(P)H-binding
+AB_015960_T.1	PF07993	45.8	3.9e-12	NAD_binding_4	Male sterility protein
+AB_015960_T.1	PF05368	38.7	7.3e-10	NmrA	NmrA-like family
+AB_015962_T.1	PF10512	20.1	0.00044	Borealin	Cell division cycle-associated protein 8
