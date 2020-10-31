@@ -1,10 +1,7 @@
 AB_029334_T.1	PF00139	208.7	9.2e-62	Lectin_legB	Legume lectin domain
 AB_029334_T.1	PF00069	169.0	1.1e-49	Pkinase	Protein kinase domain
 AB_029334_T.1	PF07714	164.0	3.7e-48	Pkinase_Tyr	Protein tyrosine kinase
-AB_029337_T.1	PF02298	91.4	2.4e-26	Cu_bind_like	Plastocyanin-like domain
 AB_035458_T.1	PF07714	145.0	2.2e-42	Pkinase_Tyr	Protein tyrosine kinase
 AB_035458_T.1	PF00069	138.0	3.2e-40	Pkinase	Protein kinase domain
-AB_035459_T.1	PF00182	351.1	2.9e-105	Glyco_hydro_19	Chitinase class I
 AB_031912_T.1	PF12799	47.0	1.9e-12	LRR_4	Leucine Rich repeats (2 copies)
 AB_031912_T.1	PF13855	42.4	4e-11	LRR_8	Leucine rich repeat
-AB_031914_T.1	PF16845	78.5	3.4e-22	SQAPI	Aspartic acid proteinase inhibitor

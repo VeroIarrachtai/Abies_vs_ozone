@@ -1,5 +1,4 @@
 AB_008258_T.1	PF03107	45.8	5.1e-12	C1_2	C1 domain
-AB_008259_T.1	PF02138	368.5	1.8e-110	Beach	Beige/BEACH domain
 AB_000550_T.1	PF00931	128.1	3e-37	NB-ARC	NB-ARC domain
 AB_000550_T.1	PF01582	55.6	5.1e-15	TIR	TIR domain
 AB_000550_T.1	PF05729	54.5	1.2e-14	NACHT	NACHT domain
@@ -10,26 +9,17 @@ AB_000550_T.1	PF13191	42.6	7e-11	AAA_16	AAA ATPase domain
 AB_000550_T.1	PF00004	41.7	1.3e-10	AAA	ATPase family associated with various cellular activities (AAA)
 AB_000550_T.1	PF13173	28.0	1.7e-06	AAA_14	AAA domain
 AB_000550_T.1	PF00005	24.6	2.6e-05	ABC_tran	ABC transporter
-AB_000551_T.1	PF06552	285.5	1.6e-85	TOM20_plant	Plant specific mitochondrial import receptor subunit TOM20
 AB_024145_T.1	PF12799	32.6	6.5e-08	LRR_4	Leucine Rich repeats (2 copies)
 AB_024145_T.1	PF00560	28.4	9.2e-07	LRR_1	Leucine Rich Repeat
 AB_024145_T.1	PF13855	27.8	1.4e-06	LRR_8	Leucine rich repeat
 AB_024146_T.1	PF00069	152.1	1.6e-44	Pkinase	Protein kinase domain
-AB_024146_T.1	PF00069	152.1	1.6e-44	Pkinase	Protein kinase domain
 AB_024146_T.1	PF07714	118.3	3.1e-34	Pkinase_Tyr	Protein tyrosine kinase
-AB_024147_T.1	PF01556	143.0	6.3e-42	DnaJ_C	DnaJ C terminal domain
 AB_040148_T.1	PF13855	30.8	1.6e-07	LRR_8	Leucine rich repeat
-AB_040149_T.1	PF07731	48.8	5.1e-13	Cu-oxidase_2	Multicopper oxidase
 AB_036607_T.1	PF00011	106.2	7.1e-31	HSP20	Hsp20/alpha crystallin family
-AB_036610_T.1	PF01221	103.6	4.7e-30	Dynein_light	Dynein light chain type 1
 AB_036025_T.1	PF13456	31.7	8.9e-08	RVT_3	Reverse transcriptase-like
-AB_036029_T.1	PF10406	71.4	6.8e-20	TAF8_C	Transcription factor TFIID complex subunit 8 C-term
 AB_023350_T.1	PF07859	202.5	6.5e-60	Abhydrolase_3	alpha/beta hydrolase fold
 AB_023350_T.1	PF00135	27.4	1.4e-06	COesterase	Carboxylesterase family
-AB_023351_T.1	PF00025	220.2	1.1e-65	Arf	ADP-ribosylation factor family
 AB_016386_T.1	PF07714	38.8	5.5e-10	Pkinase_Tyr	Protein tyrosine kinase
 AB_016386_T.1	PF00069	37.6	1.4e-09	Pkinase	Protein kinase domain
-AB_016389_T.1	PF11559	144.5	2.4e-42	ADIP	Afadin- and alpha -actinin-Binding
 AB_013360_T.1	PF07859	201.7	1.1e-59	Abhydrolase_3	alpha/beta hydrolase fold
 AB_013360_T.1	PF00135	27.8	1.1e-06	COesterase	Carboxylesterase family
-AB_013362_T.1	PF00583	37.3	2.3e-09	Acetyltransf_1	Acetyltransferase (GNAT) family

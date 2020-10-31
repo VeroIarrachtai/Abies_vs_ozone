@@ -1,2 +1,1 @@
 AB_008838_T.1	PF00201	98.4	3.8e-28	UDPGT	UDP-glucoronosyl and UDP-glucosyl transferase
-AB_008839_T.1	PF02365	99.1	1.7e-28	NAM	No apical meristem (NAM) protein
