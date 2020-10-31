@@ -10,17 +10,17 @@
 
 #Create list with names over and down
 
-grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/D2_ER_C_TvsD_IDs_over.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_C_TvsD_IDs_over.txt
-grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/D2_ER_C_TvsD_IDs_down.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_C_TvsD_IDs_down.txt
+grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/IDs_D2_ER_C_TvsD_over.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_C_TvsD_IDs_over.txt
+grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/IDs_D2_ER_C_TvsD_down.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_C_TvsD_IDs_down.txt
 
-grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/D2_ER_S_TvsD_IDs_over.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_S_TvsD_IDs_over.txt
-grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/D2_ER_S_TvsD_IDs_down.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_S_TvsD_IDs_down.txt
+grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/IDs_D2_ER_S_TvsD_over.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_S_TvsD_IDs_over.txt
+grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/IDs_D2_ER_S_TvsD_down.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_S_TvsD_IDs_down.txt
 
-grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/D2_ER_D_170Cvs87SS_IDs_over.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_D_170Cvs87SS_IDs_over.txt
-grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/D2_ER_D_170Cvs87SS_IDs_down.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_D_170Cvs87SS_IDs_down.txt
+grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/IDs_D2_ER_D_170Cvs87SS_over.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_D_170Cvs87SS_IDs_over.txt
+grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/IDs_D2_ER_D_170Cvs87SS_down.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_D_170Cvs87SS_IDs_down.txt
 
-grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/D2_ER_T_170Cvs87SS_IDs_over.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_T_170Cvs87SS_IDs_over.txt
-grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/D2_ER_T_170Cvs87SS_IDs_down.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_T_170Cvs87SS_IDs_down.txt
+grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/IDs_D2_ER_T_170Cvs87SS_over.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_T_170Cvs87SS_IDs_over.txt
+grep -Eo "AB_\w+\_T.1" ../../data/Over_Down/SPECIFIC/IDs_D2_ER_T_170Cvs87SS_down.txt > ../../data/Over_Down/SPECIFIC/L_D2_ER_T_170Cvs87SS_IDs_down.txt
 
 # Delete list with ""
 

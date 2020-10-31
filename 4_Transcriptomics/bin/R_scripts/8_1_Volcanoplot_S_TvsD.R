@@ -139,8 +139,6 @@ ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
 ggsave("../../outputs/8_1_VP_General_sinN_S_TvsD.png")
 
-
-
 # Export data 
 
 # color 1= pink D2 and ER
@@ -158,6 +156,6 @@ write.table(D2_ER_genes, "../../data/Over_Down/SPECIFIC/D2_ER_S_TvsD.txt", sep="
 write.table(D2_genes, "../../data/Over_Down/SPECIFIC/D2_S_TvsD.txt", sep="\t", row.names=T)
 write.table(ER_genes, "../../data/Over_Down/SPECIFIC/ER_S_TvsD.txt", sep="\t", row.names=T)
 
-write.table(genesDEcomun_over ,"../../data/Over_Down/SPECIFIC/D2_ER_S_TvsD_IDs_over.txt",sep = "\t", row.names = F, col.names = F)
-write.table(genesDEcomun_down ,"../../data/Over_Down/SPECIFIC/D2_ER_S_TvsD_IDs_down.txt",sep = "\t", row.names = F, col.names = F)
+write.table(genesDEcomun_over ,"../../data/Over_Down/SPECIFIC/IDs_D2_ER_S_TvsD_over.txt",sep = "\t", row.names = F, col.names = F)
+write.table(genesDEcomun_down ,"../../data/Over_Down/SPECIFIC/IDs_D2_ER_S_TvsD_down.txt",sep = "\t", row.names = F, col.names = F)
 
