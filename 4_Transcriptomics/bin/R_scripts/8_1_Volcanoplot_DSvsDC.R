@@ -63,6 +63,10 @@ rownames(df_general)<- df_general$rownames
 # Export data
 write.table(df_general, "../../data/Over_Down/GENERAL_D_170Cvs87SS.txt", sep="\t", row.names=T)
 
+#Data in HIGH
+
+df_general$log2FoldChange_D2 <-df_general$log2FoldChange_D2*(-1)
+
 # Plot Volcano plot
 ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_point(aes(colour =  color ),size =3.5)+

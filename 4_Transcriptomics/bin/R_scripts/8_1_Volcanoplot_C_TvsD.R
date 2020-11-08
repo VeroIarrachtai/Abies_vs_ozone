@@ -63,6 +63,7 @@ rownames(df_general)<- df_general$rownames
 # Export data
 write.table(df_general, "../../data/Over_Down/GENERAL_C_TvsD.txt", sep="\t", row.names=T)
 
+
 # Plot Volcano plot
 ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_point(aes(colour =  color ),size =3.5)+
@@ -78,7 +79,7 @@ ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
   geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
-ggsave("../../outputs/8_1_VP_General_sinN_C_TvsD.png")
+  ggsave("../../outputs/8_1_VP_General_sinN_C_TvsD.png")
 
 # Export data 
 
