@@ -69,11 +69,12 @@ str_out <- str_out[,order(apply(str_out,2,sum),decreasing = T)]
   labpos <- round(labpos,0)
   
   #Specify some nice colours
-  mycols <- c("#45b4c2",
-              "#d248a0",
-              "#c183e8",
-              "#8bb749",
-              "#e49339"
+  mycols <- c("#c167ba",
+              "#93c251",
+              "#716cd0",
+              "#cc9933",
+              "#c75b81",
+              "#5dc397"
   )[1:k]
   
   if(xlab ==T)
@@ -154,11 +155,12 @@ structureplot_popord <- function(str_out,pops,k,xlab = T, target_order)
   
   
   #Specify some nice colours
-  mycols <- c("#45b4c2",
-              "#d248a0",
-              "#c183e8",
-              "#8bb749",
-              "#e49339"
+  mycols <- c("#c167ba",
+              "#93c251",
+              "#716cd0",
+              "#cc9933",
+              "#c75b81",
+              "#5dc397"
   )[1:k]
   
   if(xlab ==T)
@@ -214,18 +216,19 @@ z<-c("SierraManantlan","NevadoColima","VolcanTancitaro","PuertaGarnica","Michoac
 # K2
 qfile <- read.table("../../metadata/admixture_PQ_files/snp_withoutDupLoci_88s_maxmiss0.9_maf0.05.2.Q")
 structureplot_popord(str_out = qfile, pops = famfile, k = 2, xlab = T, target_order=z)
+ggsave("../../outputs/7.3_Admixture_K2.png")
 
 # K3
 qfile <- read.table("../../metadata/admixture_PQ_files/snp_withoutDupLoci_88s_maxmiss0.9_maf0.05.3.Q")
 structureplot_popord(str_out = qfile,pops = famfile,k = 3, xlab = T, target_order =z)
+ggsave("../../outputs/7.3_Admixture_K3.png")
 
 # K4
 qfile <- read.table("../../metadata/admixture_PQ_files/snp_withoutDupLoci_88s_maxmiss0.9_maf0.05.4.Q")
 structureplot_popord(str_out = qfile,pops = famfile,k = 4, xlab = T, target_order =z)
+ggsave("../../outputs/7.3_Admixture_K4.png")
 
 # K5
 qfile <- read.table("../../metadata/admixture_PQ_files/snp_withoutDupLoci_88s_maxmiss0.9_maf0.05.5.Q")
 structureplot_popord(str_out = qfile,pops = famfile,k = 5, xlab = T, target_order =z)
-
-ggsave("../../outputs/7.3_Admixture.png")
-
+ggsave("../../outputs/7.3_Admixture_K5.png")
