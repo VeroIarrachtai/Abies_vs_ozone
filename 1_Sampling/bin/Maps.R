@@ -25,10 +25,10 @@ ggplot(data = world) +
                          pad_x = unit(0.25, "in"), pad_y = unit(0.25, "in"),
                          style = north_arrow_fancy_orienteering, height = unit(1.25, "cm")) +
   coord_sf(xlim = c(-116.15, -75.12), ylim = c(10.65, 33.97))+
-  theme_dark()+
+  theme_bw()+
   annotate("point", x = -99.301, y = 19.285, colour = "#4cacdb", size = 2)+
   labs(x="", y="")
-
+ggsave("../outputs/1_mexico_map.png")
 
 data("df_mxmunicipio")
 df_mxmunicipio$value <- as.numeric(df_mxmunicipio$municipio_name =="La Magdalena Contreras")
@@ -37,7 +37,7 @@ df_mxmunicipio$value <- as.numeric(df_mxmunicipio$municipio_name =="La Magdalena
 mxmunicipio_choropleth(df_mxmunicipio, num_colors = 2,
                        zoom = subset(df_mxmunicipio, state_abbr_official %in% "DF")$region) 
 
-palette()
+ggsave("../outputs/1_CDMX_map.png")
 
 
 

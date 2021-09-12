@@ -46,16 +46,21 @@ summary(metabol_ST.pca)
 sum<-summary(metabol_ST.pca)
 metabolites.PCA<-c(rep("ST15",5), rep("ST16",5), 
                    rep("SD15",5),rep("SD16",5))
-metabolites.condition<-c(rep("tolerant",10), rep("damaged",10))
+metabolites.condition<-c(rep("Tolerant",10), rep("Damaged",10))
 
 ggbiplot(metabol_ST.pca,choices = c(1,2),ellipse=TRUE,obs.scale = 1, var.scale = 1,  groups=metabolites.PCA)+
-  scale_color_manual(name="exposition year",labels = c("2015", "2016", "2015", "2016"), values=c("#c6003a", "#e98382", "#00901e","#b1e787"))+
-  scale_shape_manual(name="condition", values=c(15,16)) +
+  scale_color_manual(name="Exposition year",labels = c("2015", "2016", "2015", "2016"), 
+                     values=c("#c6003a", "#cdc339", "#7785cc","#59c8a2")) +
+  scale_shape_manual(name="Condition", values=c(15,16)) +
   geom_point(aes(colour=metabolites.PCA, shape=metabolites.condition), size = 3)+
   xlab(paste0("Eigenvector 1 explaining ", sum$importance[2,1]*100, "%")) +
-  ylab(paste0("Eigenvector 2 explaining ", sum$importance[2,2]*100, "%"))
-
+  ylab(paste0("Eigenvector 2 explaining ", sum$importance[2,2]*100, "%"))+
+  theme_light(base_size = 10)
+  
 ggsave("../../outputs/5.1_PCA_moderate_TvsD.png")
+
+# "#c6003a", "#cdc339", "#7785cc","#59c8a2"
+# "#cd565b", "#e98382", "#00901e","#b1e787"
 
 # #Contingency period HvsD
 
@@ -70,18 +75,23 @@ summary(metabol_Conti.pca)
 sum<-summary(metabol_Conti.pca)
 metabolites.PCA<-c(rep("CS15",5), rep("CS16",5), 
                    rep("CD15",5),rep("CD16",5))
-metabolites.condition<-c(rep("sana",10), rep("dañada",10))
+metabolites.condition<-c(rep("Tolerant",10), rep("Damaged",10))
 
 ggbiplot(metabol_Conti.pca,choices = c(1,2),ellipse=TRUE,obs.scale = 1, var.scale = 1,  groups=metabolites.PCA)+
-  scale_color_manual(name="exposition year",labels = c("2015", "2016", "2015", "2016"), values=c("#c6003a", "#e98382", "#00901e","#b1e787"))+
-  scale_shape_manual(name="condition", values=c(15,16)) +
+  scale_color_manual(name="Exposition year",labels = c("2015", "2016", "2015", "2016"), 
+                     values=c("#c6003a", "#cdc339", "#7785cc","#59c8a2"))+
+  scale_shape_manual(name="Condition", values=c(15,16)) +
   geom_point(aes(colour=metabolites.PCA, shape=metabolites.condition), size = 3)+
   xlab(paste0("Eigenvector 1 explaining ", sum$importance[2,1]*100, "%")) +
-  ylab(paste0("Eigenvector 2 explaining ", sum$importance[2,2]*100, "%"))
+  ylab(paste0("Eigenvector 2 explaining ", sum$importance[2,2]*100, "%"))+
+  theme_light(base_size = 10)
+ggsave("../../outputs/5.1_PCA_high_TvsD.png")
 
-ggsave("../../outputs/5.1_PCA_conti_TvsD.png")
+# "#c6003a", "#cdc339", "#7785cc","#59c8a2"
+# "#cd565b", "#e98382", "#00901e","#b1e787"
 
-#Healthy moderated period vs contingency period
+####################################################################
+# Healthy moderated period vs contingency period
 
 metaboliteshelthy<-metabolites[c(1:10, 21:30),8:14]
 colnames(metabolitesConti)<-c(beta.pinene,L.alfa.bornyl.acetate,beta.Caryophyllene.oxide,
@@ -94,16 +104,20 @@ summary(metabolhelthy.pca)
 sum<-summary(metabolhelthy.pca)
 metabolites.PCA<-c(rep("ST15",5), rep("ST16",5), 
                    rep("CS15",5),rep("CS16",5))
-metabolites.condition<-c(rep("M. concentration",10), rep("Contingency",10))
+metabolites.condition<-c(rep("M. concentration",10), rep("H. concentration",10))
 
 ggbiplot(metabolhelthy.pca,choices = c(1,2),ellipse=TRUE,obs.scale = 1, var.scale = 1,  groups=metabolites.PCA)+
-  scale_color_manual(name="exposition year",labels = c("2015", "2016", "2015", "2016"), values=c("#6cb643","#b4a945","#53b483","#617835"))+
-  scale_shape_manual(name="season", values=c(15,16)) +
+  scale_color_manual(name="Exposition year",labels = c("2015", "2016", "2015", "2016"), 
+                     values=c("#b35bb7", "#a3bb4b", "#7785cc","#59c8a2"))+
+  scale_shape_manual(name="Period", values=c(15,16)) +
   geom_point(aes(colour=metabolites.PCA, shape=metabolites.condition), size = 3)+
   xlab(paste0("Eigenvector 1 explaining ", sum$importance[2,1]*100, "%")) +
-  ylab(paste0("Eigenvector 2 explaining ", sum$importance[2,2]*100, "%"))
+  ylab(paste0("Eigenvector 2 explaining ", sum$importance[2,2]*100, "%"))+
+  theme_light(base_size = 10)
+ggsave("../../outputs/5.1_PCA_tolerant_modevshigh.png")
 
-ggsave("../../outputs/5.1_PCA_tolerant_modevscont.png")
+# "#b35bb7", "#a3bb4b", "#7785cc","#59c8a2"
+# "#6cb643","#b4a945","#53b483","#617835"
 
 #Damaged moderated period vs contingency period
 
@@ -117,13 +131,18 @@ summary(metaboldamaged.pca)
 sum<-summary(metaboldamaged.pca)
 metabolites.PCA<-c(rep("SD15",5), rep("SD16",5), 
                    rep("CD15",5),rep("CD16",5))
-metabolites.condition<-c(rep("M. concentration",10), rep("Contingency",10))
+metabolites.condition<-c(rep("M. concentration",10), rep("H. concentration",10))
 
 ggbiplot(metaboldamaged.pca,choices = c(1,2),ellipse=TRUE,obs.scale = 1, var.scale = 1,  groups=metabolites.PCA)+
-  scale_color_manual(name="exposition year",labels = c("2015", "2016", "2015", "2016"), values=c("#dd5035","#d7ac43","#c2455e","#a95f2e"))+
-  scale_shape_manual(name="season", values=c(15,16)) +
+  scale_color_manual(name="Exposition year",labels = c("2015", "2016", "2015", "2016"), 
+                     values=c("#c6003a", "#cdc339", "#8cd743", "#d59832")) +
+  scale_shape_manual(name="Period", values=c(15,16)) +
   geom_point(aes(colour=metabolites.PCA, shape=metabolites.condition), size = 3)+
   xlab(paste0("Eigenvector 1 explaining ", sum$importance[2,1]*100, "%")) +
-  ylab(paste0("Eigenvector 2 explaining ", sum$importance[2,2]*100, "%"))
+  ylab(paste0("Eigenvector 2 explaining ", sum$importance[2,2]*100, "%"))+
+  theme_light(base_size = 10)
 
-ggsave("../../outputs/5.1_PCA_damaged_modevscont.png")
+ggsave("../../outputs/5.1_PCA_damaged_modevshigh.png")
+
+# "#c6003a", "#cdc339", "#df355f", "#8cd743"
+# "#dd5035","#d7ac43","#c2455e","#a95f2e"
