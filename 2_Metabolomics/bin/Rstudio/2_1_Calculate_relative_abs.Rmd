@@ -1,0 +1,83 @@
+---
+title: "Calculate_relative_abs"
+author: "Veronica Reyes-Galindo"
+date: "18/5/2021"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    theme: "yeti"
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load data 
+
+```{r Load data, echo= TRUE}
+metabolites<- read.csv("../../metadata/metabolitos_Tesis_Vero.csv")
+metabolites<- dplyr::as_tibble(metabolites)
+
+metabol<- tidyr::gather(metabolites, key = "metabolite", value = "measurement",
+       beta.pinene, L.alfa.bornyl.acetate, beta.Caryophyllene.oxide,
+                alfa.Caryophyllene, beta.Cubebene, alfa.Cubenene, delta.Cadinene,
+                alfa.Muurolene)
+```
+
+```{r Calculate standar miligrams in sample, echo= FALSE}
+# Function
+standar.add<-function(microlitres.standar, miligrams.standar, microlitres.total, microlitres.inject) {
+  standar<- (microlitres.standar*miligrams.standar/microlitres.total)*microlitres.inject/microlitres.total
+  return(standar)
+}
+
+# Calculate
+metabol$standar.add<- standar.add(metabol$microlitres.standar,metabol$miligrams,metabol$microlitres, metabol$inyection.microlitres)
+```
+```{r Calculate miligrams per metabolite target, echo= FALSE}
+# Function
+target.mg<-function(standar.miligrams.calculated, metabolite.target.area, standar.area) {
+  target<- standar.miligrams.calculated*metabolite.target.area/standar.area
+  return(target)
+  }
+
+#Calculate
+metabol$target.mg <- target.mg(metabol$standar.add, metabol$measurement, metabol$Area.standar.porc)
+```
+
+```{r X3, echo= FALSE}
+# Function
+X3<-function(target.mg, microlitres.metabolites, inyection.microlitres) {
+  X3<- target.mg*microlitres.metabolites/inyection.microlitres
+  return(X3)
+  }
+
+# Calculate
+metabol$X3 <- metabol$target.mg*metabol$microlitres.metabolites/metabol$inyection.microlitres
+```
+```{r miligrams in gr needle, echo= FALSE}
+# Function
+miligrams.in.grneedle<-function(X3, needle.grams) {
+  milig.grneedle<- X3*100/needle.grams
+  return(milig.grneedle)
+  }
+
+# Calculate
+metabol$miligrams.in.grneedle <- metabol$X3*100/metabol$We.needle.grams
+```
+```{r miligrams in 100gr sample, echo= FALSE}
+# Function
+miligrams.in.hundredgr<-function(miligrams.in.grneedle) {
+  hundredgr<- miligrams.in.grneedle*1000
+  return(hundredgr)
+  }
+
+# Calculate
+metabol$miligrams.in.hundredgr<- miligrams.in.hundredgr(metabol$miligrams.in.grneedle) 
+
+```
+```{r Export data, echo= TRUE}
+write.table(metabol, "../../metadata/calculate_relat_abs.txt", sep="\t", row.names=FALSE)
+```

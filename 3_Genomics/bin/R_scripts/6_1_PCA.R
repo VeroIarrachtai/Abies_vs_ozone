@@ -3,7 +3,6 @@
 
 ### This script draw a plot with eigenvects values using SNPRelate
 
-
 ## Load packages
 library(gdsfmt)
 library(SNPRelate)
@@ -37,7 +36,7 @@ tab <- data.frame(sample.id = pca$sample.id, EV1 = pca$eigenvect[,1],    # the f
 fullmat<-read.csv("../../metadata/PLACA_FINAL_89_samples.csv", header = TRUE, sep = ",")
 
 ## Match metadata info with eigenvectors values
-tab$Poblacion<-fullmat$Localidad[match(tab$sample.id, fullmat$key_comun)]
+tab$Poblacion<-fullmat$Location[match(tab$sample.id, fullmat$key_comun)]
 
 ## Choose nice colors and ozone condition
 pobcol<- c( "#e94b57",
@@ -62,3 +61,75 @@ ggplot(tab, aes(x=EV1, y=EV2))+
   scale_shape_manual(values=c(0,1,2,3,4,5,6,7,8,11,13,15,16,17,18,35,38,43,64))
 
 ggsave("../../outputs/6.1_PCA.png")
+
+
+
+
+
+## Prueba
+
+
+## Make a data.frame with eigenvects values
+tab2 <- data.frame(sample.id = pca$sample.id, EV2= pca$eigenvect[,2],    # the 2nd eigenvector,
+                  EV3 = pca$eigenvect[,3],    # the 3er eigenvector
+                  stringsAsFactors = FALSE)
+
+## Match metadata info with eigenvectors values
+tab2$Poblacion<-fullmat$Location[match(tab2$sample.id, fullmat$key_comun)]
+
+## Choose nice colors and ozone condition
+pobcol<- c( "#e94b57",
+            "#000000",
+            "#76c74f")
+tab2$Condicion<- c(rep("otro",7),rep("damaged",4),
+                  rep("tolerant",5), rep("otro",72))
+
+## Draw PCA with ozone condition
+ggplot(tab2, aes(x=EV2, y=EV3))+
+  geom_point(aes(color=Condicion, shape=Poblacion), size =5) +
+  scale_color_manual(values = pobcol) +
+  theme(legend.title = element_text(size=15))+
+  theme(legend.text = element_text(size = 15))+
+  xlab(paste0("Eigenvector 2 explaining ", round(pc.percent, 2)[2], "%")) +
+  ylab(paste0("Eigenvector 3 explaining ", round(pc.percent, 2)[3], "%"))+
+  theme(axis.title.y = element_text(size = rel(2), angle = 90))+
+  theme(axis.title.x = element_text(size = rel(2), angle = 360))+
+  theme(axis.text.x = element_text(hjust = .5, size=13, color="black"))+
+  theme(axis.text.y = element_text(hjust = .5, size=13, color="black"))+
+  geom_point(alpha = 1/20)+
+  scale_shape_manual(values=c(0,1,2,3,4,5,6,7,8,11,13,15,16,17,18,35,38,43,64))
+
+
+## Prueba
+
+
+## Make a data.frame with eigenvects values
+tab3 <- data.frame(sample.id = pca$sample.id, EV5= pca$eigenvect[,5],    # the 5to eigenvector,
+                   EV6 = pca$eigenvect[,6],    # the 6to eigenvector
+                   stringsAsFactors = FALSE)
+
+## Match metadata info with eigenvectors values
+tab3$Poblacion<-fullmat$Location[match(tab3$sample.id, fullmat$key_comun)]
+
+## Choose nice colors and ozone condition
+pobcol<- c( "#e94b57",
+            "#000000",
+            "#76c74f")
+tab3$Condicion<- c(rep("otro",7),rep("damaged",4),
+                   rep("tolerant",5), rep("otro",72))
+
+## Draw PCA with ozone condition
+ggplot(tab3, aes(x=EV5, y=EV6))+
+  geom_point(aes(color=Condicion, shape=Poblacion), size =5) +
+  scale_color_manual(values = pobcol) +
+  theme(legend.title = element_text(size=15))+
+  theme(legend.text = element_text(size = 15))+
+  xlab(paste0("Eigenvector 5 explaining ", round(pc.percent, 2)[5], "%")) +
+  ylab(paste0("Eigenvector 6 explaining ", round(pc.percent, 2)[6], "%"))+
+  theme(axis.title.y = element_text(size = rel(2), angle = 90))+
+  theme(axis.title.x = element_text(size = rel(2), angle = 360))+
+  theme(axis.text.x = element_text(hjust = .5, size=13, color="black"))+
+  theme(axis.text.y = element_text(hjust = .5, size=13, color="black"))+
+  geom_point(alpha = 1/20)+
+  scale_shape_manual(values=c(0,1,2,3,4,5,6,7,8,11,13,15,16,17,18,35,38,43,64))
+

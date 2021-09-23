@@ -30,6 +30,8 @@ ggplot(data = world) +
   labs(x="", y="")
 ggsave("../outputs/1_mexico_map.png")
 
+sf::st_read(system.file("shape/nc.shp", package = "sf")
+
 data("df_mxmunicipio")
 df_mxmunicipio$value <- as.numeric(df_mxmunicipio$municipio_name =="La Magdalena Contreras")
 
