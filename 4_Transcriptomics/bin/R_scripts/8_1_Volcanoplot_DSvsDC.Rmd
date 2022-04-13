@@ -127,7 +127,7 @@ ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
   geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
-ggsave("../../outputs/8_1_VP_General_sinN_D_170Cvs87SS.png")
+ggsave("../../outputs/8_1_VP_General_sinN_D_170Cvs87SS.tiff")
 
 ```
 
