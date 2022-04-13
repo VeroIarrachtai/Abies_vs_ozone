@@ -38,6 +38,11 @@ results_Edge<- read.delim("../../data/DGE/EdgeR_TvsD170ppb_FDR_5.txt")
 results_DESeq2_rt <- data.frame(results_DESeq2[,c(2,5,6)])
 results_Edge_rt <- data.frame(results_Edge[,c(1,3,4)])
 
+# up and down in damage trees
+
+results_DESeq2_rt$log2FoldChange<-results_DESeq2_rt$log2FoldChange*(-1)
+results_Edge_rt$logFC<-results_Edge_rt$logFC*(-1)
+
 results_DESeq2_rt$sig <- -log10(results_DESeq2$pvalue) ##Create a column with aditional info of FDR (padj)##
 results_DESeq2_rt$sigadj <- -log10(results_DESeq2$padj) ##Create a column with aditional info of FDR (padj)##
 results_Edge_rt$sig <- -log10(results_Edge$PValue) ##Create a column with aditional info of FDR (padj)##
@@ -107,7 +112,6 @@ write.table(df_general, "../../data/Over_Down/GENERAL_C_TvsD.txt", sep="\t", row
 
 ```{r PLOT GENERAL Contingency, echo= FALSE}
 # Data in Contingency
-df_general$log2FoldChange_D2 <-df_general$log2FoldChange_D2*(-1)
 
 # General
 write.table(df_general, "../../data/Over_Down/GENERAL_C_TvsD_inDamaged.txt", sep="\t", row.names=T)
