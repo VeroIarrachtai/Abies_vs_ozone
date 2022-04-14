@@ -115,7 +115,7 @@ write.table(df_general, "../../data/Over_Down/GENERAL_T_170Cvs87SS_inConti.txt",
 
 # Plot Volcano plot
 ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
-  geom_point(aes(colour =  color ),size =3.5)+
+  geom_point(aes(colour =  color ),size =2.5)+
   scale_color_manual(values=c("#cd77ca", # purple D2 and ER
                               "#49cfd8", # blue Only D2
                               "#cdbd3a", # yellow Only ER

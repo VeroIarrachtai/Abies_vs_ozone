@@ -48,6 +48,11 @@ results_DESeq2_rt$sigadj <- -log10(results_DESeq2$padj) ##Create a column with a
 results_Edge_rt$sig <- -log10(results_Edge$PValue) ##Create a column with aditional info of FDR (padj)##
 results_Edge_rt$sigadj <- -log10(results_Edge$FDR) ##Create a column with aditional info of FDR (padj)##
 
+# rm data non useful
+rm(results_DESeq2)
+rm(results_Edge)
+
+
 ##Create a column with colors depending p-adj##  
 results_DESeq2_rt$TDE <- (results_DESeq2_rt$padj< 0.05) & (abs(results_DESeq2_rt$log2FoldChange) > 1)
 
@@ -57,7 +62,7 @@ results_Edge_rt$TDE <- (results_Edge_rt$FDR< 0.05) & (abs(results_Edge_rt$logFC)
 #### Make table
 
 ```{r Make table, echo= FALSE}
-# Make table with over and down expressed in TOLERANTS
+# Make table with over and down expressed in DAMAGED
 overxpress_Ds2 <- results_DESeq2_rt[results_DESeq2_rt[,"padj"]< 0.05 & results_DESeq2_rt[,"log2FoldChange"]> 1, ]
 downxpress_Ds2 <- results_DESeq2_rt[results_DESeq2_rt[,"padj"]< 0.05 & results_DESeq2_rt[,"log2FoldChange"]< -1, ]
 
@@ -117,8 +122,8 @@ write.table(df_general, "../../data/Over_Down/GENERAL_C_TvsD.txt", sep="\t", row
 write.table(df_general, "../../data/Over_Down/GENERAL_C_TvsD_inDamaged.txt", sep="\t", row.names=T)
 
 # Plot Volcano plot
-ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
-  geom_point(aes(colour =  color ),size =3.5)+
+ggplot(df_general, aes(x=logFC_ER, y=sig_ER)) +
+  geom_point(aes(colour =  color ),size =2.5)+
   scale_color_manual(values=c("#cd77ca", # purple D2 and ER
                               "#49cfd8", # blue Only D2
                               "#cdbd3a", # yellow Only ER
