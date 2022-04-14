@@ -39,7 +39,6 @@ results_DESeq2_rt <- data.frame(results_DESeq2[,c(2,5,6)])
 results_Edge_rt <- data.frame(results_Edge[,c(1,3,4)])
 
 # up and down in damage trees
-
 results_DESeq2_rt$log2FoldChange<-results_DESeq2_rt$log2FoldChange*(-1)
 results_Edge_rt$logFC<-results_Edge_rt$logFC*(-1)
 
@@ -48,9 +47,6 @@ results_DESeq2_rt$sigadj <- -log10(results_DESeq2$padj) ##Create a column with a
 results_Edge_rt$sig <- -log10(results_Edge$PValue) ##Create a column with aditional info of FDR (padj)##
 results_Edge_rt$sigadj <- -log10(results_Edge$FDR) ##Create a column with aditional info of FDR (padj)##
 
-# rm data non useful
-rm(results_DESeq2)
-rm(results_Edge)
 
 
 ##Create a column with colors depending p-adj##  
@@ -115,11 +111,31 @@ rownames(df_general)<- df_general$rownames
 write.table(df_general, "../../data/Over_Down/GENERAL_C_TvsD.txt", sep="\t", row.names=T)
 ```
 
-```{r PLOT GENERAL Contingency, echo= FALSE}
-# Data in Contingency
+```{r PLOT GENERAL DAMAGED D2, echo= FALSE}
+# Data in DAMAGED
 
-# General
-write.table(df_general, "../../data/Over_Down/GENERAL_C_TvsD_inDamaged.txt", sep="\t", row.names=T)
+# Plot Volcano plot
+ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
+  geom_point(aes(colour =  color ),size =2.5)+
+  scale_color_manual(values=c("#cd77ca", # purple D2 and ER
+                              "#49cfd8", # blue Only D2
+                              "#cdbd3a", # yellow Only ER
+                              "grey",    # grey
+                              "black"))+ # black
+  xlab("log2 fold change")+
+  ylab("-log10 (P value)")+
+  theme_light(base_size = 10)+
+  theme(legend.position = "none")+
+  geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
+  geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
+  geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
+  ggsave("../../outputs/8_1_VP_General_sinN_C_TvsD_D2.tiff")
+
+```
+
+
+```{r PLOT GENERAL DAMAGED ER, echo= FALSE}
+# Data in DAMAGED
 
 # Plot Volcano plot
 ggplot(df_general, aes(x=logFC_ER, y=sig_ER)) +
@@ -136,7 +152,7 @@ ggplot(df_general, aes(x=logFC_ER, y=sig_ER)) +
   geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
   geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
-  ggsave("../../outputs/8_1_VP_General_sinN_C_TvsD.tiff")
+ggsave("../../outputs/8_1_VP_General_sinN_C_TvsD_ER.tiff")
 
 ```
 
@@ -159,6 +175,6 @@ write.table(D2_ER_genes, "../../data/Over_Down/SPECIFIC/D2_ER_C_TvsD.txt", sep="
 write.table(D2_genes, "../../data/Over_Down/SPECIFIC/D2_C_TvsD.txt", sep="\t", row.names=T)
 write.table(ER_genes, "../../data/Over_Down/SPECIFIC/ER_C_TvsD.txt", sep="\t", row.names=T)
 
-write.table(genesDEcomun_over ,"../../data/Over_Down/SPECIFIC/IDs_D2_ER_C_TvsD_over.txt",sep = "\t", row.names = F, col.names = F)
-write.table(genesDEcomun_down ,"../../data/Over_Down/SPECIFIC/IDs_D2_ER_C_TvsD_down.txt",sep = "\t", row.names = F, col.names = F)
+write.table(genesDEcomun_over ,"../../data/Over_Down/SPECIFIC/IDs/IDs_D2_ER_C_TvsD_overinDamaged.txt",sep = "\t", row.names = F, col.names = F)
+write.table(genesDEcomun_down ,"../../data/Over_Down/SPECIFIC/IDs/IDs_D2_ER_C_TvsD_downinDamaged.txt",sep = "\t", row.names = F, col.names = F)
 ```

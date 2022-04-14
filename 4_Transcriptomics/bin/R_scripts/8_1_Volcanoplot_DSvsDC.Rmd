@@ -38,6 +38,12 @@ results_Edge<- read.delim("../../data/DGE/EdgeR_DSvsDC_FDR_5.txt")
 results_DESeq2_rt <- data.frame(results_DESeq2[,c(2,5,6)])
 results_Edge_rt <- data.frame(results_Edge[,c(1,3,4)])
 
+
+# up and down in damage trees during contingency
+results_DESeq2_rt$log2FoldChange<-results_DESeq2_rt$log2FoldChange*(-1)
+results_Edge_rt$logFC<-results_Edge_rt$logFC*(-1)
+
+
 results_DESeq2_rt$sig <- -log10(results_DESeq2$pvalue) ##Create a column with aditional info of FDR (padj)##
 results_DESeq2_rt$sigadj <- -log10(results_DESeq2$padj) ##Create a column with aditional info of FDR (padj)##
 results_Edge_rt$sig <- -log10(results_Edge$PValue) ##Create a column with aditional info of FDR (padj)##
@@ -107,13 +113,6 @@ write.table(df_general, "../../data/Over_Down/GENERAL_D_170Cvs87SS.txt", sep="\t
 
 ```{r PLOT GENERAL Contingency, echo= FALSE}
 # Plot Volcano plot
-#Data in HIGH
-df_general$log2FoldChange_D2 <-df_general$log2FoldChange_D2*(-1)
-
-# General
-write.table(df_general, "../../data/Over_Down/GENERAL_D_170Cvs87SS_inConti.txt", sep="\t", row.names=T)
-
-# Plot Volcano plot
 ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_point(aes(colour =  color ),size =3.5)+
   scale_color_manual(values=c("#cd77ca", # purple D2 and ER
@@ -127,9 +126,29 @@ ggplot(df_general, aes(x=log2FoldChange_D2, y=sig_D2)) +
   geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
   geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
   geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
-ggsave("../../outputs/8_1_VP_General_sinN_D_170Cvs87SS.tiff")
+ggsave("../../outputs/8_1_VP_General_sinN_D_170Cvs87SS_D2.tiff")
 
 ```
+
+```{r PLOT GENERAL Contingency ER, echo= FALSE}
+# Plot Volcano plot
+ggplot(df_general, aes(x=logFC_ER, y=sig_ER)) +
+  geom_point(aes(colour =  color ),size =3.5)+
+  scale_color_manual(values=c("#cd77ca", # purple D2 and ER
+                              "#49cfd8", # blue Only D2
+                              "grey",    # grey
+                              "black"))+ # black
+  xlab("log2 fold change")+
+  ylab("-log10 (P value)")+
+  theme_light(base_size = 10)+
+  theme(legend.position = "none")+
+  geom_hline(yintercept = -log10(0.05), colour = "black", linetype = "dashed", size = 0.25) + # Horizontal significance cut-off line.
+  geom_vline(xintercept = 1, colour = "black", linetype = "dashed", size = 0.25)+  # Vertical significance cut-off line (+).
+  geom_vline(xintercept = -1, colour = "black", linetype = "dashed", size = 0.25)  # Vertical significance cut-off line (+).
+ggsave("../../outputs/8_1_VP_General_sinN_D_170Cvs87SS_ER.tiff")
+
+```
+
 
 #### Export data
 
@@ -149,4 +168,8 @@ ER_genes$rownames
 write.table(D2_ER_genes, "../../data/Over_Down/SPECIFIC/D2_ER_D_170Cvs87SS.txt", sep="\t", row.names=T)
 write.table(D2_genes, "../../data/Over_Down/SPECIFIC/D2_D_170Cvs87SS.txt", sep="\t", row.names=T)
 write.table(ER_genes, "../../data/Over_Down/SPECIFIC/ER_D_170Cvs87SS.txt", sep="\t", row.names=T)
+
+write.table(genesDEcomun_over ,"../../data/Over_Down/SPECIFIC/IDs/IDs_D2_ER_D_170Cvs87SS_overinContingency.txt",sep = "\t", row.names = F, col.names = F)
+write.table(genesDEcomun_down ,"../../data/Over_Down/SPECIFIC/IDs/IDs_D2_ER_D_170Cvs87SS_downinContingency.txt",sep = "\t", row.names = F, col.names = F)
+
 ```
